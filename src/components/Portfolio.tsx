@@ -1,0 +1,175 @@
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from './Button';
+import { VideoModal } from './VideoModal';
+import { PlayIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+// Portfolio categories data
+const portfolioCategories = [{
+  id: 'promo',
+  title: 'Promo Videos',
+  image: 'https://img.youtube.com/vi/gY5Qz7N7BVU/maxresdefault.jpg',
+  pageLink: '/hype-promo',
+  videoId: 'gY5Qz7N7BVU',
+  isVideo: true
+}, {
+  id: 'branded-storytelling',
+  title: 'Branded Storytelling',
+  image: 'https://img.youtube.com/vi/qFQUSroCI8A/maxresdefault.jpg',
+  pageLink: '/branded-storytelling',
+  videoId: 'qFQUSroCI8A',
+  isVideo: true
+}, {
+  id: 'music-videos',
+  title: 'Music Videos',
+  image: 'https://img.youtube.com/vi/RETndZHvfZs/maxresdefault.jpg',
+  pageLink: '/music-videos',
+  videoId: 'RETndZHvfZs',
+  isVideo: true
+}, {
+  id: 'outdoor-photography',
+  title: 'Outdoor Photography',
+  image: "/_DSC6480.jpg",
+  pageLink: '/outdoor-photography',
+  isVideo: false
+}, {
+  id: 'musician-photography',
+  title: 'Music Photography',
+  image: "/_YOU0011.jpg",
+  pageLink: '/musician-photography',
+  isVideo: false
+}, {
+  id: 'design',
+  title: 'Design Work',
+  image: "/LoFi-Magnify.jpg",
+  pageLink: '/design',
+  isVideo: false
+}];
+export const Portfolio = () => {
+  const [selectedVideo, setSelectedVideo] = useState<{
+    id: string;
+    title: string;
+    isVimeo?: boolean;
+  } | null>(null);
+  const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
+  // Handle clicking on a video item
+  const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
+    setSelectedVideo({
+      id,
+      title,
+      isVimeo
+    });
+  };
+  // Close the video modal
+  const handleCloseModal = () => {
+    setSelectedVideo(null);
+  };
+  return <section id="portfolio" className="bg-digital-black pt-5 pb-24 relative" style={{
+    backgroundSize: '20px 20px',
+    backgroundImage: `
+          linear-gradient(to right, rgba(0, 255, 247, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 255, 247, 0.05) 1px, transparent 1px)
+        `
+  }}>
+      <div className="container mx-auto px-4 md:px-6 mb-16">
+        <motion.div className="text-center mb-16" initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }}>
+          <h2 className="font-pixel text-3xl md:text-4xl font-bold mb-4 text-electric-cyan neon-cyan"></h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+        </motion.div>
+        {/* Portfolio Categories Grid - Larger cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolioCategories.map((category, index) => <motion.div key={category.id} className="relative group overflow-hidden cursor-pointer rounded-lg shadow-lg" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: index * 0.1
+        }} whileHover={{
+          scale: 1.03,
+          transition: {
+            duration: 0.3
+          }
+        }} onMouseEnter={() => category.isVideo && setHoveredVideo(category.id)} onMouseLeave={() => setHoveredVideo(null)} onClick={() => {
+          if (category.videoId) {
+            handleVideoClick(category.videoId, category.title);
+          }
+        }}>
+              {category.pageLink ? <Link to={category.pageLink} className="block h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
+                    {/* Video indicator overlay */}
+                    {category.isVideo && <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
+                          <PlayIcon className="w-10 h-10" />
+                        </div>
+                      </div>}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-digital-black/80 via-digital-black/40 to-digital-black/30 flex flex-col justify-end p-8">
+                    <div className="text-left pb-4">
+                      <h3 className="font-pixel text-2xl font-bold text-electric-cyan mb-2">
+                        {category.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Explore {category.title.toLowerCase()} projects
+                      </p>
+                    </div>
+                  </div>
+                </Link> : <>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
+                    {/* Video indicator overlay */}
+                    {category.isVideo && <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
+                          <PlayIcon className="w-10 h-10" />
+                        </div>
+                      </div>}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-digital-black/80 via-digital-black/40 to-digital-black/30 flex flex-col justify-end p-8">
+                    <div className="text-left pb-4">
+                      <h3 className="font-pixel text-2xl font-bold text-electric-cyan mb-2">
+                        {category.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Explore {category.title.toLowerCase()} projects
+                      </p>
+                    </div>
+                  </div>
+                </>}
+            </motion.div>)}
+        </div>
+      </div>
+      <div className="px-4 py-8">
+        <motion.div className="text-center" initial={{
+        opacity: 0
+      }} whileInView={{
+        opacity: 1
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.3
+      }}>
+          <Link to="/projects">
+            <Button>View All Projects</Button>
+          </Link>
+        </motion.div>
+      </div>
+      {/* Video Modal */}
+      {selectedVideo && <VideoModal videoId={selectedVideo.id} title={selectedVideo.title} onClose={handleCloseModal} isVimeo={selectedVideo.isVimeo} />}
+    </section>;
+};
