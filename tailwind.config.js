@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pixel: ['"Press Start 2P"', 'regular'],
+        pixel: ['"Press Start 2P"', 'monoface'],
         sans: ['Space Grotesk', 'sans-serif'],
         ui: ['DM Sans', 'sans-serif'],
       },
