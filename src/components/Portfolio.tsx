@@ -7,40 +7,40 @@ import { Link } from 'react-router-dom';
 // Portfolio categories data
 const portfolioCategories = [{
   id: 'promo',
-  title: 'Promo Videos',
+  title: 'commercial + promo',
   image: 'https://img.youtube.com/vi/gY5Qz7N7BVU/maxresdefault.jpg',
   pageLink: '/hype-promo',
   videoId: 'gY5Qz7N7BVU',
   isVideo: true
 }, {
   id: 'branded-storytelling',
-  title: 'Branded Storytelling',
+  title: 'documentary + branded storytelling',
   image: 'https://img.youtube.com/vi/qFQUSroCI8A/maxresdefault.jpg',
   pageLink: '/branded-storytelling',
   videoId: 'qFQUSroCI8A',
   isVideo: true
 }, {
   id: 'music-videos',
-  title: 'Music Videos',
+  title: 'music videos',
   image: 'https://img.youtube.com/vi/RETndZHvfZs/maxresdefault.jpg',
   pageLink: '/music-videos',
   videoId: 'RETndZHvfZs',
   isVideo: true
 }, {
   id: 'outdoor-photography',
-  title: 'Outdoor Photography',
+  title: 'outdoor photography',
   image: "/_DSC6480.jpg",
   pageLink: '/outdoor-photography',
   isVideo: false
 }, {
   id: 'musician-photography',
-  title: 'Music Photography',
+  title: 'music photography',
   image: "/_YOU0011.jpg",
   pageLink: '/musician-photography',
   isVideo: false
 }, {
   id: 'design',
-  title: 'Design Work',
+  title: 'design',
   image: "/LoFi-Magnify.jpg",
   pageLink: '/design',
   isVideo: false
