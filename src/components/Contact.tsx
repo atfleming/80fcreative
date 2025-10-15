@@ -23,18 +23,18 @@ export const Contact = () => {
            Let's start a conversation.
            </p>*/}
         </motion.div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="flex flex-col items-center gap-12">
           <motion.div initial={{
-          opacity: 0,
-          x: -30
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.8
-        }}>
+            opacity: 0,
+            x: -30
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="w-full max-w-2xl">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -74,22 +74,22 @@ export const Contact = () => {
             </form>
           </motion.div>
           <motion.div initial={{
-          opacity: 0,
-          x: 30
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.8
-        }} className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 font-pixel text-electric-cyan">
+            opacity: 0,
+            x: 30
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-8 w-full max-w-xl">
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold mb-6 font-pixel text-electric-cyan text-center">
                 Contact Information
               </h3>
               <div className="space-y-4 font-sans">
-                <div className="flex items-start">
+                <div className="flex items-center justify-center">
                   <MailIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Email</p>
@@ -98,7 +98,7 @@ export const Contact = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center justify-center">
                   <PhoneIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Phone</p>
@@ -107,7 +107,7 @@ export const Contact = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center justify-center">
                   <MapPinIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Location</p>
