@@ -2,6 +2,8 @@ import React from 'react';
 import { Hero } from './components/Hero';
 import { Portfolio } from './components/Portfolio';
 import { AnimatedVideoSection } from './components/AnimatedVideoSection';
+import { About } from './components/About';
+import { Services } from './components/Services';
 import { SideScrollGallery, Project } from './components/SideScrollGallery';
 // import { About } from './components/About'
 // import { Services } from './components/Services'
@@ -70,9 +72,8 @@ export function App() {
               }))}
             />
             */}
-          {/* About and Services sections moved to separate pages */}
-          {/* <About /> */}
-          {/* <Services /> */}
+          <About />
+          <Services />
           {/* Development section temporarily hidden */}
           {/* <Development /> */}
           {/* Newsletter section temporarily hidden */}
