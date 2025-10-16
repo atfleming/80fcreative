@@ -11,14 +11,14 @@ const portfolioItems = [
   id: 'csv1',
   title: '901 fc brand reveal video',
   category: 'Commercial',
-  image: 'https://img.youtube.com/vi/gY5Qz7N7BVU/maxresdefault.jpg',
+  image: 'public/901 fc brand reveal.png',
   videoId: 'gY5Qz7N7BVU'
 },
 {
   id: 'csv2',
   title: 'champions for lit grizzlies promo',
   category: 'Commercial',
-  image: '',
+  image: 'public/champions for lit grizzlies promo.png',
   videoId: '935182826',
   isVimeo: true
 },
@@ -26,7 +26,7 @@ const portfolioItems = [
   id: 'csv3',
   title: 'champions for lit player hype promo',
   category: 'Commercial',
-  image: '',
+  image: 'public/champions for lit player intro.png',
   videoId: '1002964765',
   isVimeo: true
 },
@@ -34,7 +34,7 @@ const portfolioItems = [
   id: 'csv4',
   title: 'aces x penny hardaway x complex promo',
   category: 'Commercial',
-  image: '',
+  image: 'public/aces penny thumbnail.png',
   videoId: '947118016',
   isVimeo: true
 },
@@ -42,10 +42,53 @@ const portfolioItems = [
   id: 'csv5',
   title: 'u of m engineering promo',
   category: 'Commercial',
-  image: '',
+  image: 'public/u of m engineering.png',
   videoId: '947123598',
   isVimeo: true
 },
+{
+  id: 'csv6',
+  title: "u of m 'give to the legacy'",
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/oQiZGRDIct8/maxresdefault.jpg',
+  videoId: 'oQiZGRDIct8'
+},
+{
+  id: 'csv7',
+  title: 'old dominick whiskey 5 year reveal',
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/GprckON8yZo/maxresdefault.jpg',
+  videoId: 'GprckON8yZo'
+},
+{
+  id: 'csv8',
+  title: 'grizzly outdoor corp: Offroad Jeeps in Pennsylvania',
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/kUZkK1oAbmY/maxresdefault.jpg',
+  videoId: 'kUZkK1oAbmY'
+},
+{
+  id: 'csv9',
+  title: 'bloodbound audio drama promo',
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/NTWjUkkcbBE/maxresdefault.jpg',
+  videoId: 'NTWjUkkcbBE'
+},
+{
+  id: 'csv10',
+  title: 'virbac mr squeakems',
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/jfgbnFL8rSo/maxresdefault.jpg',
+  videoId: 'jfgbnFL8rSo'
+},
+{
+  id: 'csv22',
+  title: 'rolling stone',
+  category: 'Documentary/Branded',
+  image: '/memphis masters rolling stone.png',
+  externalLink: 'https://www.rollingstone.com/music/music-news/big-star-memphis-masters-series-1021789/'
+},
+
 {
   id: 'csv6',
   title: "u of m 'give to the legacy'",
