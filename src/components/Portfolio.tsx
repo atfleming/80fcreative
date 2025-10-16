@@ -9,21 +9,21 @@ const portfolioCategories = [{
   id: 'promo',
   title: 'commercial + promo',
   image: 'https://img.youtube.com/vi/gY5Qz7N7BVU/maxresdefault.jpg',
-  pageLink: '/hype-promo',
+  pageLink: '/projects?filter=Commercial',
   videoId: 'gY5Qz7N7BVU',
   isVideo: true
 }, {
   id: 'branded-storytelling',
   title: 'documentary + branded storytelling',
   image: 'https://img.youtube.com/vi/qFQUSroCI8A/maxresdefault.jpg',
-  pageLink: '/branded-storytelling',
+  pageLink: '/projects?filter=Documentary/Branded',
   videoId: 'qFQUSroCI8A',
   isVideo: true
 }, {
   id: 'music-videos',
   title: 'music videos',
   image: 'https://img.youtube.com/vi/RETndZHvfZs/maxresdefault.jpg',
-  pageLink: '/music-videos',
+  pageLink: '/projects?filter=music videos',
   videoId: 'RETndZHvfZs',
   isVideo: true
 }, {

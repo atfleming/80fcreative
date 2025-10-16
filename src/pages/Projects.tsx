@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
@@ -8,25 +9,33 @@ import { PlayIcon, ArrowLeftIcon } from 'lucide-react';
 const portfolioItems = [
 // --- BEGIN CSV APPEND ---
 {
-  id: 'csv1',
-  title: '901 fc brand reveal video',
+  id: 'v1',
+  title: 'Creative Reel',
   category: 'Commercial',
-  image: 'public/901 fc brand reveal.png',
-  videoId: 'gY5Qz7N7BVU'
+  image: '/creative reel.png',
+  description: ':30 showcase reel of select video work.',
+  videoId: 'youtube.com/watch?v=v0ad5Cv7kqg&feature=youtu.be'
 },
 {
   id: 'csv2',
   title: 'champions for lit grizzlies promo',
   category: 'Commercial',
-  image: 'public/champions for lit grizzlies promo.png',
+  image: '/champions for lit grizzlies promo.png',
   videoId: '935182826',
   isVimeo: true
+},  {
+  id: 'v8',
+  title: 'FedEx x Memphis Record Pressing',
+  category: 'Commercial',
+  image: 'https://img.youtube.com/vi/VaT_oPNG8eM/maxresdefault.jpg',
+  description: '',
+  videoId: 'VaT_oPNG8eM'
 },
 {
   id: 'csv3',
   title: 'champions for lit player hype promo',
   category: 'Commercial',
-  image: 'public/champions for lit player intro.png',
+  image: '/champions for lit player intro.png',
   videoId: '1002964765',
   isVimeo: true
 },
@@ -34,7 +43,7 @@ const portfolioItems = [
   id: 'csv4',
   title: 'aces x penny hardaway x complex promo',
   category: 'Commercial',
-  image: 'public/aces penny thumbnail.png',
+  image: '/aces penny thumbnail.png',
   videoId: '947118016',
   isVimeo: true
 },
@@ -42,7 +51,7 @@ const portfolioItems = [
   id: 'csv5',
   title: 'u of m engineering promo',
   category: 'Commercial',
-  image: 'public/u of m engineering.png',
+  image: '/u of m engineering.png',
   videoId: '947123598',
   isVimeo: true
 },
@@ -74,13 +83,7 @@ const portfolioItems = [
   image: 'https://img.youtube.com/vi/NTWjUkkcbBE/maxresdefault.jpg',
   videoId: 'NTWjUkkcbBE'
 },
-{
-  id: 'csv10',
-  title: 'virbac mr squeakems',
-  category: 'Commercial',
-  image: 'https://img.youtube.com/vi/jfgbnFL8rSo/maxresdefault.jpg',
-  videoId: 'jfgbnFL8rSo'
-},
+
 {
   id: 'csv22',
   title: 'rolling stone',
@@ -89,34 +92,8 @@ const portfolioItems = [
   externalLink: 'https://www.rollingstone.com/music/music-news/big-star-memphis-masters-series-1021789/'
 },
 
-{
-  id: 'csv6',
-  title: "u of m 'give to the legacy'",
-  category: 'Commercial',
-  image: 'https://img.youtube.com/vi/oQiZGRDIct8/maxresdefault.jpg',
-  videoId: 'oQiZGRDIct8'
-},
-{
-  id: 'csv7',
-  title: 'old dominick whiskey 5 year reveal',
-  category: 'Commercial',
-  image: 'https://img.youtube.com/vi/GprckON8yZo/maxresdefault.jpg',
-  videoId: 'GprckON8yZo'
-},
-{
-  id: 'csv8',
-  title: 'grizzly outdoor corp: Offroad Jeeps in Pennsylvania',
-  category: 'Commercial',
-  image: 'https://img.youtube.com/vi/kUZkK1oAbmY/maxresdefault.jpg',
-  videoId: 'kUZkK1oAbmY'
-},
-{
-  id: 'csv9',
-  title: 'bloodbound audio drama promo',
-  category: 'Commercial',
-  image: 'https://img.youtube.com/vi/NTWjUkkcbBE/maxresdefault.jpg',
-  videoId: 'NTWjUkkcbBE'
-},
+
+
 {
   id: 'csv10',
   title: 'virbac mr squeakems',
@@ -198,44 +175,37 @@ const portfolioItems = [
 },
 {
   id: 'csv21',
-  title: 'the memphis masters: series',
+  title: 'the memphis masters: the bar-kays',
   category: 'Documentary/Branded',
-  image: 'https://img.youtube.com/vi/u4NRkMWrlnc/maxresdefault.jpg',
-  videoId: 'u4NRkMWrlnc'
-},
-{
-  id: 'csv22',
-  title: 'rolling stone',
-  category: 'Documentary/Branded',
-  image: '',
-  externalLink: 'https://www.rollingstone.com/music/music-news/big-star-memphis-masters-series-1021789/'
+  image: '/memphis masters barkays.png',
+  videoId: 'INUr6UD6UR0'
 },
 {
   id: 'csv23',
-  title: 'full series',
+  title: 'the memphis masters: full series',
   category: 'Documentary/Branded',
-  image: 'https://img.youtube.com/vi/u4NRkMWrlnc/maxresdefault.jpg',
-  videoId: 'u4NRkMWrlnc'
+  image: '/memphis masters full series.png',
+  videoId: 'https://www.youtube.com/watch?v=u4NRkMWrlnc&list=PL79xK-VVZpsntp7H7m-p9vr48f6Yxiv7E'
 },
 {
   id: 'csv24',
   title: 'Roberta Finocchiaro "Put the Memphis On it" album release',
   category: 'Documentary/Branded',
-  image: 'https://img.youtube.com/vi/qSN-wQlqj1s/maxresdefault.jpg',
+  image: '/put the memphis on it.png',
   videoId: 'qSN-wQlqj1s'
 },
 {
   id: 'csv25',
   title: 'MLB Fan Cave Submission (top 30 winner 2012)',
   category: 'Documentary/Branded',
-  image: 'https://img.youtube.com/vi/TSwXZa6EDbI/maxresdefault.jpg',
+  image: '/mlb fan cave submission.png',
   videoId: 'TSwXZa6EDbI'
 },
 {
   id: 'csv26',
-  title: 'the cotton board: runner',
+  title: 'the cotton board: forever cotton',
   category: 'Documentary/Branded',
-  image: '',
+  image: '/cotton board forever cotton.png',
   externalLink: 'https://www.cottonboard.org/forever-cotton'
 },
 {
@@ -250,7 +220,7 @@ const portfolioItems = [
   id: 'csv28',
   title: 'daykisser: "it\'s just what we talked about"',
   category: 'Music Videos',
-  image: 'https://img.youtube.com/vi/0efLsK07TxA/maxresdefault.jpg',
+  image: '/daykisser ijwwta.png',
   videoId: '0efLsK07TxA'
 },
 {
@@ -271,14 +241,14 @@ const portfolioItems = [
   id: 'csv31',
   title: 'brennan villines: "better than we\'ve ever been"',
   category: 'Music Videos',
-  image: 'https://img.youtube.com/vi/v-70xxtygbA/maxresdefault.jpg',
+  image: '/brennan villines better than we\'ve ever been.png',
   videoId: 'v-70xxtygbA'
 },
 {
   id: 'csv32',
   title: 'marco pave: "dirty benz"',
   category: 'Music Videos',
-  image: 'https://img.youtube.com/vi/sfsEnFcfGqQ/maxresdefault.jpg',
+  image: '/marco pave dirty benz.png',
   videoId: 'sfsEnFcfGqQ'
 },
 {
@@ -299,7 +269,7 @@ const portfolioItems = [
   id: 'csv35',
   title: 'marco pave: "gold grind"',
   category: 'Music Videos',
-  image: 'https://img.youtube.com/vi/OYzT1YvPpbs/maxresdefault.jpg',
+  image: '/marco pave gold grind.png',
   videoId: 'OYzT1YvPpbs'
 },
 {
@@ -327,7 +297,7 @@ const portfolioItems = [
   id: 'csv39',
   title: 'marco pave: "black tux"',
   category: 'Music Videos',
-  image: 'https://img.youtube.com/vi/jyCqLS8CPHw/maxresdefault.jpg',
+  image: '/marco pave black tux.png',
   videoId: 'jyCqLS8CPHw'
 },
 {
@@ -399,66 +369,16 @@ const portfolioItems = [
   category: 'Music Videos',
   image: 'https://img.youtube.com/vi/uMTPE7eSuUU/maxresdefault.jpg',
   videoId: 'uMTPE7eSuUU'
-},
-// --- END CSV APPEND ---
-// Video items
-{
-  id: 'v1',
-  title: 'Creative Reel',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/TW2EuzedA0I/maxresdefault.jpg',
-  description: 'Showcase of creative work across various projects',
-  videoId: 'TW2EuzedA0I'
-}, {
+}
+//hide
+/*
   id: 'v2',
   title: 'Music Video Production',
   category: 'Video',
   image: 'https://img.youtube.com/vi/21POSFRtjY4/maxresdefault.jpg',
   description: 'Artistic direction for music production',
   videoId: '21POSFRtjY4'
-}, {
-  id: 'v3',
-  title: 'Visual Storytelling',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/RETndZHvfZs/maxresdefault.jpg',
-  description: 'Visual storytelling through music',
-  pageLink: '/music-videos'
-}, {
-  id: 'v4',
-  title: 'Brand Campaign Video',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/oQiZGRDIct8/maxresdefault.jpg',
-  description: 'Brand campaign commercial',
-  videoId: 'oQiZGRDIct8'
-}, {
-  id: 'v5',
-  title: 'Product Showcase',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/ewwyhhlLzjE/maxresdefault.jpg',
-  description: 'Product showcase commercial',
-  videoId: 'ewwyhhlLzjE'
-}, {
-  id: 'v6',
-  title: 'Branded Documentary',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/KiQfXe6o8Lw/maxresdefault.jpg',
-  description: 'Regional Addy Award for Directing Branded Documentary Piece',
-  videoId: 'KiQfXe6o8Lw'
-}, {
-  id: 'v7',
-  title: 'Hype/Promo',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/gY5Qz7N7BVU/maxresdefault.jpg',
-  description: 'Official brand reveal for Memphis 901 Football Club',
-  videoId: 'gY5Qz7N7BVU'
-}, {
-  id: 'v8',
-  title: 'Memphis Record Pressing',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/VaT_oPNG8eM/maxresdefault.jpg',
-  description: 'Documentary showcasing the vinyl record manufacturing process',
-  videoId: 'VaT_oPNG8eM'
-}, {
+},   {
   id: 'v9',
   title: 'The Memphis Masters',
   category: 'Video',
@@ -466,24 +386,8 @@ const portfolioItems = [
   description: 'Featured in Rolling Stone, a series celebrating Memphis music legacy',
   externalLink: 'https://www.rollingstone.com/music/music-news/big-star-memphis-masters-series-1021789/'
 },
-// Adding the new music video
-{
-  id: 'v10',
-  title: 'Artistic Music Video',
-  category: 'Video',
-  image: 'https://img.youtube.com/vi/c7i_BYe45TE/maxresdefault.jpg',
-  description: 'Creative direction and visual storytelling through music',
-  videoId: 'c7i_BYe45TE'
-},
-// Adding the new animation music video
-{
-  id: 'a1',
-  title: 'Animated Music Video',
-  category: 'Animation',
-  image: 'https://img.youtube.com/vi/Jl8iOcCepao/maxresdefault.jpg',
-  description: 'Animated visual storytelling set to music',
-  videoId: 'Jl8iOcCepao'
-},
+
+
 // Photography items
 {
   id: 'p1',
@@ -549,18 +453,48 @@ const portfolioItems = [
   category: 'Personal',
   image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop',
   description: 'Abstract visual arts personal project.'
-}];
+}
+/*
+// All items after jack bear are commented out for later adjustment
+*/
+];
 export const Projects = () => {
-  const [filter, setFilter] = useState<string | null>(null);
+  const location = useLocation();
+  // Read filter from URL query string
+  const getFilterFromQuery = () => {
+    const params = new URLSearchParams(location.search);
+    const filterParam = params.get('filter');
+    return filterParam ? filterParam : 'All';
+  };
+  const [filter, setFilter] = useState<string>(getFilterFromQuery());
+
+  // Update filter when URL changes
+  useEffect(() => {
+    setFilter(getFilterFromQuery());
+  }, [location.search]);
   const [selectedVideo, setSelectedVideo] = useState<{
     id: string;
     title: string;
     isVimeo?: boolean;
   } | null>(null);
-  // Filter items based on selected category
-  const filteredItems = filter ? portfolioItems.filter(item => item.category === filter) : portfolioItems;
   // Get all unique categories from portfolio items
-  const categories = Array.from(new Set(portfolioItems.map(item => item.category)));
+  // Get all unique categories that actually have items, sorted
+  const categoryCounts: Record<string, number> = {};
+  portfolioItems.forEach(item => {
+    if (item.category) {
+      categoryCounts[item.category] = (categoryCounts[item.category] || 0) + 1;
+    }
+  });
+  const categories = Object.keys(categoryCounts).sort((a, b) => a.localeCompare(b));
+  // Filter items based on selected category
+  // Robust filter: match category exactly, fallback to all
+  // Normalize category for robust filtering
+  const normalize = (str: string) => (str || '').trim().toLowerCase();
+  const normalizedFilter = normalize(filter);
+  const filteredItems =
+    !filter || normalizedFilter === 'all'
+      ? portfolioItems
+      : portfolioItems.filter(item => normalize(item.category) === normalizedFilter);
   // Handle clicking on a video item
   const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
     setSelectedVideo({
@@ -599,19 +533,26 @@ export const Projects = () => {
           duration: 0.6
         }}>
             <h1 className="font-pixel text-4xl md:text-5xl font-bold mb-4 text-electric-cyan neon-cyan">
-              All Projects
+              video projects
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-sans">
-              Explore our complete collection of creative work across different
-              mediums.
+              
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-12">
-              <Button variant={filter === null ? 'primary' : 'outline'} onClick={() => setFilter(null)} className="px-4 py-2">
+              <Button variant={!filter || filter === 'All' ? 'primary' : 'outline'} onClick={() => setFilter('All')} className="px-4 py-2">
                 All
               </Button>
-              {categories.map(category => <Button key={category} variant={filter === category ? 'primary' : 'outline'} onClick={() => setFilter(category)} className="px-4 py-2">
+              {categories.map(category => (
+                <Button
+                  key={category}
+                  variant={filter === category ? 'primary' : 'outline'}
+                  onClick={() => setFilter(category)}
+                  className="px-4 py-2"
+                  aria-label={`Show only ${category} videos`}
+                >
                   {category}
-                </Button>)}
+                </Button>
+              ))}
             </div>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
