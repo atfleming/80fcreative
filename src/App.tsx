@@ -2,9 +2,9 @@ import React from 'react';
 import { Hero } from './components/Hero';
 import { Portfolio } from './components/Portfolio';
 import { AnimatedVideoSection } from './components/AnimatedVideoSection';
-import { About } from './components/About';
 import { Services } from './components/Services';
-import { SideScrollGallery, Project } from './components/SideScrollGallery';
+import { About } from './components/About';
+//import { SideScrollGallery, Project } from './components/SideScrollGallery';
 // import { VideoPortfolio } from './components/VideoPortfolio'
 // import { Development } from './components/Development'
 // import { Newsletter } from './components/Newsletter'
