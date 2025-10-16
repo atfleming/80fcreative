@@ -70,8 +70,8 @@ export function App() {
               }))}
             />
             */}
-          <About />
           <Services />
+          <About />
           {/* Development section temporarily hidden */}
           {/* <Development /> */}
           {/* Newsletter section temporarily hidden */}
