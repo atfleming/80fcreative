@@ -5,7 +5,6 @@ import { AnimatedVideoSection } from './components/AnimatedVideoSection';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { SideScrollGallery, Project } from './components/SideScrollGallery';
-import { Services } from './components/Services'
 // import { VideoPortfolio } from './components/VideoPortfolio'
 // import { Development } from './components/Development'
 // import { Newsletter } from './components/Newsletter'
