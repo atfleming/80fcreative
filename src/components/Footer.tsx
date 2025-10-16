@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className="border-t border-electric-cyan/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-highlight/50 text-sm mb-4 md:mb-0 font-ui">
-              © 2023 80F.co. All rights reserved.
+              © 2025 80f creative. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-highlight/50 hover:text-electric-cyan text-sm transition-colors font-ui">
