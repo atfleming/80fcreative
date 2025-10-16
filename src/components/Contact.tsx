@@ -89,7 +89,7 @@ export const Contact = () => {
                 Contact Information
               </h3>
               <div className="space-y-4 font-sans">
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-left">
                   <MailIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Email</p>
@@ -98,7 +98,7 @@ export const Contact = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-left">
                   <PhoneIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Phone</p>
@@ -107,7 +107,7 @@ export const Contact = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-left">
                   <MapPinIcon className="w-5 h-5 text-electric-cyan mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-highlight">Location</p>
