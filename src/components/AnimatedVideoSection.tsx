@@ -3,10 +3,10 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const AnimatedVideoSection: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: containerRef,
     offset: ["start end", "end start"]
   });
 
@@ -14,22 +14,23 @@ export const AnimatedVideoSection: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0.2, 0.6], [0, 1]);
 
   return (
-    <motion.div
-      ref={ref} 
-      className="relative min-h-screen w-full flex items-center justify-center"
-      style={{ scale, opacity }}
-    >
-      <div className="w-full max-w-7xl aspect-video">
-        <video
-          ref={videoRef}
-          src="/80fco reel.mov"
-          controls
-          loop
-          className="rounded-lg w-full h-full object-cover"
-          preload="auto"
-          muted
-        />
-      </div>
-    </motion.div>
+    <div ref={containerRef} className="relative min-h-[150vh]">
+      <motion.div
+        className="sticky top-0 w-full min-h-screen flex items-center justify-center -mt-20"
+        style={{ scale, opacity }}
+      >
+        <div className="w-full max-w-7xl aspect-video px-4">
+          <video
+            ref={videoRef}
+            src="/80fco reel.mov"
+            controls
+            loop
+            className="rounded-lg w-full h-full object-cover"
+            preload="auto"
+            muted
+          />
+        </div>
+      </motion.div>
+    </div>
   );
 };
