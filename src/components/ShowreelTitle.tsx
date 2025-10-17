@@ -1,53 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 export const ShowreelTitle = () => {
-  const { scrollY } = useScroll();
-  const [elementTop, setElementTop] = useState(0);
-  const [viewportHeight, setViewportHeight] = useState(0);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
 
-  useEffect(() => {
-    const element = document.getElementById('showreel-title');
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      setElementTop(rect.top + window.scrollY);
-    }
-    setViewportHeight(window.innerHeight);
-
-    const handleResize = () => {
-      const element = document.getElementById('showreel-title');
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        setElementTop(rect.top + window.scrollY);
-      }
-      setViewportHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const scale = useTransform(
-    scrollY,
-    [elementTop - viewportHeight, elementTop + 100],
-    [1, 1.5]
-  );
-
-  const opacity = useTransform(
-    scrollY,
-    [elementTop - viewportHeight, elementTop],
-    [1, 0]
-  );
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.4], [0, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0.1, 0.4], [1, 1.5]);
+  const y = useTransform(scrollYProgress, [0, 0.4], ["100vh", "0vh"]);
 
   return (
     <motion.div 
-      id="showreel-title"
-      className="w-full flex justify-center items-center py-12 sticky top-0 z-10"
-      style={{ scale, opacity }}
+      ref={ref}
+      className="fixed top-0 left-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none"
+      style={{ opacity, scale, y }}
     >
-      <h2 className="text-8xl font-2p-press-start text-highlight">
+      <h1 className="text-8xl font-2p-press-start text-highlight">
         SHOWREEL
-      </h2>
+      </h1>
     </motion.div>
   );
 };
