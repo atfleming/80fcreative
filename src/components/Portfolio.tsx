@@ -126,7 +126,6 @@ export const Portfolio = () => {
                         {category.title}
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Explore {category.title.toLowerCase()} projects
                       </p>
                     </div>
                   </div>
