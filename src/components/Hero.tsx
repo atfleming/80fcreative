@@ -95,7 +95,7 @@ export const Hero = () => {
           delay: 0.4,
           duration: 0.5
         }}>
-            <a href="#" aria-label="Instagram" className="text-highlight hover:text-electric-cyan transition-colors">
+            <a href="www.instagram.com/thefilmjerk" aria-label="Instagram" className="text-highlight hover:text-electric-cyan transition-colors">
               <InstagramIcon className="w-5 h-5" />
             </a>
             <Button variant="outline" className="ml-2" onClick={scrollToContact}>
