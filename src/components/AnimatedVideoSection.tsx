@@ -1,10 +1,12 @@
 
 import React, { useRef, useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const AnimatedVideoSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [inView, setInView] = useState(false);
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -29,15 +31,29 @@ export const AnimatedVideoSection: React.FC = () => {
     }
   }, [inView]);
 
+  const scale = useTransform(
+    scrollY,
+    [0, 400],
+    [0.9, 1]
+  );
+
+  const opacity = useTransform(
+    scrollY,
+    [0, 400],
+    [0.6, 1]
+  );
+
   return (
-    <div
+    <motion.div
       ref={containerRef}
-      className={`transition-transform duration-700 ease-out flex justify-center my-8 ${
-        inView ? 'scale-100' : 'scale-90 opacity-60'
-      }`}
-      style={{ willChange: 'transform' }}
+      className="flex justify-center my-8"
+      style={{ 
+        scale,
+        opacity,
+        willChange: 'transform'
+      }}
     >
-      <div className="w-full max-w-3xl aspect-video">
+      <div className="w-full max-w-4xl aspect-video">
         <video
           ref={videoRef}
           src="/80fco reel.mov"
@@ -48,6 +64,6 @@ export const AnimatedVideoSection: React.FC = () => {
           muted
         />
       </div>
-    </div>
+    </motion.div>
   );
 };

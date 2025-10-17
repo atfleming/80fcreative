@@ -14,8 +14,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    // Prevent scrolling when modal is open
-    document.body.style.overflow = 'hidden';
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -27,7 +25,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({
     return () => {
       document.removeEventListener('keydown', handleEscape);
       document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'auto';
     };
   }, [onClose]);
   if (!videoId) return null;

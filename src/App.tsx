@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hero } from './components/Hero';
+import { ShowreelTitle } from './components/ShowreelTitle';
 import { Portfolio } from './components/Portfolio';
 import { AnimatedVideoSection } from './components/AnimatedVideoSection';
 import { Services } from './components/Services';
@@ -15,6 +16,7 @@ export function App() {
       <div className="pixel-grid">
         <main>
           <Hero />
+          <ShowreelTitle />
           <AnimatedVideoSection />
             <Portfolio />
             {/* Side Scrolling Gallery Below Portfolio */}

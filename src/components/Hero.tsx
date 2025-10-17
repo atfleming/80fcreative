@@ -44,7 +44,7 @@ export const Hero = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return <section className="min-h-[50vh] w-full flex flex-col relative pt-6 overflow-hidden bg-digital-black">
+  return <section className="min-h-[70vh] w-full flex flex-col relative pt-6 overflow-hidden bg-digital-black">
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black/90 z-10"></div>
@@ -95,7 +95,7 @@ export const Hero = () => {
           delay: 0.4,
           duration: 0.5
         }}>
-            <a href="www.instagram.com/thefilmjerk" aria-label="Instagram" className="text-highlight hover:text-electric-cyan transition-colors">
+            <a href="https://instagram.com/thefilmjerk" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-highlight hover:text-electric-cyan transition-colors">
               <InstagramIcon className="w-5 h-5" />
             </a>
             <Button variant="outline" className="ml-2" onClick={scrollToContact}>
