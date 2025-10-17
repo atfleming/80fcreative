@@ -5,18 +5,17 @@ export const ShowreelTitle = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start center", "end start"]
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.4], [0, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0.1, 0.4], [1, 1.5]);
-  const y = useTransform(scrollYProgress, [0, 0.4], ["100vh", "0vh"]);
-
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+  
   return (
     <motion.div 
       ref={ref}
-      className="fixed top-0 left-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none"
-      style={{ opacity, scale, y }}
+      className="relative w-full min-h-[50vh] flex items-center justify-center z-10"
+      style={{ opacity, scale }}
     >
       <h1 className="text-8xl font-2p-press-start text-highlight">
         SHOWREEL
