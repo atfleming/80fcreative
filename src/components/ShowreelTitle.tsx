@@ -45,7 +45,7 @@ export const ShowreelTitle = () => {
       className="w-full flex justify-center items-center py-12 sticky top-0 z-10"
       style={{ scale, opacity }}
     >
-      <h2 className="text-8xl font-2p-press-start text-highlight">
+      <h2 className="text-4xl font-2p-press-start text-highlight">
         SHOWREEL
       </h2>
     </motion.div>
