@@ -52,6 +52,11 @@ export const Portfolio = () => {
     isVimeo?: boolean;
   } | null>(null);
   const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
+
+  const titleVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 }
+  };
   // Handle clicking on a video item
   const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
     setSelectedVideo({
@@ -71,20 +76,16 @@ export const Portfolio = () => {
           linear-gradient(to bottom, rgba(0, 255, 247, 0.05) 1px, transparent 1px)
         `
   }}>
-      <div className="container mx-auto px-4 md:px-6 mb-16">
-        <motion.div className="text-center mb-16" initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.6
-      }}>
-          <h2 className="font-pixel text-3xl md:text-4xl font-bold mb-4 text-electric-cyan neon-cyan"></h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+      <div className="container mx-auto px-4 md:px-6">
+        <motion.div 
+          className="text-center mb-12" 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-6xl font-2p-press-start text-highlight mb-8">
+            PROJECTS
+          </h2>
         </motion.div>
         {/* Portfolio Categories Grid - Larger cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
