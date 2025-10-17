@@ -40,9 +40,9 @@ export const AnimatedVideoSection: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-[150vh]">
+    <div ref={containerRef} className="relative min-h-[110vh]">
       <motion.div
-        className="sticky top-0 w-full min-h-screen flex items-center justify-center -mt-20"
+        className="sticky top-0 w-full min-h-[60vh] flex items-center justify-center -mt-20"
         style={{ scale, opacity }}
       >
         <div className="w-full max-w-7xl aspect-video px-4">
