@@ -30,7 +30,7 @@ export const About = () => {
               strategic thinking, ensuring that every visual element serves both
               aesthetic and functional purposes to meet clients' needs. Drew has
               a passion for music-focused work and enjoys producing and
-              directing music videos and artists promo packages as well.
+              directing music videos and artists promo packages.
             </p>
             <p className="text-lg text-gray-300 mb-6">
               From Stax Records, to FedEx, to Complex, to CNN: Drew has
