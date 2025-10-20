@@ -27,7 +27,7 @@ const portfolioItems = [
   id: 'v8',
   title: 'FedEx x Memphis Record Pressing',
   category: 'Commercial',
-  image: 'https://img.youtube.com/vi/VaT_oPNG8eM/maxresdefault.jpg',
+  image: '/fedex mrp .png',
   description: '',
   videoId: 'VaT_oPNG8eM'
 },
