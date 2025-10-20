@@ -5,6 +5,7 @@ import { Portfolio } from './components/Portfolio';
 import { AnimatedVideoSection } from './components/AnimatedVideoSection';
 import { Services } from './components/Services';
 import { About } from './components/About';
+import { Analytics } from "@vercel/analytics/next"
 //import { SideScrollGallery, Project } from './components/SideScrollGallery';
 // import { VideoPortfolio } from './components/VideoPortfolio'
 // import { Development } from './components/Development'
