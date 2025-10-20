@@ -1,25 +1,30 @@
-import React from 'react';
+import { Suspense, lazy } from 'react';
 import { Hero } from './components/Hero';
-import { ShowreelTitle } from './components/ShowreelTitle';
-import { Portfolio } from './components/Portfolio';
-import { AnimatedVideoSection } from './components/AnimatedVideoSection';
-import { Services } from './components/Services';
-import { About } from './components/About';
-import { Analytics } from "@vercel/analytics/next"
+const ShowreelTitle = lazy(() => import('./components/ShowreelTitle').then(module => ({ default: module.ShowreelTitle })));
+const AnimatedVideoSection = lazy(() => import('./components/AnimatedVideoSection').then(module => ({ default: module.AnimatedVideoSection })));
+const Portfolio = lazy(() => import('./components/Portfolio').then(module => ({ default: module.Portfolio })));
+const Services = lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
+const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
 //import { SideScrollGallery, Project } from './components/SideScrollGallery';
 // import { VideoPortfolio } from './components/VideoPortfolio'
 // import { Development } from './components/Development'
 // import { Newsletter } from './components/Newsletter'
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
+const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 export function App() {
   return <div className="bg-digital-black text-highlight min-h-screen w-full crt-scanlines">
       <div className="pixel-grid">
         <main>
           <Hero />
-          <ShowreelTitle />
-          <AnimatedVideoSection />
+          <Suspense fallback={null}>
+            <ShowreelTitle />
+          </Suspense>
+          <Suspense fallback={null}>
+            <AnimatedVideoSection />
+          </Suspense>
+          <Suspense fallback={null}>
             <Portfolio />
+          </Suspense>
             {/* Side Scrolling Gallery Below Portfolio */}
             {/*
             <SideScrollGallery
@@ -73,15 +78,23 @@ export function App() {
               }))}
             />
             */}
-          <Services />
-          <About />
+          <Suspense fallback={null}>
+            <Services />
+          </Suspense>
+          <Suspense fallback={null}>
+            <About />
+          </Suspense>
           {/* Development section temporarily hidden */}
           {/* <Development /> */}
           {/* Newsletter section temporarily hidden */}
           {/* <Newsletter /> */}
-          <Contact />
+          <Suspense fallback={null}>
+            <Contact />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </div>;
 }

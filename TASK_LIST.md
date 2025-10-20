@@ -15,6 +15,7 @@
 - [x] **About section video implementation** - Replaced static image with autoplay video `/bts-video-about.mov` [AC]
 - [x] **Removed decorative frames** - Cleaned up pink/purple border overlays from about video [SF]
 - [x] **Git LFS optimization** - Properly configured for large media files while keeping UI images as regular files [RM]
+- [x] **Component-level code splitting** - Lazy loaded below-the-fold sections with `React.lazy`/`Suspense` to trim initial bundle [PA]
 
 ### 🏗️ Core Infrastructure
 - [x] **Photography page creation** - Unified page with 129 photos across 3 categories (outdoor, music, lifestyle) [CA]
@@ -45,7 +46,7 @@
   - **Priority**: Medium | **Complexity**: Medium
 
 ### ⚡ Performance & Optimization
-- [ ] **Optimize media loading performance** [PA]
+- [/] **Optimize media loading performance** [PA]
   - Implement lazy loading for photography galleries
   - Add video preloading strategies
   - Consider image compression/optimization
