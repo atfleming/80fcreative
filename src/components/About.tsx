@@ -1,20 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 export const About = () => {
-  return <section id="about" className="py-24 bg-[#0f0a1e]">
+  return (
+    <section id="about" className="py-24 bg-[#0f0a1e]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{
-          opacity: 0,
-          x: -30
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.8
-        }}>
+          <motion.div 
+            initial={{
+              opacity: 0,
+              x: -30
+            }} 
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }} 
+            viewport={{
+              once: true
+            }} 
+            transition={{
+              duration: 0.8
+            }}
+          >
             <h2 className="font-pixel text-3xl md:text-4xl font-bold mb-6 text-electric-cyan neon-cyan">
               About Drew
             </h2>
@@ -48,7 +55,8 @@ export const About = () => {
                   <span>
                     Winner, Best Short Film "The Typewriter", FEEDBACK Under 5 Minute Film Festival, Los Angeles, 2021
                   </span>
-                   </li>
+                </li>
+                <li className="flex items-center">
                   <span className="text-[#ff55ee] mr-2">•</span>
                   <span>
                     Winner, Gold/Best of Show for Video/Directing, American
@@ -75,20 +83,26 @@ export const About = () => {
               </ul>
             </div>
           </motion.div>
-          <motion.div className="relative" initial={{
-          opacity: 0,
-          x: 30
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.8
-        }}>
-            <div className="aspect-square relative z-10 rounded-lg overflow-hidden">
+          <motion.div 
+            className="relative" 
+            initial={{
+              opacity: 0,
+              x: 30
+            }} 
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }} 
+            viewport={{
+              once: true
+            }} 
+            transition={{
+              duration: 0.8
+            }}
+          >
+            <div className="aspect-square relative rounded-lg overflow-hidden">
               <video 
-                src="/BTS VIDEO FOR ABOUT.mov" 
+                src="/bts-video-about.mov" 
                 autoPlay 
                 loop 
                 muted 
@@ -98,10 +112,9 @@ export const About = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="absolute top-8 -right-8 w-full h-full border-4 border-[#ff55ee] rounded-lg -z-10"></div>
-            <div className="absolute -bottom-8 -left-8 w-full h-full border-4 border-[#5522ff] rounded-lg -z-10"></div>
           </motion.div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
