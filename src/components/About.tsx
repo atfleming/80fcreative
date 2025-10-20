@@ -48,6 +48,7 @@ export const About = () => {
                   <span>
                     Winner, Best Short Film "The Typewriter", FEEDBACK Under 5 Minute Film Festival, Los Angeles, 2021
                   </span>
+                  <span className="text-[#ff55ee] mr-2">•</span>
                   <span>
                     Winner, Gold/Best of Show for Video/Directing, American
                     Advertising Federation Memphis 2021
