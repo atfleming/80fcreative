@@ -1,2 +1,6 @@
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
+public/outdoor[[:space:]]photography/*.jpg filter=lfs diff=lfs merge=lfs -text
+public/outdoor[[:space:]]photography/*.png filter=lfs diff=lfs merge=lfs -text
+public/music[[:space:]]photography/*.jpg filter=lfs diff=lfs merge=lfs -text
+public/music[[:space:]]photography/*.png filter=lfs diff=lfs merge=lfs -text
+public/lifestyle[[:space:]]photography/*.jpg filter=lfs diff=lfs merge=lfs -text
+public/lifestyle[[:space:]]photography/*.png filter=lfs diff=lfs merge=lfs -text

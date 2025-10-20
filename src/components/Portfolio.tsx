@@ -50,6 +50,13 @@ const portfolioCategories = [{
   image: "/LoFi-Magnify.jpg",
   pageLink: '/design',
   isVideo: false
+}, {
+  id: 'development',
+  title: 'development',
+  image: "/development.png",
+  pageLink: 'https://github.com/atfleming',
+  isVideo: false,
+  isExternal: true
 }];
 export const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState<{
@@ -112,26 +119,52 @@ export const Portfolio = () => {
             handleVideoClick(category.videoId, category.title);
           }
         }}>
-              {category.pageLink ? <Link to={category.pageLink} className="block h-full">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
-                    {/* Video indicator overlay */}
-                    {category.isVideo && <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
-                          <PlayIcon className="w-10 h-10" />
-                        </div>
-                      </div>}
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-digital-black/80 via-digital-black/40 to-digital-black/30 flex flex-col justify-end p-8">
-                    <div className="text-left pb-4">
-                      <h3 className="font-pixel text-2xl font-bold text-electric-cyan mb-2">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                      </p>
+              {category.pageLink ? (
+                category.isExternal ? (
+                  <a href={category.pageLink} target="_blank" rel="noopener noreferrer" className="block h-full">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
+                      {/* Video indicator overlay */}
+                      {category.isVideo && <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
+                            <PlayIcon className="w-10 h-10" />
+                          </div>
+                        </div>}
                     </div>
-                  </div>
-                </Link> : <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-digital-black/80 via-digital-black/40 to-digital-black/30 flex flex-col justify-end p-8">
+                      <div className="text-left pb-4">
+                        <h3 className="font-pixel text-2xl font-bold text-electric-cyan mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm">
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                ) : (
+                  <Link to={category.pageLink} className="block h-full">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
+                      {/* Video indicator overlay */}
+                      {category.isVideo && <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
+                            <PlayIcon className="w-10 h-10" />
+                          </div>
+                        </div>}
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-digital-black/80 via-digital-black/40 to-digital-black/30 flex flex-col justify-end p-8">
+                      <div className="text-left pb-4">
+                        <h3 className="font-pixel text-2xl font-bold text-electric-cyan mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm">
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              ) : (
+                <>
                   <div className="aspect-[4/3] overflow-hidden">
                     <img src={category.image} alt={category.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.7] ${category.isVideo && hoveredVideo === category.id ? 'animate-pulse' : ''}`} />
                     {/* Video indicator overlay */}
@@ -151,7 +184,8 @@ export const Portfolio = () => {
                       </p>
                     </div>
                   </div>
-                </>}
+                </>
+              )}
             </motion.div>)}
         </div>
       </div>
