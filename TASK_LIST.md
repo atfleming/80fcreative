@@ -19,6 +19,7 @@
 - [x] **Lightweight Suspense fallbacks** - Added brand-aligned loading placeholders to reduce layout shifts while modules stream in [PA]
 - [x] **Showreel playback QA** - Verified renamed `/80fco-reel.mov` streams correctly inside `AnimatedVideoSection` [PA]
 - [x] **Portfolio photography thumbnails** - Percent-encoded remaining space-delimited directories so gallery cards render reliably [CA]
+- [x] **Narrative film portfolio card** - Highlighted film work with typewriter thumbnail and filtered route [CA]
 
 ### 🏗️ Core Infrastructure
 - [x] **Photography page creation** - Unified page with 129 photos across 3 categories (outdoor, music, lifestyle) [CA]

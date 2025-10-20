@@ -27,6 +27,13 @@ const portfolioCategories = [{
   videoId: 'RETndZHvfZs',
   isVideo: true
 }, {
+  id: 'narrative-film',
+  title: 'narrative film',
+  image: '/typewriter_thumbnail.jpg',
+  pageLink: '/projects?filter=Film',
+  videoId: 'TF08ScP2wi4',
+  isVideo: true
+}, {
   id: 'outdoor-photography',
   title: 'outdoor photography',
   image: "/outdoor%20photography/_DSC0526.jpg",
