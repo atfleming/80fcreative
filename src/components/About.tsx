@@ -46,6 +46,9 @@ export const About = () => {
                 <li className="flex items-center">
                   <span className="text-[#ff55ee] mr-2">•</span>
                   <span>
+                    Winner, Best Short Film "The Typewriter", FEEDBACK Under 5 Minute Film Festival, Los Angeles, 2021
+                  </span>
+                  <span>
                     Winner, Gold/Best of Show for Video/Directing, American
                     Advertising Federation Memphis 2021
                   </span>
@@ -82,7 +85,16 @@ export const About = () => {
           duration: 0.8
         }}>
             <div className="aspect-square relative z-10 rounded-lg overflow-hidden">
-              <img src="/Drew_Website_80fco_vhs_style_headshot.png" alt="Drew Fleming VHS Style Headshot" className="w-full h-full object-cover" />
+              <video 
+                src="/BTS VIDEO FOR ABOUT.mov" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div className="absolute top-8 -right-8 w-full h-full border-4 border-[#ff55ee] rounded-lg -z-10"></div>
             <div className="absolute -bottom-8 -left-8 w-full h-full border-4 border-[#5522ff] rounded-lg -z-10"></div>

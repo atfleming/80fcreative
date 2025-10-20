@@ -12,7 +12,16 @@ export const AboutPage = () => {
             {/* Background image */}
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black z-10"></div>
-              <img src="/Drew_Website_80fco_vhs_style_headshot.png" alt="Drew Fleming VHS Style Headshot" className="w-full h-full object-cover object-center" />
+              <video 
+                src="/BTS VIDEO FOR ABOUT.mov" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover object-center"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
             {/* Content */}
             <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center items-center text-center">
@@ -122,7 +131,16 @@ export const AboutPage = () => {
                 duration: 0.8
               }}>
                   <div className="aspect-square relative z-10 rounded-lg overflow-hidden">
-                    <img src="/Drew_Website_80fco_vhs_style_headshot.png" alt="Drew Fleming VHS Style Headshot" className="w-full h-full object-cover" />
+                    <video 
+                      src="/BTS VIDEO FOR ABOUT.mov" 
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline
+                      className="w-full h-full object-cover"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                   <div className="absolute top-8 -right-8 w-full h-full border-4 border-[#ff55ee] rounded-lg -z-10"></div>
                   <div className="absolute -bottom-8 -left-8 w-full h-full border-4 border-[#5522ff] rounded-lg -z-10"></div>
