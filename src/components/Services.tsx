@@ -11,7 +11,7 @@ const services = [{
   title: 'Creative Direction',
   icon: PenToolIcon
 }, {
-  title: 'Design',
+  title: 'Design/Web Development',
   icon: LayoutIcon
 }, {
   title: 'Editing',
