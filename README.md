@@ -22,7 +22,7 @@
 
 ## 🚀 Live Demo
 
-**🌐 Production Site**: [80F Creative Portfolio](https://your-vercel-url.vercel.app)
+**🌐 Production Site**: [80F Creative Portfolio](http://www.80fcreative.com)
 
 ---
 
