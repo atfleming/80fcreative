@@ -57,8 +57,7 @@ export const Services = () => {
             Creative Services
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans">
-            Elevate your brand with our comprehensive suite of creative
-            services.
+            Full-stack creative support—from concept to final delivery across film, photo, design, and post.
           </p>
         </motion.div>
         <motion.div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8" variants={container} initial="hidden" whileInView="show" viewport={{

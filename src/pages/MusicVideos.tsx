@@ -96,8 +96,7 @@ export const MusicVideos = () => {
                   Music Video Projects
                 </h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  Creative direction and visual storytelling through the medium
-                  of music videos
+                  Creative direction and neon-drenched storytelling for artists on stage and on screen.
                 </p>
               </motion.div>
               {/* Featured Video */}

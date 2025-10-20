@@ -100,8 +100,7 @@ export const OutdoorPhotography = () => {
                   Outdoor Photography
                 </h1>
                 <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-8">
-                  Capturing the majestic wildlife, vibrant performances, and
-                  serene landscapes
+                  Capturing majestic wildlife, glowing campfires, and the vast landscapes that fuel adventure.
                 </p>
               </motion.div>
             </div>
