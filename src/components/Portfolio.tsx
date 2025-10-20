@@ -29,19 +29,19 @@ const portfolioCategories = [{
 }, {
   id: 'outdoor-photography',
   title: 'outdoor photography',
-  image: "/outdoor photography/_DSC0526.jpg",
+  image: "/outdoor-photography/_DSC0526.jpg",
   pageLink: '/photography?filter=Outdoor',
   isVideo: false
 }, {
   id: 'musician-photography',
   title: 'music photography',
-  image: "/music photography/_YOU0011.jpg",
+  image: "/music-photography/_YOU0011.jpg",
   pageLink: '/photography?filter=Music',
   isVideo: false
 }, {
   id: 'lifestyle-photography',
   title: 'commercial/lifestyle photography',
-  image: "/lifestyle photography/_ATF5915-2.jpg",
+  image: "/lifestyle-photography/_ATF5915-2.jpg",
   pageLink: '/photography?filter=Commercial/Lifestyle',
   isVideo: false
 }, {

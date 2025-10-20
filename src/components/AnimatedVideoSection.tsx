@@ -48,7 +48,7 @@ export const AnimatedVideoSection: React.FC = () => {
         <div className="w-full max-w-7xl aspect-video px-4">
           <video
             ref={videoRef}
-            src="/80fco reel.mov"
+            src="/80fco-reel.mov"
             loop
             playsInline
             autoPlay
