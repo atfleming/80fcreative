@@ -1,7 +1,7 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { App } from './App';
 import { Projects } from './pages/Projects';
+import { Photography } from './pages/Photography';
 import { OutdoorPhotography } from './pages/OutdoorPhotography';
 import { Animation } from './pages/Animation';
 import { BrandedStorytelling } from './pages/BrandedStorytelling';
@@ -17,6 +17,7 @@ export function AppRouter() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/photography" element={<Photography />} />
         <Route path="/outdoor-photography" element={<OutdoorPhotography />} />
         <Route path="/musician-photography" element={<MusicianPhotography />} />
         <Route path="/animation" element={<Animation />} />

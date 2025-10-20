@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { VideoModal } from './VideoModal';
@@ -29,14 +29,20 @@ const portfolioCategories = [{
 }, {
   id: 'outdoor-photography',
   title: 'outdoor photography',
-  image: "/_DSC6480.jpg",
-  pageLink: '/outdoor-photography',
+  image: "/outdoor photography/_DSC0526.jpg",
+  pageLink: '/photography?filter=Outdoor',
   isVideo: false
 }, {
   id: 'musician-photography',
   title: 'music photography',
-  image: "/_YOU0011.jpg",
-  pageLink: '/musician-photography',
+  image: "/music photography/_YOU0011.jpg",
+  pageLink: '/photography?filter=Music',
+  isVideo: false
+}, {
+  id: 'lifestyle-photography',
+  title: 'commercial/lifestyle photography',
+  image: "/lifestyle photography/_ATF5915-2.jpg",
+  pageLink: '/photography?filter=Commercial/Lifestyle',
   isVideo: false
 }, {
   id: 'design',
@@ -53,10 +59,6 @@ export const Portfolio = () => {
   } | null>(null);
   const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
 
-  const titleVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 }
-  };
   // Handle clicking on a video item
   const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
     setSelectedVideo({
