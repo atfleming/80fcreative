@@ -9,12 +9,12 @@ import { PlayIcon, ArrowLeftIcon } from 'lucide-react';
 const portfolioItems = [
 // --- BEGIN CSV APPEND ---
 {
-  id: 'v1',
-  title: 'Creative Reel',
-  category: 'Commercial',
-  image: '/creative reel.png',
-  description: ':30 showcase reel of select video work.',
-  videoId: 'youtube.com/watch?v=v0ad5Cv7kqg&feature=youtu.be'
+	id: "csv0",
+	title: "Memphis 901 FC",
+	category: "Commercial",
+	image: "https://img.youtube.com/vi/gY5Qz7N7BVU/hqdefault.jpg",
+	description: "Cinematic hype spot capturing the pulse of the Memphis 901 FC supporters.",
+	videoId: "gY5Qz7N7BVU"
 },
 {
   id: 'csv2',

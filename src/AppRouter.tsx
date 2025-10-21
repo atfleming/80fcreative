@@ -10,8 +10,6 @@ import { MusicVideos } from "./pages/MusicVideos";
 import { MusicianPhotography } from "./pages/MusicianPhotography";
 import { Design } from "./pages/Design";
 import { MusicianPromos } from "./pages/MusicianPromos";
-import { AboutPage } from "./pages/AboutPage";
-import { ServicesPage } from "./pages/ServicesPage";
 import { CaseStudyPage } from "./pages/CaseStudyPage";
 
 export function AppRouter() {
@@ -29,8 +27,6 @@ export function AppRouter() {
         <Route element={<MusicVideos />} path="/music-videos" />
         <Route element={<Design />} path="/design" />
         <Route element={<MusicianPromos />} path="/musician-promos" />
-        <Route element={<AboutPage />} path="/about" />
-        <Route element={<ServicesPage />} path="/services" />
         <Route element={<CaseStudyPage />} path="/case-studies/:slug" />
       </Routes>
     </BrowserRouter>

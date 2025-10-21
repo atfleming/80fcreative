@@ -60,6 +60,9 @@ export function App() {
 					<Suspense fallback={<SectionFallback label="Featured case study" className="mt-24" />}>
 						<FeaturedCaseStudy />
 					</Suspense>
+					<Suspense fallback={<SectionFallback label="Services overview" className="mt-24" />}>
+						<Services />
+					</Suspense>
 					<Suspense fallback={<SectionFallback label="Portfolio grid" className="mt-24" />}>
 						<Portfolio />
 					</Suspense>
@@ -116,9 +119,6 @@ export function App() {
 							}))}
 						/>
 						*/}
-					<Suspense fallback={<SectionFallback label="Services overview" className="mt-24" />}>
-						<Services />
-					</Suspense>
 					<Suspense fallback={<SectionFallback label="About 80F Creative" className="mt-24" />}>
 						<About />
 					</Suspense>

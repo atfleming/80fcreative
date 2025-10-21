@@ -26,13 +26,7 @@ export const FeaturedCaseStudy = () => {
 					<p className="font-ui text-base text-highlight/80">
 						{featuredCaseStudy.subtitle}
 					</p>
-					<p className="font-ui text-sm leading-relaxed text-highlight/70">
-						{featuredCaseStudy.description}
-					</p>
-					<div className="rounded border border-electric-cyan/20 bg-digital-black/40 p-6 font-ui text-sm leading-relaxed text-highlight/80">
-						{featuredCaseStudy.teaser}
-					</div>
-					<Link className="inline-flex" to={`/case-studies/${featuredCaseStudy.slug}`}>
+					<Link className="mt-8 inline-flex" to={`/case-studies/${featuredCaseStudy.slug}`}>
 						<span className="button-glow inline-flex items-center gap-3 px-6 py-3 font-ui text-sm uppercase tracking-[0.2em] transition-transform duration-300 hover:-translate-y-1">
 							{featuredCaseStudy.ctaLabel}
 						</span>

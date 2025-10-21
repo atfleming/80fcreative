@@ -126,20 +126,20 @@ export const Hero = () => {
                   </button>
                 </li>
                 <li>
-                  <Link to="/services" className="text-highlight hover:text-electric-cyan transition-colors font-ui block w-full text-left" onClick={() => setIsMenuOpen(false)}>
+                  <button onClick={() => scrollToSection('services')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
                     Services
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link to="/musician-promos" className="text-highlight hover:text-electric-cyan transition-colors font-ui block w-full text-left" onClick={() => setIsMenuOpen(false)}>
-                    Musician Promos
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-highlight hover:text-electric-cyan transition-colors font-ui block w-full text-left" onClick={() => setIsMenuOpen(false)}>
+                  <button onClick={() => scrollToSection('about')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
                     About
-                  </Link>
+                  </button>
                 </li>
+                  <li>
+                    <Link to="/musician-promos" className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
+                      Musician Promos
+                    </Link>
+                  </li>
               </ul>
             </div>
           </motion.div>}
@@ -168,7 +168,7 @@ export const Hero = () => {
         }}>
             portfolio for filmmaker and creative, andrew trent fleming
           </motion.p>*/}
-          
+
         </motion.div>
       </div>
     </section>;
