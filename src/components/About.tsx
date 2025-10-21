@@ -26,7 +26,7 @@ export const About = () => {
 							We partner with brands and organizations to find the human heart of their message. Our approach blends documentary-style authenticity with strategic, results-driven thinking. This ensures every visual element serves a purpose, connecting with your audience on a genuine level while achieving your core business goals.
 						</p>
 						<p>
-							Whether it&apos;s a brand film, a documentary web series, or a full creative campaign, our process is rooted in collaboration. We bring an award-winning creative eye to projects for clients ranging from global brands like FedEx and CNN to cultural icons like Stax Records and Memphis 901 FC.
+							Whether it&apos;s a brand film, a documentary web series, or a full creative campaign, our process is rooted in collaboration. We bring an award-winning creative eye to projects for clients ranging from global brands like FedEx to cultural icons like Stax Records.
 						</p>
 					</div>
 				</motion.div>
