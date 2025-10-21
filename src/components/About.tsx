@@ -42,12 +42,6 @@ export const About = () => {
 							<p>
 								80F Creative is led by Andrew Trent Fleming ("Drew"), who has produced and directed award-winning commercial work, photography, creative, and independent film work for brands, agencies, and production companies since 2005.
 							</p>
-							<p>
-								His philosophy centers on blending documentary storytelling with strategic thinking, ensuring that every visual element serves both aesthetic and functional purposes to meet clients&apos; needs. Drew has a passion for music-focused work and enjoys producing and directing music videos and artist promo packages.
-							</p>
-							<p>
-								From Stax Records, to FedEx, to Complex, to CNN: Drew has collaborated with brands across a wide variety of industries, bringing their stories to life through compelling visual narratives.
-							</p>
 						</div>
 						<div className="mt-8">
 							<h4 className="font-pixel text-xl text-electric-cyan">

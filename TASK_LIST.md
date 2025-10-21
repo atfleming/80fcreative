@@ -22,6 +22,7 @@
 - [x] **Featured work refresh** – Highlighted the Memphis 901 FC commercial and simplified the case study teaser CTA to keep the portfolio current. [ISA][SF]
 - [x] **Services CTA** – Added a “Ready to get started?” prompt that scrolls to `#contact`, matching the CTA guidance in `.github/docs/style_guide.md`. [SF][CA]
 - [x] **About section contrast** – Applied cyan vs. magenta panel treatments to distinguish agency and founder stories while staying on-brand per `.github/docs/80f creative brand and style guide.png`. [RP][CA]
+- [x] **Index navigation refresh** – Updated hero menu to Home/Services/Work/About anchors for a single-page flow, retaining smooth scroll per `.github/docs/style_guide.md`. [SF][CA]
 
 ### �🎬 Video & Media Fixes (October 2025)
 - [x] **Fixed showreel video loading** - Updated path from `/80fco reel.mov` to `/80fco-reel.mov` [SF]

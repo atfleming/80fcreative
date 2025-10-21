@@ -2,7 +2,6 @@ import React, { useState, Children } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './Button';
 import { InstagramIcon, MenuIcon, XIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
 export const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const container = {
@@ -30,21 +29,21 @@ export const Hero = () => {
       }
     }
   };
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth'
-    });
-    setIsMenuOpen(false);
-  };
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
+    const scrollToSection = (id: string) => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: 'smooth'
+      });
+      setIsMenuOpen(false);
+    };
+    const scrollToContact = () => {
+      document.getElementById('contact')?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return <section className="min-h-[70vh] w-full flex flex-col relative pt-6 overflow-hidden bg-digital-black">
+  return <section id="hero" className="min-h-[70vh] w-full flex flex-col relative pt-6 overflow-hidden bg-digital-black">
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black/90 z-10"></div>
@@ -121,8 +120,8 @@ export const Hero = () => {
             <div className="py-3 px-4">
               <ul className="space-y-3">
                 <li>
-                  <button onClick={() => scrollToSection('portfolio')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
-                    Portfolio
+                  <button onClick={() => scrollToSection('hero')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
+                    Home
                   </button>
                 </li>
                 <li>
@@ -131,15 +130,15 @@ export const Hero = () => {
                   </button>
                 </li>
                 <li>
+                  <button onClick={() => scrollToSection('featured-case-study')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
+                    Work
+                  </button>
+                </li>
+                <li>
                   <button onClick={() => scrollToSection('about')} className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
                     About
                   </button>
                 </li>
-                  <li>
-                    <Link to="/musician-promos" className="text-highlight hover:text-electric-cyan transition-colors font-ui w-full text-left">
-                      Musician Promos
-                    </Link>
-                  </li>
               </ul>
             </div>
           </motion.div>}
