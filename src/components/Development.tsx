@@ -17,7 +17,7 @@ export const Development = () => {
         duration: 0.6
       }}>
           <h2 className="font-pixel text-3xl md:text-4xl font-bold mb-4 text-electric-cyan neon-cyan">
-            Development & Strategy
+            Development
           </h2>
           <p className="text-xl text-gray-400 font-sans">
             Blending creative direction with cutting-edge digital experiences
