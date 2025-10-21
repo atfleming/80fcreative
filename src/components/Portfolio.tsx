@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 import { VideoModal } from "./VideoModal";
@@ -21,13 +21,9 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "promo",
     title: "commercial + promo",
-    image: "/creative%20reel.png",
+    image: "/uofmengineering.png",
     thumbnails: [
-      "/creative%20reel.png",
-      "/champions%20for%20lit%20grizzlies%20promo.png",
-      "/champions%20for%20lit%20player%20intro.png",
-      "/aces%20penny%20thumbnail.png",
-      "/u%20of%20m%20engineering.png"
+      "/uofmengineering.png"
     ],
     pageLink: "/projects?filter=Commercial",
     videoId: "gY5Qz7N7BVU",
@@ -36,13 +32,9 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "branded-storytelling",
     title: "documentary + branded storytelling",
-    image: "/memphis%20masters%20full%20series.png",
+    image: "/memphis masters barkays.png",
     thumbnails: [
-      "/memphis%20masters%20full%20series.png",
-      "/memphis%20masters%20rolling%20stone.png",
-      "/memphis%20masters%20barkays.png",
-      "/put%20the%20memphis%20on%20it.png",
-      "/cotton%20board%20forever%20cotton.png"
+      "/memphis masters barkays.png"
     ],
     pageLink: "/projects?filter=Documentary/Branded",
     videoId: "qFQUSroCI8A",
@@ -51,13 +43,9 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "music-videos",
     title: "music videos",
-    image: "/marco%20pave%20dirty%20benz.png",
+    image: "/marco pave dirty benz.png",
     thumbnails: [
-      "/marco%20pave%20dirty%20benz.png",
-      "/marco%20pave%20gold%20grind.png",
-      "/daykisser%20ijwwta.png",
-      "/brennan%20villines%20better%20than%20we%27ve%20ever%20been.png",
-      "https://img.youtube.com/vi/KtlSk0LOTeY/maxresdefault.jpg"
+      "/marco pave dirty benz.png"
     ],
     pageLink: "/projects?filter=music videos",
     videoId: "RETndZHvfZs",
@@ -66,13 +54,9 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "narrative-film",
     title: "narrative film",
-    image: "/typewriter_thumbnail.jpg",
+    image: "/narrativefilmthumbnail.png",
     thumbnails: [
-      "/typewriter_thumbnail.jpg",
-      "https://img.youtube.com/vi/clWlvoAxct0/maxresdefault.jpg",
-      "https://img.youtube.com/vi/U8Y5Tz4_noE/maxresdefault.jpg",
-      "https://img.youtube.com/vi/Xxxdd86i7Xo/maxresdefault.jpg",
-      "https://img.youtube.com/vi/vy9-y7xUQbI/maxresdefault.jpg"
+      "/narrativefilmthumbnail.png"
     ],
     pageLink: "/projects?filter=Film",
     videoId: "TF08ScP2wi4",
@@ -81,26 +65,18 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "outdoor-photography",
     title: "outdoor photography",
-    image: "/outdoor-photography/_ATF1563.jpg",
+    image: "/outdoorphotographythumbnail.png",
     thumbnails: [
-      "/outdoor-photography/_ATF1563.jpg",
-      "/outdoor-photography/_ATF1570.jpg",
-      "/outdoor-photography/_DSC0026.jpg",
-      "/outdoor-photography/1Z3A0412.jpg",
-      "/outdoor-photography/DSC00441.jpg"
+      "/outdoorphotographythumbnail.png"
     ],
     pageLink: "/photography?filter=Outdoor"
   },
   {
     id: "musician-photography",
     title: "music photography",
-    image: "/music-photography/_ATF3388.jpg",
+    image: "/musicphotographythumbnail.jpg",
     thumbnails: [
-      "/music-photography/_ATF3388.jpg",
-      "/music-photography/_ATF3624-HDR.jpg",
-      "/music-photography/_ATF4807.jpg",
-      "/music-photography/_ATF5177.jpg",
-      "/music-photography/_ATF5230.jpg"
+      "/musicphotographythumbnail.jpg"
     ],
     pageLink: "/photography?filter=Music"
   },
@@ -120,13 +96,9 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "design",
     title: "design",
-    image: "/design/80fcreativelogo.png",
+    image: "/LoFi-Magnify.jpg",
     thumbnails: [
-      "/design/80fcreativelogo.png",
-      "/design/coheed_skull_fan_art.jpg",
-      "/design/looper.png",
-      "/design/fastandfurryous.png",
-      "/design/thebarkknight.png"
+      "/LoFi-Magnify.jpg"
     ],
     pageLink: "/design"
   },
@@ -146,36 +118,6 @@ export const Portfolio = () => {
     title: string;
     isVimeo?: boolean;
   } | null>(null);
-  const [activeCard, setActiveCard] = useState<string | null>(null);
-  const [hoverIndexes, setHoverIndexes] = useState<Record<string, number>>({});
-
-  useEffect(() => {
-    if (!activeCard) {
-      return;
-    }
-
-    const activeCategory = portfolioCategories.find((category) => category.id === activeCard);
-
-    if (!activeCategory || !activeCategory.thumbnails || activeCategory.thumbnails.length <= 1) {
-      return;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setHoverIndexes((prev) => {
-        const currentIndex = prev[activeCategory.id] ?? 0;
-        const nextIndex = (currentIndex + 1) % activeCategory.thumbnails!.length;
-
-        return {
-          ...prev,
-          [activeCategory.id]: nextIndex
-        };
-      });
-    }, 400);
-
-    return () => {
-      window.clearInterval(intervalId);
-    };
-  }, [activeCard]);
 
   const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
     setSelectedVideo({
@@ -187,35 +129,6 @@ export const Portfolio = () => {
 
   const handleCloseModal = () => {
     setSelectedVideo(null);
-  };
-
-  const handleMouseEnter = (category: PortfolioCategory) => {
-    setActiveCard(category.id);
-    setHoverIndexes((prev) => ({
-      ...prev,
-      [category.id]: 0
-    }));
-  };
-
-  const handleMouseLeave = (category: PortfolioCategory) => {
-    setActiveCard((current) => (current === category.id ? null : current));
-    setHoverIndexes((prev) => {
-      if (!(category.id in prev)) {
-        return prev;
-      }
-
-      const { [category.id]: _removed, ...rest } = prev;
-
-      return rest;
-    });
-  };
-
-  const getCurrentImage = (category: PortfolioCategory) => {
-    if (!category.thumbnails || category.thumbnails.length === 0) {
-      return category.image;
-    }
-    const index = hoverIndexes[category.id] ?? 0;
-    return category.thumbnails[index] ?? category.thumbnails[0];
   };
 
   return (
@@ -241,12 +154,9 @@ export const Portfolio = () => {
         </motion.div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {portfolioCategories.map((category, index) => {
-            const currentImage = getCurrentImage(category);
-            const showHoverVideo = Boolean(category.hoverVideo && activeCard === category.id);
-
             const cardMedia = (
               <div className="aspect-[4/3] overflow-hidden">
-                {showHoverVideo ? (
+                {category.hoverVideo ? (
                   <video
                     src={category.hoverVideo}
                     className="w-full h-full object-cover"
@@ -257,7 +167,7 @@ export const Portfolio = () => {
                   />
                 ) : (
                   <img
-                    src={currentImage}
+                    src={category.image}
                     alt={category.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.75]"
                     loading="lazy"
@@ -299,8 +209,6 @@ export const Portfolio = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
-                onMouseEnter={() => handleMouseEnter(category)}
-                onMouseLeave={() => handleMouseLeave(category)}
                 onClick={() => {
                   if (category.videoId) {
                     handleVideoClick(category.videoId, category.title);
