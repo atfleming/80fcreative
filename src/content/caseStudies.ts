@@ -1,6 +1,6 @@
 export const featuredCaseStudy = {
 	slug: "university-of-memphis",
-	title: "University of Memphis: Give to the Legacy", 
+	title: "University of Memphis:\nGive to the Legacy", 
 	subtitle: "Driving Legacy Donations Through Cinematic Storytelling",
 	description:
 		"A cinematic pivot reignites donor support for the University of Memphis Scheidt Performing Arts Center.",

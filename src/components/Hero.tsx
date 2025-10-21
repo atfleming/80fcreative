@@ -147,18 +147,16 @@ export const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 flex-grow flex items-end relative z-10">
         <motion.div className="w-full flex flex-col justify-end gap-4 mb-0" variants={container} initial="hidden" animate="show">
           <div>
-            <motion.h2 variants={item} className="text-xl md:text-2xl lg:text-3xl text-electric-cyan text-left" style={{
+            <motion.h2 variants={item} className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-electric-cyan text-left max-w-[280px] md:max-w-none" style={{
             fontFamily: "'VT323', monospace",
             textShadow: '0 0 10px rgba(0, 255, 247, 0.7), 0 0 20px rgba(0, 255, 247, 0.5), 0 0 30px rgba(0, 255, 247, 0.3)',
             letterSpacing: '0.05em',
             textTransform: 'lowercase',
             fontStyle: 'italic',
             fontWeight: 'normal',
-            lineHeight: '1.2'
+            lineHeight: '1.3'
           }}>
-              80f creative: a digital agency telling stories
-              <br />
-              through film, photography, and design.
+              80f creative: a digital agency telling stories through film, photography, and design.
             </motion.h2>
           </div>
           {/* <motion.p variants={item} className="text-lg md:text-xl text-highlight text-left mb-0" style={{

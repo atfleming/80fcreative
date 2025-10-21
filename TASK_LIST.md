@@ -23,6 +23,7 @@
 - [x] **Services CTA** – Added a “Ready to get started?” prompt that scrolls to `#contact`, matching the CTA guidance in `.github/docs/style_guide.md`. [SF][CA]
 - [x] **About section contrast** – Applied cyan vs. magenta panel treatments to distinguish agency and founder stories while staying on-brand per `.github/docs/80f creative brand and style guide.png`. [RP][CA]
 - [x] **Index navigation refresh** – Updated hero menu to Home/Services/Work/About anchors for a single-page flow, retaining smooth scroll per `.github/docs/style_guide.md`. [SF][CA]
+- [x] **Mobile hero polish** – Centered the “Trusted by” heading, resized the SHOWREEL title responsively, and relaxed the showreel sticky effect on phones to tighten spacing, following `.github/docs/style_guide.md`. [RP][PA]
 
 ### �🎬 Video & Media Fixes (October 2025)
 - [x] **Fixed showreel video loading** - Updated path from `/80fco reel.mov` to `/80fco-reel.mov` [SF]

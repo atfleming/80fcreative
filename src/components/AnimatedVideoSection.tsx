@@ -40,15 +40,15 @@ export const AnimatedVideoSection: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-[95vh]">
+    <div ref={containerRef} className="relative min-h-[30vh] md:min-h-[45vh]">
       <motion.div
-        className="sticky top-0 w-full min-h-[50vh] flex items-center justify-center -mt-20"
+        className="flex w-full min-h-[25vh] items-center justify-center px-4 pt-6 md:sticky md:top-0 md:-mt-20 md:px-4 md:pt-0 md:pb-2"
         style={{ scale, opacity }}
       >
-        <div className="w-full max-w-7xl aspect-video px-4">
+        <div className="w-full max-w-7xl aspect-video">
           <video
             ref={videoRef}
-            src="/80fco-reel.mov"
+            src="https://res.cloudinary.com/da2wgtiau/video/upload/v1761070301/80fco-reel_snemru.mov"
             loop
             playsInline
             autoPlay

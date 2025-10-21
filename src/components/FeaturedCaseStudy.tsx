@@ -19,7 +19,7 @@ export const FeaturedCaseStudy = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true, amount: 0.4 }}
 						transition={{ duration: 0.6 }}
-						className="font-pixel text-3xl leading-tight text-electric-cyan md:text-4xl"
+						className="font-pixel text-3xl leading-tight text-electric-cyan md:text-4xl whitespace-pre-line"
 					>
 						{featuredCaseStudy.title}
 					</motion.h3>

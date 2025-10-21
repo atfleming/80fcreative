@@ -104,19 +104,19 @@ const portfolioCategories: PortfolioCategory[] = [
     ],
     pageLink: "/photography?filter=Music"
   },
-  {
-    id: "lifestyle-photography",
-    title: "commercial/lifestyle photography",
-    image: "/lifestyle-photography/_ATF3435.jpg",
-    thumbnails: [
-      "/lifestyle-photography/_ATF3435.jpg",
-      "/lifestyle-photography/_ATF4389.jpg",
-      "/lifestyle-photography/_ATF5246.jpg",
-      "/lifestyle-photography/_ATF5915-2.jpg",
-      "/lifestyle-photography/_ATF7724.jpg"
-    ],
-    pageLink: "/photography?filter=Commercial/Lifestyle"
-  },
+  // {
+  //   id: "lifestyle-photography",
+  //   title: "commercial/lifestyle photography",
+  //   image: "/lifestyle-photography/_ATF3435.jpg",
+  //   thumbnails: [
+  //     "/lifestyle-photography/_ATF3435.jpg",
+  //     "/lifestyle-photography/_ATF4389.jpg",
+  //     "/lifestyle-photography/_ATF5246.jpg",
+  //     "/lifestyle-photography/_ATF5915-2.jpg",
+  //     "/lifestyle-photography/_ATF7724.jpg"
+  //   ],
+  //   pageLink: "/photography?filter=Commercial/Lifestyle"
+  // },
   {
     id: "design",
     title: "design",
@@ -239,7 +239,7 @@ export const Portfolio = () => {
         >
           <h2 className="text-6xl font-2p-press-start text-highlight mb-8">PROJECTS</h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {portfolioCategories.map((category, index) => {
             const currentImage = getCurrentImage(category);
             const showHoverVideo = Boolean(category.hoverVideo && activeCard === category.id);

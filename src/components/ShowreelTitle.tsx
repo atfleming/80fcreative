@@ -14,10 +14,10 @@ export const ShowreelTitle = () => {
   return (
     <motion.div 
       ref={ref}
-      className="relative w-full py-8 flex items-center justify-center z-10"
+      className="relative z-10 flex w-full items-center justify-center px-4 py-8"
       style={{ opacity, scale }}
     >
-      <h1 className="text-8xl font-2p-press-start text-highlight">
+      <h1 className="font-2p-press-start text-5xl text-highlight sm:text-6xl md:text-7xl lg:text-8xl">
         SHOWREEL
       </h1>
     </motion.div>

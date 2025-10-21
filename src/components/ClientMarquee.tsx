@@ -20,30 +20,28 @@ export const ClientMarquee = () => {
 	return (
 		<section
 			aria-label="Trusted by marquee"
-			className="relative border-y border-electric-cyan/20 bg-digital-black/80"
+			className="border-y border-electric-cyan/20 bg-digital-black/80 py-10"
 		>
-			<div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-digital-black via-digital-black/90 to-transparent" />
-			<div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-digital-black via-digital-black/90 to-transparent" />
-			<div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:px-10">
+			<div className="mx-auto w-full max-w-6xl px-4 text-center md:px-6 md:text-left">
 				<p className="font-ui text-xs uppercase tracking-[0.4em] text-electric-cyan/60">
 					Trusted by:
 				</p>
-				<div className="overflow-hidden">
-					<ul className="marquee-track flex gap-10">
-						{marqueeItems.map((logo, index) => (
-							<li
-								className="flex h-20 min-w-[160px] items-center justify-center rounded-full border border-electric-cyan/15 bg-digital-black/60 px-6"
-								key={`${logo.alt}-${index}`}
-							>
-								<img
-									alt={logo.alt}
-									className="max-h-12 w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
-									src={logo.src}
-								/>
-							</li>
-						))}
-					</ul>
-				</div>
+			</div>
+			<div className="mt-6 w-full overflow-hidden">
+				<ul className="marquee-track flex items-center gap-10">
+					{marqueeItems.map((logo, index) => (
+						<li
+							className="flex h-20 min-w-[160px] items-center justify-center rounded-full border border-electric-cyan/15 bg-digital-black/60 px-6"
+							key={`${logo.alt}-${index}`}
+						>
+							<img
+								alt={logo.alt}
+								className="max-h-12 w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
+								src={logo.src}
+							/>
+						</li>
+					))}
+				</ul>
 			</div>
 		</section>
 	);
