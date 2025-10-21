@@ -22,6 +22,7 @@
 - [x] **Narrative film portfolio card** - Highlighted film work with typewriter thumbnail and filtered route [CA]
 - [x] **Design gallery page** - Rebuilt `/design` to showcase local assets with modal viewer and no metadata overlays [CA]
 - [x] **Portfolio hover animations** - Cycled five branded thumbnails per card and added development hover video cue [PA][CA]
+- [x] **Portfolio hover stability** - Simplified timer logic so hover flips stay consistent across builds after asset path updates [SF][PA]
 - [x] **Hyphenated photography assets** - Renamed public photo directories and updated Outdoor/Musician pages to match Portfolio + Photography references [CA][SF][AC]
 
 ### 🏗️ Core Infrastructure
@@ -135,5 +136,5 @@ Following the [Copilot Instructions](/.github/copilot-instructions.md) principle
 
 ---
 
-*Last Updated: October 20, 2025*  
+*Last Updated: October 21, 2025*  
 *Following CDiP principles - this file should be updated with each development session*

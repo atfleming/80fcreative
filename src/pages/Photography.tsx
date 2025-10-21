@@ -12,427 +12,427 @@ const photographyItems = [
   {
     id: 'outdoor-1',
     category: 'Outdoor',
-    url: '/outdoor photography/_ATF1563.jpg',
+    url: '/outdoor-photography/_ATF1563.jpg',
     alt: 'Natural Portrait'
   },
   {
     id: 'outdoor-2',
     category: 'Outdoor',
-    url: '/outdoor photography/_ATF1570.jpg',
+    url: '/outdoor-photography/_ATF1570.jpg',
     alt: 'Outdoor Portrait'
   },
   {
     id: 'outdoor-3',
     category: 'Outdoor',
-    url: '/outdoor photography/_ATF1577.jpg',
+    url: '/outdoor-photography/_ATF1577.jpg',
     alt: 'Nature Portrait'
   },
   {
     id: 'outdoor-4',
     category: 'Outdoor',
-    url: '/outdoor photography/_ATF1580.jpg',
+    url: '/outdoor-photography/_ATF1580.jpg',
     alt: 'Environmental Portrait'
   },
   {
     id: 'outdoor-5',
     category: 'Outdoor',
-    url: '/outdoor photography/_ATF4048.jpg',
+    url: '/outdoor-photography/_ATF4048.jpg',
     alt: 'Outdoor Adventure'
   },
   {
     id: 'outdoor-6',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0007.jpg',
+    url: '/outdoor-photography/_DSC0007.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-7',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0012.jpg',
+    url: '/outdoor-photography/_DSC0012.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-8',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0018.jpg',
+    url: '/outdoor-photography/_DSC0018.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-9',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0026.jpg',
+    url: '/outdoor-photography/_DSC0026.jpg',
     alt: 'Natural Environment'
   },
   {
     id: 'outdoor-10',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0061-2.jpg',
+    url: '/outdoor-photography/_DSC0061-2.jpg',
     alt: 'Wildlife Photography'
   },
   {
     id: 'outdoor-11',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0101.jpg',
+    url: '/outdoor-photography/_DSC0101.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-12',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0118-2.jpg',
+    url: '/outdoor-photography/_DSC0118-2.jpg',
     alt: 'Outdoor Adventure'
   },
   {
     id: 'outdoor-13',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0145.jpg',
+    url: '/outdoor-photography/_DSC0145.jpg',
     alt: 'Landscape Vista'
   },
   {
     id: 'outdoor-14',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0160.jpg',
+    url: '/outdoor-photography/_DSC0160.jpg',
     alt: 'Natural Beauty'
   },
   {
     id: 'outdoor-15',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0232.jpg',
+    url: '/outdoor-photography/_DSC0232.jpg',
     alt: 'Outdoor Portrait'
   },
   {
     id: 'outdoor-16',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0445-2.jpg',
+    url: '/outdoor-photography/_DSC0445-2.jpg',
     alt: 'Wildlife Photography'
   },
   {
     id: 'outdoor-17',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0449.jpg',
+    url: '/outdoor-photography/_DSC0449.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-18',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0526.jpg',
+    url: '/outdoor-photography/_DSC0526.jpg',
     alt: 'Outdoor Scene'
   },
   {
     id: 'outdoor-19',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0572.jpg',
+    url: '/outdoor-photography/_DSC0572.jpg',
     alt: 'Natural Landscape'
   },
   {
     id: 'outdoor-20',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC0761.jpg',
+    url: '/outdoor-photography/_DSC0761.jpg',
     alt: 'Outdoor Adventure'
   },
   {
     id: 'outdoor-21',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC1473.jpg',
+    url: '/outdoor-photography/_DSC1473.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-22',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC5367.jpg',
+    url: '/outdoor-photography/_DSC5367.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-23',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC5389.jpg',
+    url: '/outdoor-photography/_DSC5389.jpg',
     alt: 'Natural Scene'
   },
   {
     id: 'outdoor-24',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC5421.jpg',
+    url: '/outdoor-photography/_DSC5421.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-25',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC5442.jpg',
+    url: '/outdoor-photography/_DSC5442.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-26',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC6303.jpg',
+    url: '/outdoor-photography/_DSC6303.jpg',
     alt: 'Wildlife Photography'
   },
   {
     id: 'outdoor-27',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC6373.jpg',
+    url: '/outdoor-photography/_DSC6373.jpg',
     alt: 'Natural Environment'
   },
   {
     id: 'outdoor-28',
     category: 'Outdoor',
-    url: '/outdoor photography/_DSC6480.jpg',
+    url: '/outdoor-photography/_DSC6480.jpg',
     alt: 'Majestic Elk in Meadow'
   },
   {
     id: 'outdoor-29',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0047.jpg',
+    url: '/outdoor-photography/1Z3A0047.jpg',
     alt: 'Mountain Landscape'
   },
   {
     id: 'outdoor-30',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0061.jpg',
+    url: '/outdoor-photography/1Z3A0061.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-31',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0064.jpg',
+    url: '/outdoor-photography/1Z3A0064.jpg',
     alt: 'Outdoor Wildlife'
   },
   {
     id: 'outdoor-32',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0201.jpg',
+    url: '/outdoor-photography/1Z3A0201.jpg',
     alt: 'Landscape Vista'
   },
   {
     id: 'outdoor-33',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0360.jpg',
+    url: '/outdoor-photography/1Z3A0360.jpg',
     alt: 'Natural Environment'
   },
   {
     id: 'outdoor-34',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0370.jpg',
+    url: '/outdoor-photography/1Z3A0370.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-35',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0373.jpg',
+    url: '/outdoor-photography/1Z3A0373.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-36',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0412.jpg',
+    url: '/outdoor-photography/1Z3A0412.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-37',
     category: 'Outdoor',
-    url: '/outdoor photography/1Z3A0473.jpg',
+    url: '/outdoor-photography/1Z3A0473.jpg',
     alt: 'Outdoor Adventure'
   },
   {
     id: 'outdoor-38',
     category: 'Outdoor',
-    url: '/outdoor photography/cotton board forever cotton 2.png',
+    url: '/outdoor-photography/cotton board forever cotton 2.png',
     alt: 'Cotton Field Photography'
   },
   {
     id: 'outdoor-39',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0146.jpg',
+    url: '/outdoor-photography/DJI_0146.jpg',
     alt: 'Aerial Landscape'
   },
   {
     id: 'outdoor-40',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0187-HDR.jpg',
+    url: '/outdoor-photography/DJI_0187-HDR.jpg',
     alt: 'Drone Photography HDR'
   },
   {
     id: 'outdoor-41',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0196-HDR.jpg',
+    url: '/outdoor-photography/DJI_0196-HDR.jpg',
     alt: 'Aerial HDR Photography'
   },
   {
     id: 'outdoor-42',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0346.jpg',
+    url: '/outdoor-photography/DJI_0346.jpg',
     alt: 'Drone Landscape'
   },
   {
     id: 'outdoor-43',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0376.jpg',
+    url: '/outdoor-photography/DJI_0376.jpg',
     alt: 'Aerial Photography'
   },
   {
     id: 'outdoor-44',
     category: 'Outdoor',
-    url: '/outdoor photography/DJI_0425.jpg',
+    url: '/outdoor-photography/DJI_0425.jpg',
     alt: 'Drone Nature Photography'
   },
   {
     id: 'outdoor-45',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00374.jpg',
+    url: '/outdoor-photography/DSC00374.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-46',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00404.jpg',
+    url: '/outdoor-photography/DSC00404.jpg',
     alt: 'Outdoor Scene'
   },
   {
     id: 'outdoor-47',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00413.jpg',
+    url: '/outdoor-photography/DSC00413.jpg',
     alt: 'Natural Environment'
   },
   {
     id: 'outdoor-48',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00426.jpg',
+    url: '/outdoor-photography/DSC00426.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-49',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00441.jpg',
+    url: '/outdoor-photography/DSC00441.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-50',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00450.jpg',
+    url: '/outdoor-photography/DSC00450.jpg',
     alt: 'Hunting Dogs on ATV'
   },
   {
     id: 'outdoor-51',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00496.jpg',
+    url: '/outdoor-photography/DSC00496.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-52',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00559.jpg',
+    url: '/outdoor-photography/DSC00559.jpg',
     alt: 'Natural Scene'
   },
   {
     id: 'outdoor-53',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00594.jpg',
+    url: '/outdoor-photography/DSC00594.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-54',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00614.jpg',
+    url: '/outdoor-photography/DSC00614.jpg',
     alt: 'Outdoor Adventure'
   },
   {
     id: 'outdoor-55',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00701.jpg',
+    url: '/outdoor-photography/DSC00701.jpg',
     alt: 'Landscape Vista'
   },
   {
     id: 'outdoor-56',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00709.jpg',
+    url: '/outdoor-photography/DSC00709.jpg',
     alt: 'Natural Beauty'
   },
   {
     id: 'outdoor-57',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00741.jpg',
+    url: '/outdoor-photography/DSC00741.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-58',
     category: 'Outdoor',
-    url: '/outdoor photography/DSC00756.jpg',
+    url: '/outdoor-photography/DSC00756.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-59',
     category: 'Outdoor',
-    url: '/outdoor photography/Illinois Farms (1).jpg',
+    url: '/outdoor-photography/Illinois Farms (1).jpg',
     alt: 'Farm Landscape'
   },
   {
     id: 'outdoor-60',
     category: 'Outdoor',
-    url: '/outdoor photography/Illinois Farms-2.jpg',
+    url: '/outdoor-photography/Illinois Farms-2.jpg',
     alt: 'Agricultural Photography'
   },
   {
     id: 'outdoor-61',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_0080.jpg',
+    url: '/outdoor-photography/IMG_0080.jpg',
     alt: 'Nature Scene'
   },
   {
     id: 'outdoor-62',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_0700.jpg',
+    url: '/outdoor-photography/IMG_0700.jpg',
     alt: 'Outdoor Photography'
   },
   {
     id: 'outdoor-63',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_0856.jpg',
+    url: '/outdoor-photography/IMG_0856.jpg',
     alt: 'Natural Environment'
   },
   {
     id: 'outdoor-64',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_0966.jpg',
+    url: '/outdoor-photography/IMG_0966.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-65',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_1139.jpg',
+    url: '/outdoor-photography/IMG_1139.jpg',
     alt: 'Nature Photography'
   },
   {
     id: 'outdoor-66',
     category: 'Outdoor',
-    url: '/outdoor photography/IMG_1346.jpg',
+    url: '/outdoor-photography/IMG_1346.jpg',
     alt: 'Outdoor Scene'
   },
   {
     id: 'outdoor-67',
     category: 'Outdoor',
-    url: '/outdoor photography/MO0A2954.jpg',
+    url: '/outdoor-photography/MO0A2954.jpg',
     alt: 'Western Horse in Desert'
   },
   {
     id: 'outdoor-68',
     category: 'Outdoor',
-    url: '/outdoor photography/MO0A3579.jpg',
+    url: '/outdoor-photography/MO0A3579.jpg',
     alt: 'Desert Landscape'
   },
   {
     id: 'outdoor-69',
     category: 'Outdoor',
-    url: '/outdoor photography/MOON-2.jpg',
+    url: '/outdoor-photography/MOON-2.jpg',
     alt: 'Moon Photography'
   },
   {
     id: 'outdoor-70',
     category: 'Outdoor',
-    url: '/outdoor photography/RNG01357.jpg',
+    url: '/outdoor-photography/RNG01357.jpg',
     alt: 'Landscape Photography'
   },
   {
     id: 'outdoor-71',
     category: 'Outdoor',
-    url: '/outdoor photography/RNG01387-HDR.jpg',
+    url: '/outdoor-photography/RNG01387-HDR.jpg',
     alt: 'HDR Landscape'
   },
 
@@ -440,235 +440,235 @@ const photographyItems = [
   {
     id: 'music-1',
     category: 'Music',
-    url: '/music photography/_ATF3388.jpg',
+    url: '/music-photography/_ATF3388.jpg',
     alt: 'Studio Session'
   },
   {
     id: 'music-2',
     category: 'Music',
-    url: '/music photography/_ATF3624-HDR.jpg',
+    url: '/music-photography/_ATF3624-HDR.jpg',
     alt: 'HDR Performance'
   },
   {
     id: 'music-3',
     category: 'Music',
-    url: '/music photography/_ATF3973-HDR.jpg',
+    url: '/music-photography/_ATF3973-HDR.jpg',
     alt: 'Concert HDR'
   },
   {
     id: 'music-4',
     category: 'Music',
-    url: '/music photography/_ATF4807.jpg',
+    url: '/music-photography/_ATF4807.jpg',
     alt: 'Musical Performance'
   },
   {
     id: 'music-5',
     category: 'Music',
-    url: '/music photography/_ATF5177.jpg',
+    url: '/music-photography/_ATF5177.jpg',
     alt: 'Guitarist in Concert'
   },
   {
     id: 'music-6',
     category: 'Music',
-    url: '/music photography/_ATF5200.jpg',
+    url: '/music-photography/_ATF5200.jpg',
     alt: 'Live Performance'
   },
   {
     id: 'music-7',
     category: 'Music',
-    url: '/music photography/_ATF5230.jpg',
+    url: '/music-photography/_ATF5230.jpg',
     alt: 'Concert Photography'
   },
   {
     id: 'music-8',
     category: 'Music',
-    url: '/music photography/_ATF5239.jpg',
+    url: '/music-photography/_ATF5239.jpg',
     alt: 'Musician Portrait'
   },
   {
     id: 'music-9',
     category: 'Music',
-    url: '/music photography/_ATF7265.jpg',
+    url: '/music-photography/_ATF7265.jpg',
     alt: 'Recording Session'
   },
   {
     id: 'music-10',
     category: 'Music',
-    url: '/music photography/_ATF7278.jpg',
+    url: '/music-photography/_ATF7278.jpg',
     alt: 'Studio Photography'
   },
   {
     id: 'music-11',
     category: 'Music',
-    url: '/music photography/_ATF7444.jpg',
+    url: '/music-photography/_ATF7444.jpg',
     alt: 'Musical Performance'
   },
   {
     id: 'music-12',
     category: 'Music',
-    url: '/music photography/_ATF7471.jpg',
+    url: '/music-photography/_ATF7471.jpg',
     alt: 'Jazz Band Performance'
   },
   {
     id: 'music-13',
     category: 'Music',
-    url: '/music photography/_ATF7581.jpg',
+    url: '/music-photography/_ATF7581.jpg',
     alt: 'Live Music'
   },
   {
     id: 'music-14',
     category: 'Music',
-    url: '/music photography/_ATF7619-HDR.jpg',
+    url: '/music-photography/_ATF7619-HDR.jpg',
     alt: 'Band Leader Portrait'
   },
   {
     id: 'music-15',
     category: 'Music',
-    url: '/music photography/_ATF8067.jpg',
+    url: '/music-photography/_ATF8067.jpg',
     alt: 'Soul Vocalist Performance'
   },
   {
     id: 'music-16',
     category: 'Music',
-    url: '/music photography/_ATF8214.jpg',
+    url: '/music-photography/_ATF8214.jpg',
     alt: 'Concert Performance'
   },
   {
     id: 'music-17',
     category: 'Music',
-    url: '/music photography/_ATF9557.jpg',
+    url: '/music-photography/_ATF9557.jpg',
     alt: 'Live Performance'
   },
   {
     id: 'music-18',
     category: 'Music',
-    url: '/music photography/_ATF9567.jpg',
+    url: '/music-photography/_ATF9567.jpg',
     alt: 'Musical Performance'
   },
   {
     id: 'music-19',
     category: 'Music',
-    url: '/music photography/_ATF9711.jpg',
+    url: '/music-photography/_ATF9711.jpg',
     alt: 'Concert Photography'
   },
   {
     id: 'music-20',
     category: 'Music',
-    url: '/music photography/_DSC2748.jpg',
+    url: '/music-photography/_DSC2748.jpg',
     alt: 'Concert Photography'
   },
   {
     id: 'music-21',
     category: 'Music',
-    url: '/music photography/_DSC2956.jpg',
+    url: '/music-photography/_DSC2956.jpg',
     alt: 'Live Music Performance'
   },
   {
     id: 'music-22',
     category: 'Music',
-    url: '/music photography/_DSC2958.jpg',
+    url: '/music-photography/_DSC2958.jpg',
     alt: 'Musical Performance'
   },
   {
     id: 'music-23',
     category: 'Music',
-    url: '/music photography/_DSC3006.jpg',
+    url: '/music-photography/_DSC3006.jpg',
     alt: 'Concert Performance'
   },
   {
     id: 'music-24',
     category: 'Music',
-    url: '/music photography/_DSC3066.jpg',
+    url: '/music-photography/_DSC3066.jpg',
     alt: 'Live Performance'
   },
   {
     id: 'music-25',
     category: 'Music',
-    url: '/music photography/_YOU0011.jpg',
+    url: '/music-photography/_YOU0011.jpg',
     alt: 'Rock Icon Portrait'
   },
   {
     id: 'music-26',
     category: 'Music',
-    url: '/music photography/4AC84E0F-261D-4576-BC86-CF67AB687F94.jpg',
+    url: '/music-photography/4AC84E0F-261D-4576-BC86-CF67AB687F94.jpg',
     alt: 'Music Portrait'
   },
   {
     id: 'music-27',
     category: 'Music',
-    url: '/music photography/5FAFDE57-4C6D-435B-92F8-D6B55BDDAF57.jpg',
+    url: '/music-photography/5FAFDE57-4C6D-435B-92F8-D6B55BDDAF57.jpg',
     alt: 'Musicians on the Road'
   },
   {
     id: 'music-28',
     category: 'Music',
-    url: '/music photography/8AC4EE09-3573-43ED-B723-4DA93874DED8.jpg',
+    url: '/music-photography/8AC4EE09-3573-43ED-B723-4DA93874DED8.jpg',
     alt: 'Musical Portrait'
   },
   {
     id: 'music-29',
     category: 'Music',
-    url: '/music photography/998E4CAC-7FD6-41C4-8461-514716DC2688.jpg',
+    url: '/music-photography/998E4CAC-7FD6-41C4-8461-514716DC2688.jpg',
     alt: 'Music Photography'
   },
   {
     id: 'music-30',
     category: 'Music',
-    url: '/music photography/C641CA27-671E-4FBC-931E-9E754B56570D.jpg',
+    url: '/music-photography/C641CA27-671E-4FBC-931E-9E754B56570D.jpg',
     alt: 'Musical Performance'
   },
   {
     id: 'music-31',
     category: 'Music',
-    url: '/music photography/DetectiveBureau--11.jpg',
+    url: '/music-photography/DetectiveBureau--11.jpg',
     alt: 'Band Portrait'
   },
   {
     id: 'music-32',
     category: 'Music',
-    url: '/music photography/DetectiveBureau--12.jpg',
+    url: '/music-photography/DetectiveBureau--12.jpg',
     alt: 'Band Photography'
   },
   {
     id: 'music-33',
     category: 'Music',
-    url: '/music photography/DetectiveBureau--5.jpg',
+    url: '/music-photography/DetectiveBureau--5.jpg',
     alt: 'Group Portrait'
   },
   {
     id: 'music-34',
     category: 'Music',
-    url: '/music photography/IMG_20190712_110415_214.jpg',
+    url: '/music-photography/IMG_20190712_110415_214.jpg',
     alt: 'Music Portrait'
   },
   {
     id: 'music-35',
     category: 'Music',
-    url: '/music photography/IMG_20190712_110415_215.jpg',
+    url: '/music-photography/IMG_20190712_110415_215.jpg',
     alt: 'Musical Portrait'
   },
   {
     id: 'music-36',
     category: 'Music',
-    url: '/music photography/IMG_20190712_110415_216.jpg',
+    url: '/music-photography/IMG_20190712_110415_216.jpg',
     alt: 'Artist Portrait'
   },
   {
     id: 'music-37',
     category: 'Music',
-    url: '/music photography/LLOJuly31-1449.jpg',
+    url: '/music-photography/LLOJuly31-1449.jpg',
     alt: 'Recording Session'
   },
   {
     id: 'music-38',
     category: 'Music',
-    url: '/music photography/LLOJuly31-1453.jpg',
+    url: '/music-photography/LLOJuly31-1453.jpg',
     alt: 'Sound Engineer at Console'
   },
   {
     id: 'music-39',
     category: 'Music',
-    url: '/music photography/wheresjoe-1494.jpg',
+    url: '/music-photography/wheresjoe-1494.jpg',
     alt: 'Saxophone Player in Performance'
   },
 
@@ -676,115 +676,115 @@ const photographyItems = [
   {
     id: 'lifestyle-1',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_ATF3435.jpg',
+    url: '/lifestyle-photography/_ATF3435.jpg',
     alt: 'Creative Portrait'
   },
   {
     id: 'lifestyle-2',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_ATF4389.jpg',
+    url: '/lifestyle-photography/_ATF4389.jpg',
     alt: 'Lifestyle Moment'
   },
   {
     id: 'lifestyle-3',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_ATF5246.jpg',
+    url: '/lifestyle-photography/_ATF5246.jpg',
     alt: 'Creative Photography'
   },
   {
     id: 'lifestyle-4',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_ATF5915-2.jpg',
+    url: '/lifestyle-photography/_ATF5915-2.jpg',
     alt: 'Creative Portrait'
   },
   {
     id: 'lifestyle-5',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_ATF7724.jpg',
+    url: '/lifestyle-photography/_ATF7724.jpg',
     alt: 'Artistic Portrait'
   },
   {
     id: 'lifestyle-6',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC1101.jpg',
+    url: '/lifestyle-photography/_DSC1101.jpg',
     alt: 'Lifestyle Photography'
   },
   {
     id: 'lifestyle-7',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC2408.jpg',
+    url: '/lifestyle-photography/_DSC2408.jpg',
     alt: 'Creative Composition'
   },
   {
     id: 'lifestyle-8',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC2637.jpg',
+    url: '/lifestyle-photography/_DSC2637.jpg',
     alt: 'Artistic Photography'
   },
   {
     id: 'lifestyle-9',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC4727 copy.jpg',
+    url: '/lifestyle-photography/_DSC4727 copy.jpg',
     alt: 'Artistic Study'
   },
   {
     id: 'lifestyle-10',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC5085.jpg',
+    url: '/lifestyle-photography/_DSC5085.jpg',
     alt: 'Creative Vision'
   },
   {
     id: 'lifestyle-11',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC5702.jpg',
+    url: '/lifestyle-photography/_DSC5702.jpg',
     alt: 'Lifestyle Scene'
   },
   {
     id: 'lifestyle-12',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/_DSC5775.jpg',
+    url: '/lifestyle-photography/_DSC5775.jpg',
     alt: 'Creative Photography'
   },
   {
     id: 'lifestyle-13',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/captain morning eye.jpg',
+    url: '/lifestyle-photography/captain morning eye.jpg',
     alt: 'Portrait Detail'
   },
   {
     id: 'lifestyle-14',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/IMG_20181005_214844_214.jpg',
+    url: '/lifestyle-photography/IMG_20181005_214844_214.jpg',
     alt: 'Creative Moment'
   },
   {
     id: 'lifestyle-15',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/IMG_20190113_125108_203.jpg',
+    url: '/lifestyle-photography/IMG_20190113_125108_203.jpg',
     alt: 'Lifestyle Portrait'
   },
   {
     id: 'lifestyle-16',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/Macro Shot Tests-3.jpg',
+    url: '/lifestyle-photography/Macro Shot Tests-3.jpg',
     alt: 'Macro Photography'
   },
   {
     id: 'lifestyle-17',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/Macro Shot Tests-4.jpg',
+    url: '/lifestyle-photography/Macro Shot Tests-4.jpg',
     alt: 'Detail Photography'
   },
   {
     id: 'lifestyle-18',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/Macro Shot Tests-5.jpg',
+    url: '/lifestyle-photography/Macro Shot Tests-5.jpg',
     alt: 'Macro Detail'
   },
   {
     id: 'lifestyle-19',
     category: 'Commercial/Lifestyle',
-    url: '/lifestyle photography/Macro Shot Tests-8.jpg',
+    url: '/lifestyle-photography/Macro Shot Tests-8.jpg',
     alt: 'Close-up Photography'
   }
 ];
@@ -848,7 +848,7 @@ export const Photography = () => {
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black z-10"></div>
               <img
-                src="/music photography/_YOU0011.jpg"
+                src="/music-photography/_YOU0011.jpg"
                 alt="Photography Portfolio Hero"
                 className="w-full h-full object-cover"
               />

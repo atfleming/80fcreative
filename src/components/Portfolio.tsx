@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 import { VideoModal } from "./VideoModal";
@@ -81,39 +81,39 @@ const portfolioCategories: PortfolioCategory[] = [
   {
     id: "outdoor-photography",
     title: "outdoor photography",
-    image: "/outdoor%20photography/_ATF1563.jpg",
+    image: "/outdoor-photography/_ATF1563.jpg",
     thumbnails: [
-      "/outdoor%20photography/_ATF1563.jpg",
-      "/outdoor%20photography/_ATF1570.jpg",
-      "/outdoor%20photography/_DSC0026.jpg",
-      "/outdoor%20photography/1Z3A0412.jpg",
-      "/outdoor%20photography/DSC00441.jpg"
+      "/outdoor-photography/_ATF1563.jpg",
+      "/outdoor-photography/_ATF1570.jpg",
+      "/outdoor-photography/_DSC0026.jpg",
+      "/outdoor-photography/1Z3A0412.jpg",
+      "/outdoor-photography/DSC00441.jpg"
     ],
     pageLink: "/photography?filter=Outdoor"
   },
   {
     id: "musician-photography",
     title: "music photography",
-    image: "/music%20photography/_ATF3388.jpg",
+    image: "/music-photography/_ATF3388.jpg",
     thumbnails: [
-      "/music%20photography/_ATF3388.jpg",
-      "/music%20photography/_ATF3624-HDR.jpg",
-      "/music%20photography/_ATF4807.jpg",
-      "/music%20photography/_ATF5177.jpg",
-      "/music%20photography/_ATF5230.jpg"
+      "/music-photography/_ATF3388.jpg",
+      "/music-photography/_ATF3624-HDR.jpg",
+      "/music-photography/_ATF4807.jpg",
+      "/music-photography/_ATF5177.jpg",
+      "/music-photography/_ATF5230.jpg"
     ],
     pageLink: "/photography?filter=Music"
   },
   {
     id: "lifestyle-photography",
     title: "commercial/lifestyle photography",
-    image: "/lifestyle%20photography/_ATF3435.jpg",
+    image: "/lifestyle-photography/_ATF3435.jpg",
     thumbnails: [
-      "/lifestyle%20photography/_ATF3435.jpg",
-      "/lifestyle%20photography/_ATF4389.jpg",
-      "/lifestyle%20photography/_ATF5246.jpg",
-      "/lifestyle%20photography/_ATF5915-2.jpg",
-      "/lifestyle%20photography/_ATF7724.jpg"
+      "/lifestyle-photography/_ATF3435.jpg",
+      "/lifestyle-photography/_ATF4389.jpg",
+      "/lifestyle-photography/_ATF5246.jpg",
+      "/lifestyle-photography/_ATF5915-2.jpg",
+      "/lifestyle-photography/_ATF7724.jpg"
     ],
     pageLink: "/photography?filter=Commercial/Lifestyle"
   },
@@ -148,13 +148,34 @@ export const Portfolio = () => {
   } | null>(null);
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const [hoverIndexes, setHoverIndexes] = useState<Record<string, number>>({});
-  const hoverTimers = useRef<Record<string, ReturnType<typeof setInterval>>>({});
 
   useEffect(() => {
+    if (!activeCard) {
+      return;
+    }
+
+    const activeCategory = portfolioCategories.find((category) => category.id === activeCard);
+
+    if (!activeCategory || !activeCategory.thumbnails || activeCategory.thumbnails.length <= 1) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setHoverIndexes((prev) => {
+        const currentIndex = prev[activeCategory.id] ?? 0;
+        const nextIndex = (currentIndex + 1) % activeCategory.thumbnails!.length;
+
+        return {
+          ...prev,
+          [activeCategory.id]: nextIndex
+        };
+      });
+    }, 400);
+
     return () => {
-      Object.values(hoverTimers.current).forEach(clearInterval);
+      window.clearInterval(intervalId);
     };
-  }, []);
+  }, [activeCard]);
 
   const handleVideoClick = (id: string, title: string, isVimeo?: boolean) => {
     setSelectedVideo({
@@ -168,52 +189,25 @@ export const Portfolio = () => {
     setSelectedVideo(null);
   };
 
-  const startHover = (category: PortfolioCategory) => {
-    if (!category.thumbnails || category.thumbnails.length <= 1) {
-      return;
-    }
-    if (hoverTimers.current[category.id]) {
-      clearInterval(hoverTimers.current[category.id]);
-    }
+  const handleMouseEnter = (category: PortfolioCategory) => {
+    setActiveCard(category.id);
     setHoverIndexes((prev) => ({
       ...prev,
       [category.id]: 0
     }));
-    hoverTimers.current[category.id] = setInterval(() => {
-      setHoverIndexes((prev) => {
-        const currentIndex = prev[category.id] ?? 0;
-        const nextIndex = (currentIndex + 1) % category.thumbnails!.length;
-        return {
-          ...prev,
-          [category.id]: nextIndex
-        };
-      });
-    }, 400);
-  };
-
-  const stopHover = (categoryId: string) => {
-    const timer = hoverTimers.current[categoryId];
-    if (timer) {
-      clearInterval(timer);
-      delete hoverTimers.current[categoryId];
-    }
-    setHoverIndexes((prev) => {
-      if (!(categoryId in prev)) {
-        return prev;
-      }
-      const { [categoryId]: _removed, ...rest } = prev;
-      return rest;
-    });
-  };
-
-  const handleMouseEnter = (category: PortfolioCategory) => {
-    setActiveCard(category.id);
-    startHover(category);
   };
 
   const handleMouseLeave = (category: PortfolioCategory) => {
     setActiveCard((current) => (current === category.id ? null : current));
-    stopHover(category.id);
+    setHoverIndexes((prev) => {
+      if (!(category.id in prev)) {
+        return prev;
+      }
+
+      const { [category.id]: _removed, ...rest } = prev;
+
+      return rest;
+    });
   };
 
   const getCurrentImage = (category: PortfolioCategory) => {
