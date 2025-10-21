@@ -70,3 +70,17 @@
   box-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
   text-shadow: 0 0 5px rgba(0, 255, 247, 0.7);
 }
+
+@keyframes client-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  min-width: max-content;
+  animation: client-marquee 36s linear infinite;
+}

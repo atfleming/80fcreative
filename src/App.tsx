@@ -1,6 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Hero } from "./components/Hero";
 import { SectionFallback } from "./components/SectionFallback";
+import { ClientMarquee } from "./components/ClientMarquee";
+import { FeaturedCaseStudy } from "./components/FeaturedCaseStudy";
 
 const ShowreelTitle = lazy(() =>
 	import("./components/ShowreelTitle").then((module) => ({
@@ -48,11 +50,15 @@ export function App() {
 			<div className="pixel-grid">
 				<main>
 					<Hero />
+					<ClientMarquee />
 					<Suspense fallback={<SectionFallback label="Showreel intro" className="mt-24" />}>
 						<ShowreelTitle />
 					</Suspense>
 					<Suspense fallback={<SectionFallback label="Motion showcase" className="mt-24" />}>
 						<AnimatedVideoSection />
+					</Suspense>
+					<Suspense fallback={<SectionFallback label="Featured case study" className="mt-24" />}>
+						<FeaturedCaseStudy />
 					</Suspense>
 					<Suspense fallback={<SectionFallback label="Portfolio grid" className="mt-24" />}>
 						<Portfolio />

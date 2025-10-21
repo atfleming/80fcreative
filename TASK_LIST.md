@@ -7,6 +7,12 @@
 
 ---
 
+## 🚀 Next Steps
+
+- [ ] _Pending next priorities_
+
+---
+
 ## ✅ Completed Tasks
 
 ### 🎬 Video & Media Fixes (October 2025)
@@ -24,6 +30,10 @@
 - [x] **Portfolio hover animations** - Cycled five branded thumbnails per card and added development hover video cue [PA][CA]
 - [x] **Portfolio hover stability** - Simplified timer logic so hover flips stay consistent across builds after asset path updates [SF][PA]
 - [x] **Hyphenated photography assets** - Renamed public photo directories and updated Outdoor/Musician pages to match Portfolio + Photography references [CA][SF][AC]
+
+### 📚 Case Study & Trust Signals (October 2025)
+- [x] **Case study feature build** – Added a dedicated `/case-studies/university-of-memphis` page and a "Featured Case Study" teaser beneath the showreel, sourcing story and visuals from `public/case_studies/case_study_1.md`. [CA][SF][SD]
+- [x] **Client logo marquee** – Introduced a "Trusted by:" auto-scrolling logo strip under the hero using assets in `public/clients`, styling per `.github/docs/style_guide.md` and `.github/docs/80f creative brand and style guide.png`. [CA][PA][SF]
 
 ### 🏗️ Core Infrastructure
 - [x] **Photography page creation** - Unified page with 129 photos across 3 categories (outdoor, music, lifestyle) [CA]

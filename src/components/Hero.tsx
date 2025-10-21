@@ -157,17 +157,18 @@ export const Hero = () => {
             fontWeight: 'normal',
             lineHeight: '1.2'
           }}>
-              telling stories through film,
+              80f creative: a digital agency telling stories
               <br />
-              photography, and design.
+              through film, photography, and design.
             </motion.h2>
           </div>
-          <motion.p variants={item} className="text-lg md:text-xl text-highlight text-left mb-0" style={{
+          {/* <motion.p variants={item} className="text-lg md:text-xl text-highlight text-left mb-0" style={{
           fontFamily: "'Space Grotesk', sans-serif",
           letterSpacing: '0.02em'
         }}>
             portfolio for filmmaker and creative, andrew trent fleming
-          </motion.p>
+          </motion.p>*/}
+          
         </motion.div>
       </div>
     </section>;
