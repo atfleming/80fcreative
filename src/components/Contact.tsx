@@ -17,7 +17,7 @@ export const Contact = () => {
         duration: 0.6
       }}>
           <h2 className="font-pixel text-2xl md:text-3xl font-bold mb-4 text-electric-cyan neon-cyan">
-            Work With Me
+            let's get your project started:
           </h2>
           {/*<p className="text-xl text-highlight/80 font-sans">
            Let's start a conversation.

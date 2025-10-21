@@ -20,6 +20,8 @@
 - [x] **About section relaunch** – Split copy into "About 80F Creative" and "Our Founder" pillars while aligning tone against `.github/docs/80f creative brand and style guide.png`. [RP][SD]
 - [x] **Index navigation smoothing** – Converted hero menu items to in-page smooth scroll targets and removed redundant routes for a cohesive SPA experience. [SF][CA]
 - [x] **Featured work refresh** – Highlighted the Memphis 901 FC commercial and simplified the case study teaser CTA to keep the portfolio current. [ISA][SF]
+- [x] **Services CTA** – Added a “Ready to get started?” prompt that scrolls to `#contact`, matching the CTA guidance in `.github/docs/style_guide.md`. [SF][CA]
+- [x] **About section contrast** – Applied cyan vs. magenta panel treatments to distinguish agency and founder stories while staying on-brand per `.github/docs/80f creative brand and style guide.png`. [RP][CA]
 
 ### �🎬 Video & Media Fixes (October 2025)
 - [x] **Fixed showreel video loading** - Updated path from `/80fco reel.mov` to `/80fco-reel.mov` [SF]

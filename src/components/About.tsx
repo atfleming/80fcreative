@@ -6,12 +6,13 @@ export const About = () => {
 		<section id="about" className="bg-[#0f0a1e] py-24">
 			<div className="container mx-auto flex max-w-6xl flex-col gap-20 px-4 md:px-6">
 				<motion.div
-					className="mx-auto max-w-3xl text-center"
+					className="relative mx-auto max-w-4xl overflow-hidden rounded-[2.5rem] border border-electric-cyan/30 bg-digital-black/70 px-8 py-12 text-center shadow-[0_0_30px_rgba(0,255,247,0.15)] backdrop-blur-sm md:px-16"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.4 }}
 					transition={{ duration: 0.8 }}
 				>
+					<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(0,255,247,0.18),_transparent_70%)]" />
 					<h2 className="font-pixel text-3xl md:text-4xl text-electric-cyan">
 						About 80F Creative
 					</h2>
@@ -22,21 +23,18 @@ export const About = () => {
 						<p>
 							We believe the most effective marketing isn&apos;t marketing at all—it&apos;s authentic storytelling. 80F Creative is an agency built on the philosophy that a great story, told with cinematic quality, can do more than just capture attention. It builds trust, drives action, and creates a lasting legacy.
 						</p>
-						<p>
-							We partner with brands and organizations to find the human heart of their message. Our approach blends documentary-style authenticity with strategic, results-driven thinking. This ensures every visual element serves a purpose, connecting with your audience on a genuine level while achieving your core business goals.
-						</p>
-						<p>
-							Whether it&apos;s a brand film, a documentary web series, or a full creative campaign, our process is rooted in collaboration. We bring an award-winning creative eye to projects for clients ranging from global brands like FedEx to cultural icons like Stax Records.
-						</p>
+					
 					</div>
 				</motion.div>
 				<div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
 					<motion.div
+						className="relative overflow-hidden rounded-[2.5rem] border border-[#ff55ee]/25 bg-[#130c24] p-10 shadow-[0_0_35px_rgba(255,85,238,0.12)]"
 						initial={{ opacity: 0, x: -30 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true, amount: 0.3 }}
 						transition={{ duration: 0.8 }}
 					>
+						<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,_rgba(255,85,238,0.2),_transparent_65%)]" />
 						<h3 className="font-pixel text-3xl md:text-4xl text-electric-cyan">
 							Our Founder
 						</h3>
