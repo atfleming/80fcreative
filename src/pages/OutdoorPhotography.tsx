@@ -7,31 +7,31 @@ import { PhotoModal } from '../components/PhotoModal';
 // Photo gallery data
 const photoData = [{
   id: 1,
-  url: "/_ATF7471.jpg",
+  url: "/music-photography/_ATF7471.jpg",
   alt: 'Jazz Band in Atmospheric Venue',
   category: 'Performance',
   description: 'A jazz ensemble bathed in dramatic light, capturing the soul of live music.'
 }, {
   id: 2,
-  url: "/_DSC6480.jpg",
+  url: "/outdoor-photography/_DSC6480.jpg",
   alt: 'Majestic Elk in Meadow',
   category: 'Wildlife',
   description: 'A magnificent elk with impressive antlers traversing a lush green meadow.'
 }, {
   id: 3,
-  url: "/_YOU0011.jpg",
+  url: "/music-photography/_YOU0011.jpg",
   alt: 'Rock Icon Portrait',
   category: 'Portrait',
   description: 'An intimate portrait capturing the charisma and character of a music legend.'
 }, {
   id: 4,
-  url: "/DSC00450.jpg",
+  url: "/outdoor-photography/DSC00450.jpg",
   alt: 'Hunting Dogs on ATV',
   category: 'Lifestyle',
   description: 'Three hunting dogs perched on an ATV in a winter landscape, ready for adventure.'
 }, {
   id: 5,
-  url: "/MO0A2954.jpg",
+  url: "/outdoor-photography/MO0A2954.jpg",
   alt: 'Western Horse in Desert Landscape',
   category: 'Landscape',
   description: 'A saddled horse standing in a rugged desert setting under dramatic clouds.'
@@ -79,7 +79,7 @@ export const OutdoorPhotography = () => {
             {/* Background image */}
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black z-10"></div>
-              <img src="/_DSC6480.jpg" alt="Majestic elk in meadow" className="w-full h-full object-cover" />
+              <img src="/outdoor-photography/_DSC6480.jpg" alt="Majestic elk in meadow" className="w-full h-full object-cover" />
             </div>
             {/* Content */}
             <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center items-center text-center">
