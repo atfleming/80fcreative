@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero";
 import { SectionFallback } from "./components/SectionFallback";
 import { ClientMarquee } from "./components/ClientMarquee";
 import { FeaturedCaseStudy } from "./components/FeaturedCaseStudy";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const ShowreelTitle = lazy(() =>
 	import("./components/ShowreelTitle").then((module) => ({
@@ -46,11 +47,11 @@ const Footer = lazy(() =>
 
 export function App() {
 	return (
-		<div className="bg-digital-black text-highlight min-h-screen w-full crt-scanlines">
-			<div className="pixel-grid">
+		<ThemeProvider>
+			<div className="bg-white dark:bg-corporate-slate text-gray-900 dark:text-white min-h-screen w-full">
 				<main>
-					<Hero />
-					<ClientMarquee />
+						<Hero />
+						<ClientMarquee />
 					<Suspense fallback={<SectionFallback label="Showreel intro" className="mt-24" />}>
 						<ShowreelTitle />
 					</Suspense>
@@ -134,6 +135,6 @@ export function App() {
 					<Footer />
 				</Suspense>
 			</div>
-		</div>
+		</ThemeProvider>
 	);
 }

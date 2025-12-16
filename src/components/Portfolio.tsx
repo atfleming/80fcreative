@@ -134,7 +134,7 @@ export const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="bg-digital-black pt-5 pb-24 relative"
+      className="bg-white dark:bg-corporate-slate pt-5 pb-24 relative"
       style={{
         backgroundSize: "20px 20px",
         backgroundImage: [

@@ -6,7 +6,7 @@ export const FeaturedCaseStudy = () => {
 	return (
 		<section
 			id="featured-case-study"
-			className="relative mt-24 overflow-hidden border border-electric-cyan/30 bg-digital-black/60 px-4 py-16 md:px-10"
+			className="relative mt-24 overflow-hidden border clean-border dark:clean-border-dark bg-white dark:bg-slate-700 px-4 py-16 md:px-10"
 		>
 			<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(0,255,247,0.12),_transparent_55%)]" />
 			<div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-12 md:flex-row md:items-center">
@@ -37,7 +37,7 @@ export const FeaturedCaseStudy = () => {
 					whileInView={{ opacity: 1, scale: 1 }}
 					viewport={{ once: true, amount: 0.4 }}
 					transition={{ duration: 0.6 }}
-					className="relative overflow-hidden rounded-[2.5rem] border border-electric-cyan/20 bg-digital-black/80 shadow-[0_0_25px_rgba(0,255,247,0.15)] md:w-1/2"
+					className="relative overflow-hidden rounded-[2.5rem] border clean-border dark:clean-border-dark bg-gray-50 dark:bg-slate-600 subtle-shadow md:w-1/2"
 				>
 					<img
 						alt="University of Memphis case study still"

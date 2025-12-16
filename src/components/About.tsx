@@ -6,7 +6,7 @@ export const About = () => {
 		<section id="about" className="bg-[#0f0a1e] py-24">
 			<div className="container mx-auto flex max-w-6xl flex-col gap-20 px-4 md:px-6">
 				<motion.div
-					className="relative mx-auto max-w-4xl overflow-hidden rounded-[2.5rem] border border-electric-cyan/30 bg-digital-black/70 px-8 py-12 text-center shadow-[0_0_30px_rgba(0,255,247,0.15)] backdrop-blur-sm md:px-16"
+					className="relative mx-auto max-w-4xl overflow-hidden rounded-[2.5rem] border clean-border dark:clean-border-dark bg-white dark:bg-slate-700 px-8 py-12 text-center subtle-shadow backdrop-blur-sm md:px-16"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.4 }}

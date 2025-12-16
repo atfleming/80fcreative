@@ -511,14 +511,14 @@ export const Projects = () => {
   const handleCloseModal = () => {
     setSelectedVideo(null);
   };
-  return <div className="bg-[#130c24] text-white min-h-screen w-full">
-      <header className="bg-[#0a071a] py-6 sticky top-0 z-50">
+  return <div className="bg-white dark:bg-corporate-slate text-gray-900 dark:text-white min-h-screen w-full">
+      <header className="bg-gray-100 dark:bg-slate-700 py-6 sticky top-0 z-50">
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center text-corporate-navy dark:text-white">
             <ArrowLeftIcon className="w-5 h-5 mr-2" />
             <span>Back to Home</span>
           </Link>
-          <img src="/80fco_logo.png" alt="80f Creative" className="h-10" />
+          <h2 className="font-wordmark font-black text-lg text-corporate-navy dark:text-white">80F</h2>
         </div>
       </header>
       <main className="py-16">
@@ -532,10 +532,10 @@ export const Projects = () => {
         }} transition={{
           duration: 0.6
         }}>
-            <h1 className="font-pixel text-4xl md:text-5xl font-bold mb-4 text-electric-cyan neon-cyan">
+            <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4 text-corporate-navy dark:text-white">
               video projects
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-sans">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 font-sans">
               
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -575,19 +575,19 @@ export const Projects = () => {
                 <div className="aspect-square overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6]" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#130c24]/90 via-[#130c24]/60 to-[#130c24]/30 opacity-100 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <span className="text-[#ff55ee] text-sm font-medium mb-1">
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/60 to-white/30 dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 opacity-100 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <span className="text-electric-cyan text-sm font-medium mb-1">
                     {item.category}
                   </span>
-                  <h3 className="font-pixel text-lg font-bold text-electric-cyan">
+                  <h3 className="text-lg font-bold text-corporate-navy dark:text-white">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mt-1 font-sans">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1 font-sans">
                     {item.description}
                   </p>
                   {/* Play button for video items */}
                   {item.videoId && <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="bg-[#ff55ee] text-[#130c24] p-3 rounded-full">
+                      <div className="bg-electric-cyan text-white p-3 rounded-full">
                         <PlayIcon className="w-6 h-6" />
                       </div>
                     </div>}

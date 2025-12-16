@@ -92,7 +92,7 @@ export const Animation = () => {
             </div>
           </section>
           {/* Animation Gallery Section */}
-          <section className="py-24 bg-[#130c24]">
+          <section className="py-24 bg-gray-50 dark:bg-slate-800">
             <div className="container mx-auto px-4 md:px-6">
               <motion.div className="text-center mb-16" initial={{
               opacity: 0,
@@ -130,7 +130,7 @@ export const Animation = () => {
                     <div className="aspect-video overflow-hidden">
                       <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6]" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#130c24]/90 via-[#130c24]/60 to-[#130c24]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/60 to-white/30 dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <h3 className="font-pixel text-xl font-bold text-electric-cyan">
                         {project.title}
                       </h3>
@@ -139,7 +139,7 @@ export const Animation = () => {
                       </p>
                     </div>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-[#ff55ee] text-[#130c24] p-3 rounded-full">
+                      <div className="bg-electric-cyan text-white p-3 rounded-full">
                         <PlayIcon className="w-8 h-8" />
                       </div>
                     </div>

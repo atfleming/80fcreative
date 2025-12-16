@@ -44,19 +44,19 @@ export const MusicVideos = () => {
   const handleCloseModal = () => {
     setSelectedVideo(null);
   };
-  return <div className="bg-digital-black text-highlight min-h-screen w-full crt-scanlines">
-      <div className="pixel-grid">
+  return <div className="bg-white dark:bg-corporate-slate text-gray-900 dark:text-white min-h-screen w-full">
+      <div>
         <main>
           {/* Hero Section */}
           <section className="relative h-screen">
             {/* Background image */}
             <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white dark:from-corporate-slate/90 dark:via-corporate-slate/70 dark:to-corporate-slate z-10"></div>
               <img src="https://img.youtube.com/vi/RETndZHvfZs/maxresdefault.jpg" alt="Music video visual storytelling" className="w-full h-full object-cover" />
             </div>
             {/* Content */}
             <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center items-center text-center">
-              <Link to="/" className="absolute top-8 left-8 flex items-center text-electric-cyan hover:text-white transition-colors">
+              <Link to="/" className="absolute top-8 left-8 flex items-center text-electric-cyan hover:text-corporate-navy dark:hover:text-white transition-colors">
                 <ArrowLeftIcon className="w-5 h-5 mr-2" />
                 Back to Home
               </Link>
@@ -69,17 +69,17 @@ export const MusicVideos = () => {
             }} transition={{
               duration: 0.8
             }}>
-                <h1 className="text-5xl md:text-7xl font-pixel mb-6 text-electric-cyan neon-cyan">
+                <h1 className="text-5xl md:text-7xl font-sans font-bold mb-6 text-corporate-navy dark:text-white">
                   Music Videos
                 </h1>
-                <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-8">
+                <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300 mb-8">
                   Visual storytelling through music and artistic direction
                 </p>
               </motion.div>
             </div>
           </section>
           {/* Music Videos Gallery Section */}
-          <section className="py-24 bg-[#130c24]">
+          <section className="py-24 bg-gray-50 dark:bg-slate-800">
             <div className="container mx-auto px-4 md:px-6">
               <motion.div className="text-center mb-16" initial={{
               opacity: 0,
@@ -114,15 +114,15 @@ export const MusicVideos = () => {
                 <div className="aspect-video relative overflow-hidden rounded-xl cursor-pointer group" onClick={() => handleVideoClick(musicVideos[0].videoId, musicVideos[0].title)}>
                   <img src={musicVideos[0].image} alt={musicVideos[0].title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-[#ff55ee] text-[#130c24] p-4 rounded-full">
+                    <div className="bg-electric-cyan text-white p-4 rounded-full">
                       <PlayIcon className="w-10 h-10" />
                     </div>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                    <h4 className="font-pixel text-2xl font-bold text-electric-cyan">
+                    <h4 className="text-2xl font-bold text-electric-cyan">
                       {musicVideos[0].title}
                     </h4>
-                    <p className="text-gray-300 font-sans">
+                    <p className="text-gray-300 dark:text-gray-200 font-sans">
                       {musicVideos[0].description}
                     </p>
                   </div>
@@ -145,14 +145,14 @@ export const MusicVideos = () => {
                     <div className="aspect-video overflow-hidden">
                       <img src={video.image} alt={video.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#130c24]/90 via-[#130c24]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                      <h3 className="font-pixel text-xl font-bold text-electric-cyan">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                      <h3 className="text-xl font-bold text-electric-cyan">
                         {video.title}
                       </h3>
-                      <p className="text-gray-300 mt-2">{video.description}</p>
+                      <p className="text-gray-300 dark:text-gray-200 mt-2">{video.description}</p>
                     </div>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-[#ff55ee] text-[#130c24] p-3 rounded-full">
+                      <div className="bg-electric-cyan text-white p-3 rounded-full">
                         <PlayIcon className="w-8 h-8" />
                       </div>
                     </div>

@@ -18,7 +18,7 @@ export const SideScrollGallery: React.FC<SideScrollGalleryProps> = ({ projects, 
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   return (
-    <div className="w-full py-10 bg-digital-black">
+    <div className="w-full py-10 bg-white dark:bg-corporate-slate">
   <h2 className="text-3xl font-bold text-highlight mb-6 px-6">{title ? title : 'Our Handpicked Featured Portfolio'}</h2>
       <div className="overflow-x-auto whitespace-nowrap px-6 scrollbar-thin scrollbar-thumb-highlight scrollbar-track-digital-black">
         <div className="flex gap-8">
@@ -43,7 +43,7 @@ export const SideScrollGallery: React.FC<SideScrollGalleryProps> = ({ projects, 
       {/* Modal for project details */}
       {activeProject && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
-          <div className="bg-digital-black rounded-2xl p-6 max-w-4xl w-full relative">
+          <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 max-w-4xl w-full relative subtle-shadow">
             <button
               className="absolute top-4 right-4 text-highlight text-2xl font-bold"
               onClick={() => setActiveProject(null)}
