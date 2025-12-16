@@ -1,11 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="About — 80F Creative">
+<BaseLayout title="About — 80F Creative" description="Telling stories through film, photography, and design since 2005.">
   <section class="hero" style="padding-top:3rem">
     <div class="container">
-      <h1 style="font-weight:800">About 80F Creative</h1>
-      <p style="max-width:65ch;margin:.5rem auto 0;">We craft cinematic campaigns and photography that move audiences to action. Built in Memphis, partnering with brands, teams, and artists.</p>
+      <h1 style="font-weight:800;font-size:2.5rem">About 80F Creative</h1>
+      <p style="max-width:65ch;margin:1rem auto 0;font-size:1.25rem;opacity:.85">Telling stories through film, photography, and design.</p>
+    </div>
+  </section>
+  <section style="padding:3rem 0">
+    <div class="container">
+      <div class="pill" style="max-width:50rem;margin:0 auto;padding:2rem">
+        <p style="line-height:1.8;margin-bottom:1rem">We believe the most effective marketing isn't marketing at all—it's authentic storytelling. 80F Creative is an agency built on the philosophy that a great story, told with cinematic quality, can do more than just capture attention. It builds trust, drives action, and creates a lasting legacy.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding:3rem 0">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start">
+        <div class="pill" style="padding:2rem">
+          <h3 style="font-weight:700;font-size:1.75rem;margin-bottom:1rem">Our Founder</h3>
+          <p style="line-height:1.8;margin-bottom:1rem">80F Creative is led by Andrew Trent Fleming ("Drew"), who has produced and directed award-winning commercial work, photography, creative, and independent film work for brands, agencies, and production companies since 2005.</p>
+          <h4 style="font-weight:700;font-size:1.125rem;margin-top:1.5rem;margin-bottom:.75rem">Recognition</h4>
+          <ul style="list-style:disc;padding-left:1.25rem;line-height:1.8;opacity:.85">
+            <li>Winner, Gold/Best of Show for Video/Directing, American Advertising Federation Memphis 2021</li>
+            <li>Winner, Indie Memphis Narrative Short Audience Choice Award 2020</li>
+            <li>Winner, Best Mississippi Short, Oxford Film Festival 2020</li>
+            <li>Winner, Memphis Film Prize 2019</li>
+          </ul>
+        </div>
+        <div style="position:relative;aspect-ratio:1;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)">
+          <video autoplay loop muted playsinline src="/bts-video-about.mov" style="width:100%;height:100%;object-fit:cover">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>
