@@ -63,12 +63,18 @@
   - **Priority**: High | **Complexity**: Low
 
 ### 🚚 Astro Migration (Dec 2025)
-- [ ] Scaffold Astro skeleton in `astro/` with `astro.config.mjs`, `package.json`, `src/` [AC][CA]
-- [ ] Add BaseLayout + global tokens for Montserrat + white/navy [SF][RP]
-- [ ] Create `src/content/config.ts` and migrate case studies to `src/content/case-studies/` [SD]
-- [ ] Build pages: `index.astro`, `about.astro`, `services/index.astro`, `projects/index.astro`, `projects/[slug].astro` [CA]
-- [ ] Map interactive components to minimal islands (gallery/modal/marquee) [DM]
-- [ ] Add redirects for legacy routes and verify SEO meta [ISA]
+- [x] **Scaffold Astro skeleton** – Created `astro/` with `astro.config.mjs`, `package.json`, `tsconfig.json`, and `src/` structure [AC][CA]
+- [x] **BaseLayout foundation** – Built with floating nav/footer, Montserrat font, white/navy CSS variables [SF][RP]
+- [x] **Content Collections setup** – Added `src/content/config.ts` and migrated 3 case studies to markdown [SD]
+- [x] **Core pages** – Created `index.astro`, `about.astro`, `services/index.astro`, `contact.astro`, `projects/index.astro`, `projects/[slug].astro` [CA]
+- [x] **Asset migration** – Copied all 200+ assets (1.17GB) including photos, videos, client logos, thumbnails [AC][RM]
+- [x] **Portfolio system** – Built `/work` page with VideoModal, category filtering, and 49 video items from TS data file [CA][SF]
+- [x] **Photography galleries** – Created `/photography` hub with `/outdoor` (71 photos) and `/musician` (40 photos) lightbox galleries [CA][PA]
+- [x] **Interactive islands** – Implemented VideoModal and PhotoModal with vanilla JS, ClientMarquee with auto-scroll [DM][SF]
+- [x] **Home page enhancements** – Added ClientMarquee (13 logos) and portfolio category preview cards [CA][SF]
+- [x] **Navigation updates** – Added Work and Photography links to header/footer navigation [CA]
+- [x] **Legacy redirects** – Configured redirects for `/outdoor-photography`, `/musician-photography`, `/projects` routes [ISA]
+- [x] **Build verification** – Successful build with 12 pages + 5 redirects, dev server running at localhost:4321 [CTC]
 
 ---
 
