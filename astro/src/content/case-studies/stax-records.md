@@ -1,5 +1,5 @@
 ---
-title: Case Study: Stax Records — The Memphis Masters
+title: "Case Study: Stax Records — The Memphis Masters"
 excerpt: Bridging generations with a cinematic documentary web series connecting modern artists to the timeless influence of Stax.
 client: Stax Records
 tags: ["case-study", "music", "documentary"]

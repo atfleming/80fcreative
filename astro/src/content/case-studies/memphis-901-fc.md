@@ -1,5 +1,5 @@
 ---
-title: Case Study: Memphis 901 FC — Brand Launch Film
+title: "Case Study: Memphis 901 FC — Brand Launch Film"
 excerpt: Launching a pro soccer team with the soul of Memphis — an authentic, high-energy brand film rooted in local culture.
 client: Memphis 901 FC
 tags: ["case-study", "sports", "brand-film"]

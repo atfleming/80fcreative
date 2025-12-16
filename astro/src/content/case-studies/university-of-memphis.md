@@ -1,5 +1,5 @@
 ---
-title: Featured Case Study: University of Memphis
+title: "Featured Case Study: University of Memphis"
 excerpt: >-
   Driving Legacy Donations Through Cinematic Storytelling — turning an informational video into an emotional call-to-action to secure final funding for the Scheidt Performing Arts Center.
 client: University of Memphis
