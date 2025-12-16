@@ -62,6 +62,14 @@
   - Add emoji organization and clear structure
   - **Priority**: High | **Complexity**: Low
 
+### 🚚 Astro Migration (Dec 2025)
+- [ ] Scaffold Astro skeleton in `astro/` with `astro.config.mjs`, `package.json`, `src/` [AC][CA]
+- [ ] Add BaseLayout + global tokens for Montserrat + white/navy [SF][RP]
+- [ ] Create `src/content/config.ts` and migrate case studies to `src/content/case-studies/` [SD]
+- [ ] Build pages: `index.astro`, `about.astro`, `services/index.astro`, `projects/index.astro`, `projects/[slug].astro` [CA]
+- [ ] Map interactive components to minimal islands (gallery/modal/marquee) [DM]
+- [ ] Add redirects for legacy routes and verify SEO meta [ISA]
+
 ---
 
 ## 📋 Pending Tasks

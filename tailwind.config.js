@@ -7,9 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pixel: ['"Press Start 2P"', 'monoface'],
-        sans: ['Space Grotesk', 'sans-serif'],
-        ui: ['DM Sans', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
         wordmark: ['Montserrat', 'sans-serif'],
       },
       colors: {

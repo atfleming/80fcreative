@@ -5,11 +5,26 @@
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+/* Removed retro font imports; using Montserrat across the site */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+/* Global font: Montserrat everywhere */
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Map legacy classes to Montserrat to avoid refactors */
+.font-pixel { /* legacy class used in headings */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.font-ui { /* legacy ui font class */
+  font-family: 'Montserrat', sans-serif;
+}
 
 /* Clean corporate styling */
 .subtle-shadow {

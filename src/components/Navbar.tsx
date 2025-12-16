@@ -4,7 +4,7 @@ import { useTheme } from '../contexts/ThemeContext';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,55 +23,45 @@ export const Navbar = () => {
     }
   };
 
-  const bgColor = scrolled 
-    ? theme === 'light' 
-      ? 'bg-white/90 backdrop-blur-md' 
-      : 'bg-corporate-slate/90 backdrop-blur-md'
-    : 'bg-transparent';
-  
-  const textColor = theme === 'light' ? 'text-corporate-navy' : 'text-white';
-  const hoverColor = theme === 'light' ? 'hover:text-electric-cyan' : 'hover:text-electric-cyan';
-
-  return <motion.header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${bgColor} py-5`} initial={{
+  return <motion.header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 pointer-events-none`} initial={{
     y: -100
   }} animate={{
     y: 0
   }} transition={{
     duration: 0.5
   }}>
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <motion.div className="flex items-center" initial={{
+      <div className="container mx-auto px-4 md:px-6">
+        <motion.div className={`mx-auto max-w-6xl rounded-full border border-white/10 bg-corporate-navy text-white shadow-md px-4 md:px-6 ${scrolled ? 'py-2' : 'py-3'} grid grid-cols-3 items-center pointer-events-auto`} initial={{
         opacity: 0
       }} animate={{
         opacity: 1
       }} transition={{
         delay: 0.2
       }}>
-          <h1 className={`font-wordmark font-black text-xl md:text-2xl tracking-tight transition-colors duration-300 ${textColor}`}>
-            80F Creative
-          </h1>
-        </motion.div>
-        <motion.nav className="hidden md:flex items-center space-x-8" initial={{
+          <motion.nav className="hidden md:flex items-center space-x-8" initial={{
         opacity: 0
       }} animate={{
         opacity: 1
       }} transition={{
         delay: 0.4
       }}>
-          <button onClick={() => scrollToSection('portfolio')} className={`${textColor} ${hoverColor} transition-colors font-ui`}>
+          <button onClick={() => scrollToSection('portfolio')} className={`text-white hover:text-white/80 transition-colors font-sans`}>
             Portfolio
           </button>
-          <button onClick={() => scrollToSection('about')} className={`${textColor} ${hoverColor} transition-colors font-ui`}>
+          <button onClick={() => scrollToSection('about')} className={`text-white hover:text-white/80 transition-colors font-sans`}>
             About
           </button>
-          <button onClick={() => scrollToSection('services')} className={`${textColor} ${hoverColor} transition-colors font-ui`}>
+          <button onClick={() => scrollToSection('services')} className={`text-white hover:text-white/80 transition-colors font-sans`}>
             Creative Services
           </button>
-          <button onClick={() => scrollToSection('contact')} className={`${textColor} ${hoverColor} transition-colors font-ui`}>
+          <button onClick={() => scrollToSection('contact')} className={`text-white hover:text-white/80 transition-colors font-sans`}>
             Contact
           </button>
-        </motion.nav>
-        <motion.div className="flex items-center space-x-4" initial={{
+          </motion.nav>
+          <h1 className={`font-wordmark font-black text-xl md:text-2xl tracking-tight text-center`}>
+            80F Creative
+          </h1>
+          <motion.div className="flex items-center justify-end space-x-2" initial={{
         opacity: 0
       }} animate={{
         opacity: 1
@@ -80,34 +70,21 @@ export const Navbar = () => {
       }}>
           <button 
             onClick={toggleTheme}
-            className={`p-2 rounded-lg transition-colors duration-300 ${theme === 'light' ? 'bg-gray-100 text-corporate-navy' : 'bg-gray-700 text-white'}`}
+            className={`p-2 rounded-lg transition-colors duration-300 bg-white/10 text-white hover:bg-white/20`}
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            )}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
           </button>
-          <button className={`md:hidden ${textColor}`}>
+          <button className={`md:hidden text-white`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
+          </motion.div>
         </motion.div>
       </div>
     </motion.header>;

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="80F Creative — Portfolio">
+  <section class="hero">
+    <div class="container">
+      <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3rem);margin:0 0 .5rem">Creative Work That Moves</h1>
+      <p style="max-width:60ch;margin:0 auto 2rem;">Videography, photography, and branded storytelling for teams that need compelling campaigns and measurable results.</p>
+      <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap">
+        <a class="btn" href="/projects/">View Work</a>
+        <a class="btn" href="/contact">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="font-size:1.5rem;margin-bottom:1rem">Featured Case Study</h2>
+      <div class="grid grid-2">
+        <a href="/projects/university-of-memphis" class="pill" style="display:block">
+          <strong>University of Memphis — Campaign</strong>
+          <div style="opacity:.8">How we delivered a multi-channel story with measurable lift.</div>
+        </a>
+        <a href="/projects/memphis-901-fc" class="pill" style="display:block">
+          <strong>Memphis 901 FC — Commercial</strong>
+          <div style="opacity:.8">Fast-turn broadcast spot and social cutdowns.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
