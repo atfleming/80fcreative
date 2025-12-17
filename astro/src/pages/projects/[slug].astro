@@ -9,19 +9,95 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+// Case study data (hardcoded for now, can be extended to content collection)
+const caseStudyData = {
+  "university-of-memphis": {
+    title: "University of Memphis: Give to the Legacy",
+    subtitle: "Driving Legacy Donations Through Cinematic Storytelling",
+    client: "The University of Memphis is a cornerstone of regional education and culture, preparing to open the Scheidt Performing Arts Center—an innovative home for students, faculty, and the Memphis arts community.",
+    challenge: "With the Scheidt Performing Arts Center nearing completion, donor momentum slowed. The brief called for a straightforward informational film, but 80F Creative saw the need to spark an emotional response that could reignite support.",
+    solution: "We pivoted from exposition to emotion, crafting a cinematic documentary that put faculty and students on screen. Interviews, staged lighting inside the unfinished space, and projections of architectural plans showcased how the new building would transform lives, all scored with an original composition designed to build resonance.",
+    results: "The finished film moved the client and their donor base. When the University distributed it through their newsletter, donor engagement surged and the remaining funding was secured, ensuring the Scheidt Performing Arts Center could open its doors and serve the community for decades.",
+    videoUrl: "https://www.youtube.com/embed/oQiZGRDIct8",
+    gallery: [
+      "/case_studies/case_study_1_images/casestudy1image1.png",
+      "/case_studies/case_study_1_images/casestudy1image2.png",
+      "/case_studies/case_study_1_images/casestudy1image3.png",
+      "/case_studies/case_study_1_images/casestudy1image5.png"
+    ]
+  }
+};
+
+const caseData = caseStudyData[entry.slug] || {};
 ---
 <BaseLayout title={`${entry.data.title} — 80F Creative`}>
-  <section class="hero" style="padding-top:3rem">
-    <div class="container">
-      <h1 style="font-weight:800">{entry.data.title}</h1>
-      {entry.data.excerpt && (<p style="opacity:.8;max-width:60ch;margin: .5rem 0">{entry.data.excerpt}</p>)}
+  <section class="hero" style="padding-top:3rem;padding-bottom:2rem;">
+    <div class="container" style="max-width:60ch;">
+      <a href="/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:1rem;text-decoration:none;color:var(--color-accent);">
+        ← Back
+      </a>
+      <span style="font-size:0.75rem;font-weight:600;letter-spacing:0.4em;text-transform:uppercase;opacity:0.6;color:var(--color-accent);display:block;margin-bottom:1rem;">Case Study</span>
+      <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3rem);margin:0 0 1rem;color:var(--color-fg);white-space:pre-line;">{caseData.title}</h1>
+      <p style="font-size:1.125rem;opacity:0.8;margin:0;line-height:1.6;color:var(--color-fg);">{caseData.subtitle}</p>
     </div>
   </section>
-  <section>
+
+  <section style="padding:3rem 0;border-top:1px solid rgba(0,0,0,0.06);">
     <div class="container">
-      <article class="prose">
-        <Content />
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem;">
+        <article style="border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:1.5rem;background:var(--color-bg);box-shadow:var(--shadow);">
+          <h2 style="font-size:0.875rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--color-accent);margin:0 0 1rem;">The Client</h2>
+          <p style="font-size:1rem;line-height:1.6;opacity:0.8;margin:0;color:var(--color-fg);">{caseData.client}</p>
+        </article>
+        <article style="border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:1.5rem;background:var(--color-bg);box-shadow:var(--shadow);">
+          <h2 style="font-size:0.875rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--color-accent);margin:0 0 1rem;">The Challenge</h2>
+          <p style="font-size:1rem;line-height:1.6;opacity:0.8;margin:0;color:var(--color-fg);">{caseData.challenge}</p>
+        </article>
+      </div>
+
+      <article style="border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:1.5rem;background:var(--color-bg);box-shadow:var(--shadow);margin-bottom:2rem;">
+        <h2 style="font-size:0.875rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--color-accent);margin:0 0 1rem;">The Solution</h2>
+        <p style="font-size:1rem;line-height:1.6;opacity:0.8;margin:0;color:var(--color-fg);">{caseData.solution}</p>
+      </article>
+
+      <article style="border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:1.5rem;background:var(--color-bg);box-shadow:var(--shadow);margin-bottom:2rem;">
+        <h2 style="font-size:0.875rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--color-accent);margin:0 0 1rem;">The Results</h2>
+        <p style="font-size:1rem;line-height:1.6;opacity:0.8;margin:0;color:var(--color-fg);">{caseData.results}</p>
       </article>
     </div>
   </section>
+
+  <section style="padding:3rem 0;border-top:1px solid rgba(0,0,0,0.06);">
+    <div class="container">
+      <div style="margin-bottom:2rem;border-radius:16px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 12px 32px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.06);">
+        <iframe
+          src={caseData.videoUrl}
+          title="University of Memphis case study video"
+          style="width:100%;height:100%;border:none;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+
+      <div class="grid grid-2" style="gap:1.25rem;">
+        {caseData.gallery?.map((image) => (
+          <img
+            src={image}
+            alt="Case study still"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.06);"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 900px) {
+      [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </BaseLayout>

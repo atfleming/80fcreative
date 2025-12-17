@@ -16,7 +16,10 @@ const clientLogos = [
 ];
 ---
 
-<section class="client-marquee" style="background:var(--color-fg);color:var(--color-bg);padding:2rem 0;overflow:hidden;position:relative">
+<section class="client-marquee" style="background:var(--color-fg);color:var(--color-bg);padding:3rem 0 2rem;overflow:hidden;position:relative">
+  <div style="text-align:center;margin-bottom:2rem">
+    <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.15em;color:white;margin:0;text-transform:uppercase">Trusted By:</p>
+  </div>
   <div class="marquee-wrapper">
     <div class="marquee-content">
       {[...clientLogos, ...clientLogos].map(logo => (
@@ -24,7 +27,7 @@ const clientLogos = [
           <img 
             src={`/clients/${logo.file}`} 
             alt={logo.name} 
-            style="height:40px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8"
+            style="height:40px;width:auto;object-fit:contain;opacity:0.95"
             loading="lazy"
           />
         </div>

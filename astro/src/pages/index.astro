@@ -1,71 +1,223 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ClientMarquee from "../components/ClientMarquee.astro";
+import AnimatedVideoSection from "../components/AnimatedVideoSection";
+import FeaturedCaseStudy from "../components/FeaturedCaseStudy";
 import { getCollection } from 'astro:content';
 const featured = (await getCollection('case-studies')).slice(0, 2);
 ---
 <BaseLayout title="80F Creative — Portfolio">
-  <section class="hero">
-    <div class="container">
-      <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3.5rem);margin:0 0 .5rem">Creative Work That Moves</h1>
-      <p style="max-width:60ch;margin:0 auto 2rem;font-size:1.125rem;opacity:.85">Videography, photography, and branded storytelling for teams that need compelling campaigns and measurable results.</p>
+  <section class="hero" style="position:relative;overflow:hidden;color:#0B2545;">
+    <div style="position:absolute;inset:0;z-index:0;">
+      <video autoplay loop muted playsinline poster="/Hero_Image_background.png" style="width:100%;height:100%;object-fit:cover;opacity:0.75;filter:saturate(0.6)">
+        <source src="https://res.cloudinary.com/da2wgtiau/video/upload/v1760393870/80fco_website_header_video_bkgd_720p_small_jcuvrl.mp4" type="video/mp4" />
+        <img src="/Hero_Image_background.png" alt="Showreel background" style="width:100%;height:100%;object-fit:cover;" />
+      </video>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.50) 40%,rgba(0,0,0,0.45) 100%);"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;padding-top:3.5rem;padding-bottom:3rem;color:#F5F7FB;">
+      <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3.5rem);margin:0 0 .5rem;text-shadow:0 6px 18px rgba(0,0,0,0.35)">Creative Work That Moves</h1>
+      <p style="max-width:60ch;margin:0 auto 2.2rem;font-size:1.125rem;opacity:.95;text-shadow:0 4px 12px rgba(0,0,0,0.35)">Videography, photography, and branded storytelling for teams that need compelling campaigns and measurable results.</p>
       <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap">
-        <a class="btn" href="/work">View Work</a>
-        <a class="btn" href="/contact">Start a Project</a>
+        <a class="btn" href="/#contact" style="background:#0B2545;color:white;box-shadow:0 10px 24px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.18);">Start a Project</a>
       </div>
     </div>
   </section>
   <ClientMarquee />
+  <AnimatedVideoSection client:idle />
+  <FeaturedCaseStudy client:idle />
 
   <section style="padding:4rem 0;background:var(--color-fg);color:var(--color-bg)">
     <div class="container">
-      <h2 style="font-size:1.75rem;margin-bottom:1.5rem;font-weight:700;text-align:center">Portfolio</h2>
-      <div class="grid grid-3">
-        <a href="/work?filter=Commercial" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">🎬</div>
-          <strong style="font-size:1.125rem">Commercial</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Brand campaigns & promos</div>
-        </a>
-        <a href="/work?filter=Music Videos" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">🎵</div>
-          <strong style="font-size:1.125rem">Music Videos</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Creative storytelling for artists</div>
-        </a>
-        <a href="/work?filter=Documentary/Branded" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">📽️</div>
-          <strong style="font-size:1.125rem">Documentary</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Branded storytelling & docs</div>
-        </a>
-        <a href="/work?filter=Film" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">🎞️</div>
-          <strong style="font-size:1.125rem">Film</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Narrative & short films</div>
-        </a>
-        <a href="/photography/outdoor" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">🏔️</div>
-          <strong style="font-size:1.125rem">Outdoor</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Adventure & lifestyle</div>
-        </a>
-        <a href="/photography/musician" class="pill" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05)">
-          <div style="font-size:2rem;margin-bottom:.5rem">📸</div>
-          <strong style="font-size:1.125rem">Musician</strong>
-          <div style="opacity:.8;margin-top:.25rem;font-size:.85rem">Live & studio portraits</div>
-        </a>
+      <div style="text-align:center;margin-bottom:2rem;">
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);margin:0 0 1rem;font-weight:900;color:#F5F7FB">Creative Services</h2>
+        <p style="font-size:1.125rem;opacity:0.85;max-width:50ch;margin:0 auto;line-height:1.6;">Full-stack creative support—from concept to final delivery across film, photo, design, and post.</p>
+      </div>
+      <div class="grid grid-3" style="gap:2rem;">
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">🎬</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Video Production</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Cinematic storytelling and branded video content</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">📸</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Photography</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Commercial, lifestyle, and documentary photography</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">🎨</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Creative Direction</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Strategic visual concepts and brand narratives</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">💻</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Design & Web</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Motion graphics, visual design, and digital</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">✂️</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Post & Editing</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Color grading, sound design, and final delivery</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);text-align:center;transition:transform 0.3s ease,background 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.05)'">
+          <div style="font-size:3rem;margin-bottom:1rem;">🎯</div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem;color:#F5F7FB">Strategy</h3>
+          <p style="font-size:0.95rem;opacity:0.75;margin:0;line-height:1.5;">Campaign planning and creative consultation</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a class="btn" href="/#contact" style="background:white;color:#0B2545;padding:0.8rem 1.4rem;border-radius:10px;border:none;box-shadow:0 10px 24px rgba(0,0,0,0.25);font-weight:700;transition:transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Start a Project</a>
       </div>
     </div>
   </section>
 
-  <section style="padding:4rem 0">
+  <section style="padding:4rem 0;background:var(--color-bg)">
     <div class="container">
-      <h2 style="font-size:1.75rem;margin-bottom:1.5rem;font-weight:700">Featured Case Studies</h2>
-      <div class="grid grid-2">
-        {featured.map((study) => (
-          <a href={`/projects/${study.slug}`} class="pill" style="display:block;transition:transform .2s;text-decoration:none" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <strong style="font-size:1.125rem">{study.data.title.replace('Case Study: ', '').replace('Featured Case Study: ', '')}</strong>
-            {study.data.excerpt && (<div style="opacity:.75;margin-top:.25rem;font-size:.9rem">{study.data.excerpt}</div>)}
-          </a>
-        ))}
+      <h2 style="font-size:1.75rem;margin-bottom:1.5rem;font-weight:700;text-align:center;color:var(--color-fg)">Portfolio</h2>
+      <div class="grid grid-4" style="gap:1.25rem">
+        <a href="/work?filter=Commercial" class="card" aria-label="Commercial + Promo">
+          <div class="card-media">
+            <img src="/aces penny thumbnail.png" alt="Commercial and promo" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Commercial + Promo</span>
+            </div>
+          </div>
+        </a>
+        <a href="/work?filter=Documentary/Branded" class="card" aria-label="Documentary & Branded Storytelling">
+          <div class="card-media">
+            <img src="/memphis masters rolling stone.png" alt="Documentary and branded storytelling" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Documentary + Branded</span>
+            </div>
+          </div>
+        </a>
+        <a href="/work?filter=Music Videos" class="card" aria-label="Music Videos">
+          <div class="card-media">
+            <img src="/daykisser ijwwta.png" alt="Music video still" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Music Videos</span>
+            </div>
+          </div>
+        </a>
+        <a href="/work?filter=Film" class="card" aria-label="Narrative Film">
+          <div class="card-media">
+            <img src="/narrativefilmthumbnail.png" alt="Narrative film" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Narrative Film</span>
+            </div>
+          </div>
+        </a>
+        <a href="/photography/outdoor" class="card" aria-label="Outdoor Photography">
+          <div class="card-media">
+            <img src="/outdoorphotographythumbnail.png" alt="Outdoor photography" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Outdoor Photography</span>
+            </div>
+          </div>
+        </a>
+        <a href="/photography/musician" class="card" aria-label="Music Photography">
+          <div class="card-media">
+            <img src="/musicphotographythumbnail.jpg" alt="Music photography" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Music Photography</span>
+            </div>
+          </div>
+        </a>
+        <a href="/design" class="card" aria-label="Design">
+          <div class="card-media">
+            <img src="/design/sports_intro_titles.png" alt="Design work" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Design</span>
+            </div>
+          </div>
+        </a>
+        <a href="/development" class="card" aria-label="Development">
+          <div class="card-media">
+            <img src="/development.png" alt="Development work" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Development</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:1.75rem;">
+        <a class="btn" href="/work" style="background:#0B2545;color:white;box-shadow:0 10px 24px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.18);padding:.8rem 1.4rem">View All Projects</a>
       </div>
     </div>
   </section>
+
+  <section style="padding:4rem 0;background:var(--color-fg);color:var(--color-bg)">
+    <div class="container">
+      <div style="max-width:60ch;margin:0 auto;text-align:center;padding:2rem;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);margin-bottom:3rem;">
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);margin:0 0 1rem;font-weight:900;color:#F5F7FB">About 80F Creative</h2>
+        <p style="font-size:1.125rem;margin:0 0 1rem;opacity:0.85;line-height:1.6;color:#F5F7FB">Telling stories through film, photography, and design.</p>
+        <p style="font-size:1rem;line-height:1.7;opacity:0.75;margin:0;color:#F5F7FB;">We believe the most effective marketing isn't marketing at all—it's authentic storytelling. 80F Creative is an agency built on the philosophy that a great story, told with cinematic quality, can do more than just capture attention. It builds trust, drives action, and creates a lasting legacy.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+        <div style="border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);padding:2rem;">
+          <h3 style="font-size:2rem;font-weight:900;margin:0 0 1.5rem;color:#F5F7FB">Our Founder</h3>
+          <p style="font-size:1rem;line-height:1.7;opacity:0.8;margin:0 0 1.5rem;color:#F5F7FB;">80F Creative is led by Andrew Trent Fleming ("Drew"), who has produced and directed award-winning commercial work, photography, creative, and independent film work for brands, agencies, and production companies since 2005.</p>
+          
+          <h4 style="font-size:1.125rem;font-weight:700;margin:1.5rem 0 1rem;color:#F5F7FB;">Recognition</h4>
+          <ul style="list-style:disc;padding-left:1.5rem;margin:0;space-y:0.75rem;">
+            <li style="opacity:0.75;margin-bottom:0.75rem;font-size:0.95rem;color:#F5F7FB;">Winner, Gold/Best of Show for Video/Directing, American Advertising Federation Memphis 2021</li>
+            <li style="opacity:0.75;margin-bottom:0.75rem;font-size:0.95rem;color:#F5F7FB;">Winner, Indie Memphis Narrative Short Audience Choice Award 2020</li>
+            <li style="opacity:0.75;margin-bottom:0.75rem;font-size:0.95rem;color:#F5F7FB;">Winner, Best Mississippi Short, Oxford Film Festival 2020</li>
+            <li style="opacity:0.75;font-size:0.95rem;color:#F5F7FB;">Winner, Memphis Film Prize 2019</li>
+          </ul>
+        </div>
+
+        <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;box-shadow:0 12px 32px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+          <video
+            src="/bts-video-about.mov"
+            autoplay
+            loop
+            muted
+            playsinline
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact Section */}
+  <section id="contact" style="padding:4rem 0;background:var(--color-fg);color:var(--color-bg)">
+    <div class="container">
+      <h2 style="font-size:2.5rem;font-weight:900;text-align:center;margin-bottom:3rem;color:#F5F7FB">let's get your project started!</h2>
+      
+      <div style="display:flex;flex-direction:column;align-items:center;max-width:600px;margin:0 auto">
+        {/* Contact Form */}
+        <form style="display:flex;flex-direction:column;gap:1.5rem;width:100%" method="POST" action="https://formspree.io/f/xyzjvwod">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+            <div>
+              <label for="name" style="display:block;font-weight:600;margin-bottom:.5rem;color:#F5F7FB;font-size:.9rem">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" style="width:100%;padding:.75rem;background:#1a1a1a;border:1px solid rgba(255,255,255,0.15);border-radius:8px;font-family:inherit;color:#F5F7FB;box-sizing:border-box" required />
+            </div>
+            <div>
+              <label for="email" style="display:block;font-weight:600;margin-bottom:.5rem;color:#F5F7FB;font-size:.9rem">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" style="width:100%;padding:.75rem;background:#1a1a1a;border:1px solid rgba(255,255,255,0.15);border-radius:8px;font-family:inherit;color:#F5F7FB;box-sizing:border-box" required />
+            </div>
+          </div>
+          <div>
+            <label for="subject" style="display:block;font-weight:600;margin-bottom:.5rem;color:#F5F7FB;font-size:.9rem">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Name" style="width:100%;padding:.75rem;background:#1a1a1a;border:1px solid rgba(255,255,255,0.15);border-radius:8px;font-family:inherit;color:#F5F7FB;box-sizing:border-box" required />
+          </div>
+          <div>
+            <label for="message" style="display:block;font-weight:600;margin-bottom:.5rem;color:#F5F7FB;font-size:.9rem">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your project..." style="width:100%;padding:.75rem;background:#1a1a1a;border:1px solid rgba(255,255,255,0.15);border-radius:8px;resize:vertical;font-family:inherit;color:#F5F7FB;box-sizing:border-box" required></textarea>
+          </div>
+          <div>
+            <label style="display:flex;align-items:center;font-size:.85rem;opacity:.85;color:#F5F7FB;cursor:pointer">
+              <input type="checkbox" name="newsletter" style="margin-right:.5rem;cursor:pointer;width:1.1rem;height:1.1rem" />
+              I agree to receive occasional newsletters and updates.
+            </label>
+          </div>
+          <button type="submit" style="width:100%;padding:.9rem;background:white;color:#0B2545;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:1rem;transition:transform 0.2s ease,box-shadow 0.2s ease;text-transform:none" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

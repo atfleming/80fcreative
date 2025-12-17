@@ -108,6 +108,28 @@
   - Document Portfolio component video handling
   - **Priority**: Low | **Complexity**: Low
 
+### 🎨 Card Layout & Legibility
+- [x] **Adjust video projects page cards** [CA][RP]
+  - Make cards more square-shaped with rounded corners
+  - Ensure text legibility without cutoff
+  - Improve aspect ratio for better visual balance
+  - **Status**: Completed - Changed from 1:1 to 4:3 aspect ratio with overlay text
+
+- [x] **Adjust photography page cards** [CA][RP]
+  - Make cards more square-shaped with rounded corners
+  - Ensure text legibility without cutoff
+  - Improve aspect ratio for better visual balance
+  - **Status**: Completed - Updated outdoor.astro and musician.astro with 4:3 aspect ratio
+
+- [x] **Redesign photography hub page** [CA][RP]
+  - Create full-page hero section with background image
+  - Implement dynamic photo gallery with category filtering
+  - Update grid to 3-column responsive layout
+  - Add image darkening effect (brightness-75%)
+  - Implement client-side category filtering (All/Outdoor/Music)
+  - Add lightbox functionality with prev/next navigation
+  - **Status**: Completed - Full redesign of `/photography` with hero, filtering, and lightbox
+
 ### 🚀 Future Enhancements
 - [ ] **Mobile responsiveness audit** [CA]
   - Test all components on mobile devices

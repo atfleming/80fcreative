@@ -10,6 +10,7 @@
     "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "astro": "^4.15.0"
   },
   "devDependencies": {
