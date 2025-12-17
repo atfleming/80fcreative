@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd astro && npm ci && npm run build",
+  "outputDirectory": "astro/dist",
+  "installCommand": "cd astro && npm ci",
+  "framework": null
+}
