@@ -43,7 +43,7 @@ export const Hero = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return <section id="hero" className="min-h-[70vh] w-full flex flex-col relative pt-6 overflow-hidden bg-digital-black">
+  return <section id="hero" className="min-h-[70vh] w-full flex flex-col relative pt-6 overflow-hidden bg-white dark:bg-corporate-slate">
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-digital-black/90 via-digital-black/70 to-digital-black/90 z-10"></div>
@@ -105,7 +105,7 @@ export const Hero = () => {
       </div>
       {/* Dropdown menu */}
       <AnimatePresence>
-        {isMenuOpen && <motion.div className="absolute top-16 left-0 w-64 bg-digital-black/90 backdrop-blur-md border border-electric-cyan/30 z-50 shadow-lg shadow-electric-cyan/20" initial={{
+        {isMenuOpen && <motion.div className="absolute top-16 left-0 w-64 bg-white/90 dark:bg-slate-700/90 backdrop-blur-md border clean-border dark:clean-border-dark z-50 shadow-md" initial={{
         opacity: 0,
         y: -10
       }} animate={{

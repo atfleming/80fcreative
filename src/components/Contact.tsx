@@ -41,26 +41,26 @@ export const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium mb-1 font-ui text-electric-cyan">
                     Name
                   </label>
-                  <input type="text" id="name" placeholder="Your name" className="w-full px-4 py-3 bg-digital-black border border-electric-cyan/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-highlight font-sans" required />
+                  <input type="text" id="name" placeholder="Your name" className="w-full px-4 py-3 bg-white dark:bg-slate-700 border clean-border dark:clean-border-dark focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-gray-900 dark:text-white font-sans" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1 font-ui text-electric-cyan">
                     Email
                   </label>
-                  <input type="email" id="email" placeholder="you@example.com" className="w-full px-4 py-3 bg-digital-black border border-electric-cyan/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-highlight font-sans" required />
+                  <input type="email" id="email" placeholder="you@example.com" className="w-full px-4 py-3 bg-white dark:bg-slate-700 border clean-border dark:clean-border-dark focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-gray-900 dark:text-white font-sans" required />
                 </div>
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-1 font-ui text-electric-cyan">
                   Subject
                 </label>
-                <input type="text" id="subject" placeholder="Project Name" className="w-full px-4 py-3 bg-digital-black border border-electric-cyan/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-highlight font-sans" required />
+                <input type="text" id="subject" placeholder="Project Name" className="w-full px-4 py-3 bg-white dark:bg-slate-700 border clean-border dark:clean-border-dark focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-gray-900 dark:text-white font-sans" required />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-1 font-ui text-electric-cyan">
                   Message
                 </label>
-                <textarea id="message" rows={5} placeholder="Tell us about your project..." className="w-full px-4 py-3 bg-digital-black border border-electric-cyan/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-highlight resize-none font-sans" required></textarea>
+                <textarea id="message" rows={5} placeholder="Tell us about your project..." className="w-full px-4 py-3 bg-white dark:bg-slate-700 border clean-border dark:clean-border-dark focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan text-gray-900 dark:text-white resize-none font-sans" required></textarea>
               </div>
               <div>
                 <label className="flex items-center font-sans">

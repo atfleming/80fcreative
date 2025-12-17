@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="About — 80F Creative" description="Telling stories through film, photography, and design since 2005.">
+  {/* Hero Section */}
+  <section style="position:relative;height:12.5vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--color-fg);color:white">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,37,69,0.8) 0%,rgba(11,37,69,0.9) 100%);z-index:1"></div>
+    <div style="position:relative;z-index:2;text-align:center">
+      <h1 style="font-weight:900;font-size:2.5rem;margin:0;color:white">About 80F Creative</h1>
+    </div>
+  </section>
+
+  {/* Main Content Section */}
+  <section style="padding:5rem 0;background:white">
+    <div class="container">
+      {/* Title */}
+      <h2 style="font-size:2.75rem;font-weight:900;line-height:1.2;margin:0 0 3rem;color:var(--color-fg);text-align:center">Authentic Storytelling</h2>
+
+      {/* Intro Text */}
+      <div style="max-width:70ch;margin:0 auto 4rem;text-align:center;padding:2rem;border-radius:16px;background:rgba(11,37,69,0.03);border:1px solid rgba(11,37,69,0.08)">
+        <p style="font-size:1.125rem;line-height:1.8;margin:0;color:var(--color-fg);opacity:0.9">We believe the most effective marketing isn't marketing at all—it's authentic storytelling. 80F Creative is an agency built on the philosophy that a great story, told with cinematic quality, can do more than just capture attention. It builds trust, drives action, and creates a lasting legacy.</p>
+      </div>
+
+      {/* Asymmetric Layout - Image & Founder Info */}
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center">
+        {/* Left: Image Container */}
+        <div style="position:relative">
+          <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.12);aspect-ratio:3/4">
+            <video 
+              autoplay
+              loop
+              muted
+              playsinline
+              src="/bts-video-about.mov" 
+              style="width:100%;height:100%;object-fit:cover;filter:brightness(1.05)"
+            >
+              Your browser does not support the video tag.
+            </video>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,37,69,0.1) 100%)"></div>
+          </div>
+        </div>
+
+        {/* Right: Text Content */}
+        <div style="padding:2rem">
+          {/* Label */}
+          <div style="font-size:0.85rem;font-weight:700;letter-spacing:0.15em;color:#4A90E2;margin-bottom:1rem;text-transform:uppercase">80F Creative</div>
+          
+          {/* Founder Bio */}
+          <div style="margin-bottom:2.5rem">
+            <h3 style="font-weight:700;font-size:1.375rem;margin:0 0 1rem;color:var(--color-fg)">Our Founder</h3>
+            <p style="font-size:1rem;line-height:1.8;margin:0;color:var(--color-fg);opacity:0.85">80F Creative is led by Andrew Trent Fleming ("Drew"), who has produced and directed award-winning commercial work, photography, creative, and independent film work for brands, agencies, and production companies since 2005.</p>
+          </div>
+
+          {/* Recognition */}
+          <div style="margin-bottom:2.5rem">
+            <h4 style="font-weight:700;font-size:1.125rem;margin:0 0 1.25rem;color:var(--color-fg)">Recognition</h4>
+            <ul style="list-style:none;padding:0;margin:0;space-y:0.75rem">
+              <li style="font-size:0.95rem;line-height:1.6;margin-bottom:0.75rem;color:var(--color-fg);opacity:0.8;padding-left:1.5rem;position:relative">
+                <span style="position:absolute;left:0">▪</span>
+                Winner, Gold/Best of Show for Video/Directing, American Advertising Federation Memphis 2021
+              </li>
+              <li style="font-size:0.95rem;line-height:1.6;margin-bottom:0.75rem;color:var(--color-fg);opacity:0.8;padding-left:1.5rem;position:relative">
+                <span style="position:absolute;left:0">▪</span>
+                Winner, Indie Memphis Narrative Short Audience Choice Award 2020
+              </li>
+              <li style="font-size:0.95rem;line-height:1.6;margin-bottom:0.75rem;color:var(--color-fg);opacity:0.8;padding-left:1.5rem;position:relative">
+                <span style="position:absolute;left:0">▪</span>
+                Winner, Best Mississippi Short, Oxford Film Festival 2020
+              </li>
+              <li style="font-size:0.95rem;line-height:1.6;color:var(--color-fg);opacity:0.8;padding-left:1.5rem;position:relative">
+                <span style="position:absolute;left:0">▪</span>
+                Winner, Memphis Film Prize 2019
+              </li>
+            </ul>
+          </div>
+
+          {/* CTA Button */}
+          <a href="/#contact" style="display:inline-block;padding:0.9rem 2rem;background:var(--color-fg);color:white;border-radius:10px;text-decoration:none;font-weight:700;transition:transform 0.2s ease,box-shadow 0.2s ease;box-shadow:0 4px 12px rgba(11,37,69,0.2)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(11,37,69,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(11,37,69,0.2)'">
+            Let's Work Together
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

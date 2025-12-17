@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Contact — 80F Creative" description="Let's start a conversation about your next project.">
+  <section class="hero" style="padding-top:3rem">
+    <div class="container">
+      <h1 style="font-weight:800;font-size:2.5rem">Let's Get Your Project Started</h1>
+    </div>
+  </section>
+  <section style="padding:3rem 0">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;gap:3rem">
+        <form class="pill" style="padding:2rem" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+          <div class="grid grid-2" style="gap:1rem;margin-bottom:1rem">
+            <div>
+              <label for="name" style="display:block;font-weight:600;margin-bottom:.25rem;font-size:.9rem">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" style="width:100%;padding:.75rem;border:1px solid rgba(0,0,0,0.1);border-radius:8px;font-family:inherit" required />
+            </div>
+            <div>
+              <label for="email" style="display:block;font-weight:600;margin-bottom:.25rem;font-size:.9rem">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" style="width:100%;padding:.75rem;border:1px solid rgba(0,0,0,0.1);border-radius:8px;font-family:inherit" required />
+            </div>
+          </div>
+          <div style="margin-bottom:1rem">
+            <label for="subject" style="display:block;font-weight:600;margin-bottom:.25rem;font-size:.9rem">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Name" style="width:100%;padding:.75rem;border:1px solid rgba(0,0,0,0.1);border-radius:8px;font-family:inherit" required />
+          </div>
+          <div style="margin-bottom:1rem">
+            <label for="message" style="display:block;font-weight:600;margin-bottom:.25rem;font-size:.9rem">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." style="width:100%;padding:.75rem;border:1px solid rgba(0,0,0,0.1);border-radius:8px;resize:vertical;font-family:inherit" required></textarea>
+          </div>
+          <div style="margin-bottom:1.5rem">
+            <label style="display:flex;align-items:center;font-size:.85rem;opacity:.85">
+              <input type="checkbox" name="newsletter" style="margin-right:.5rem" />
+              I agree to receive occasional newsletters and updates.
+            </label>
+          </div>
+          <button type="submit" class="btn" style="width:100%;cursor:pointer;text-align:center">Send Message</button>
+        </form>
+        <div class="pill" style="padding:2rem">
+          <h3 style="font-weight:700;font-size:1.5rem;margin-bottom:1.5rem">Contact Information</h3>
+          <div style="space-y:1rem">
+            <div style="margin-bottom:1rem">
+              <p style="font-weight:600;margin-bottom:.25rem">Email</p>
+              <a href="mailto:80fcreative@gmail.com" style="opacity:.85;text-decoration:none">80fcreative@gmail.com</a>
+            </div>
+            <div style="margin-bottom:1rem">
+              <p style="font-weight:600;margin-bottom:.25rem">Location</p>
+              <p style="opacity:.85">Memphis, TN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

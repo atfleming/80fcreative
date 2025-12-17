@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+const studies = await getCollection('case-studies');
+---
+<BaseLayout title="Projects — 80F Creative">
+  <section class="hero" style="padding-top:3rem">
+    <div class="container">
+      <h1 style="font-weight:800">Case Studies</h1>
+      <p style="opacity:.8;max-width:600px;margin:1rem auto">In-depth project stories showcasing our creative process and results.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container grid grid-3">
+      {studies.map((s) => (
+        <a class="pill" href={`/projects/${s.slug}`}>
+          <strong>{s.data.title}</strong>
+          {s.data.excerpt && (<div style="opacity:.8">{s.data.excerpt}</div>)}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

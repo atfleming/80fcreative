@@ -839,8 +839,8 @@ export const Photography = () => {
   const currentPhoto = selectedPhoto ? filteredPhotos.find(photo => photo.id === selectedPhoto) : null;
 
   return (
-    <div className="bg-digital-black text-highlight min-h-screen w-full crt-scanlines">
-      <div className="pixel-grid">
+        <div className="bg-white dark:bg-corporate-slate text-gray-900 dark:text-white min-h-screen w-full">
+      <div>
         <main>
           {/* Hero Section */}
           <section className="relative h-screen">
@@ -858,7 +858,7 @@ export const Photography = () => {
             <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center items-center text-center">
               <Link
                 to="/"
-                className="absolute top-8 left-8 flex items-center text-electric-cyan hover:text-white transition-colors"
+                className="absolute top-8 left-8 flex items-center text-electric-cyan hover:text-corporate-navy dark:hover:text-white transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5 mr-2" />
                 Back to Home
@@ -869,10 +869,10 @@ export const Photography = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-5xl md:text-7xl font-pixel mb-6 text-electric-cyan neon-cyan">
+                <h1 className="text-5xl md:text-7xl font-sans font-bold mb-6 text-corporate-navy dark:text-white">
                   Photography
                 </h1>
-                <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-8">
+                <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300 mb-8">
                   Capturing moments across outdoor adventures, musical performances, and commercial lifestyle.
                 </p>
               </motion.div>
@@ -880,7 +880,7 @@ export const Photography = () => {
           </section>
 
           {/* Gallery Section */}
-          <section className="py-24 bg-[#130c24]">
+          <section className="py-24 bg-gray-50 dark:bg-slate-800">
             <div className="container mx-auto px-4 md:px-6">
               <motion.div
                 className="text-center mb-16"
@@ -889,10 +889,10 @@ export const Photography = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="font-pixel text-3xl md:text-4xl font-bold mb-4 text-electric-cyan neon-cyan">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-corporate-navy dark:text-white">
                   Photography Gallery
                 </h2>
-                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
                   From outdoor landscapes to intimate musical moments and commercial lifestyle captures
                 </p>
 
@@ -935,7 +935,7 @@ export const Photography = () => {
                       alt={photo.alt}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-digital-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                 ))}
               </div>

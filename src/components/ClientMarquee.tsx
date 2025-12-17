@@ -20,7 +20,7 @@ export const ClientMarquee = () => {
 	return (
 		<section
 			aria-label="Trusted by marquee"
-			className="border-y border-electric-cyan/20 bg-digital-black/80 py-10"
+			className="border-y clean-border dark:clean-border-dark bg-white dark:bg-slate-700 py-10"
 		>
 			<div className="mx-auto w-full max-w-6xl px-4 text-center md:px-6 md:text-left">
 				<p className="font-ui text-xs uppercase tracking-[0.4em] text-electric-cyan/60">
@@ -31,7 +31,7 @@ export const ClientMarquee = () => {
 				<ul className="marquee-track flex items-center gap-10">
 					{marqueeItems.map((logo, index) => (
 						<li
-							className="flex h-20 min-w-[160px] items-center justify-center rounded-full border border-electric-cyan/15 bg-digital-black/60 px-6"
+							className="flex h-20 min-w-[160px] items-center justify-center rounded-full border clean-border dark:clean-border-dark bg-gray-50 dark:bg-slate-600 px-6"
 							key={`${logo.alt}-${index}`}
 						>
 							<img

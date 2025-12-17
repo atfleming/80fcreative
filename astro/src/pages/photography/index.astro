@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { readdir } from "node:fs/promises";
+import { join } from "node:path";
+
+// Read outdoor photos
+const outdoorDir = join(process.cwd(), "public", "outdoor-photography");
+const outdoorFiles = await readdir(outdoorDir);
+const outdoorPhotos = outdoorFiles
+  .filter(f => /\.(jpg|jpeg|png|webp|avif)$/i.test(f))
+  .map(f => ({ path: `/outdoor-photography/${f}`, category: "Outdoor" }));
+
+// Read music photos
+const musicDir = join(process.cwd(), "public", "music-photography");
+const musicFiles = await readdir(musicDir);
+const musicPhotos = musicFiles
+  .filter(f => /\.(jpg|jpeg|png|webp|avif)$/i.test(f))
+  .map(f => ({ path: `/music-photography/${f}`, category: "Music" }));
+
+// Combine all photos
+const allPhotos = [...outdoorPhotos, ...musicPhotos];
+---
+
+<BaseLayout title="Photography — 80F Creative" description="Outdoor adventure, music, and lifestyle photography.">
+  {/* Hero Section */}
+  <section style="position:relative;height:60vh;overflow:hidden;display:flex;align-items:center;justify-content:center">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%);z-index:10"></div>
+    <img 
+      src="/music-photography/music1.jpg" 
+      alt="Photography Hero" 
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"
+    />
+    <div style="position:relative;z-index:20;text-align:center;color:white">
+      <h1 style="font-weight:800;font-size:3rem;margin:0;text-shadow:0 2px 10px rgba(0,0,0,0.5)">Photography</h1>
+      <p style="font-size:1.1rem;opacity:0.9;margin-top:1rem;max-width:600px">Capturing authentic moments across outdoor adventures, music scenes, and lifestyle stories.</p>
+    </div>
+  </section>
+
+  {/* Category Filter & Gallery */}
+  <section style="padding:3rem 0;background:var(--color-bg)">
+    <div class="container">
+      {/* Filter Buttons */}
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:3rem">
+        <button 
+          class="category-btn"
+          data-filter="All"
+          style="padding:.75rem 1.5rem;border:1px solid rgba(0,0,0,0.06);border-radius:10px;background:var(--color-accent);color:white;cursor:pointer;font-weight:600;transition:all .2s"
+        >
+          All
+        </button>
+        <button 
+          class="category-btn"
+          data-filter="Outdoor"
+          style="padding:.75rem 1.5rem;border:1px solid rgba(0,0,0,0.06);border-radius:10px;background:transparent;color:var(--color-fg);cursor:pointer;font-weight:600;transition:all .2s"
+        >
+          Outdoor
+        </button>
+        <button 
+          class="category-btn"
+          data-filter="Music"
+          style="padding:.75rem 1.5rem;border:1px solid rgba(0,0,0,0.06);border-radius:10px;background:transparent;color:var(--color-fg);cursor:pointer;font-weight:600;transition:all .2s"
+        >
+          Music
+        </button>
+      </div>
+
+      {/* Photo Grid */}
+      <div id="photo-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;width:100%">
+        {allPhotos.map((photo, i) => (
+          <button 
+            class="photo-card"
+            data-category={photo.category}
+            data-index={i}
+            style="position:relative;overflow:hidden;padding:0;border:none;cursor:pointer;background:none;border-radius:24px;aspect-ratio:4/3"
+          >
+            <img 
+              src={photo.path} 
+              alt={`${photo.category} photo ${i + 1}`} 
+              style="width:100%;height:100%;object-fit:cover;transition:transform .3s;filter:brightness(0.75)" 
+              class="photo-img" 
+              loading="lazy" 
+            />
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .photo-card:hover .photo-img {
+    transform: scale(1.05);
+  }
+  .category-btn.active {
+    background: var(--color-accent) !important;
+    color: white !important;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      
+      // Update active button state
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'transparent';
+        b.style.color = 'var(--color-fg)';
+      });
+      btn.classList.add('active');
+      btn.style.background = 'var(--color-accent)';
+      btn.style.color = 'white';
+      
+      // Filter photos
+      document.querySelectorAll('.photo-card').forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'All' || category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Add lightbox functionality
+  document.querySelectorAll('.photo-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const index = parseInt(card.getAttribute('data-index') || '0');
+      const category = card.getAttribute('data-category');
+      openLightbox(index, category);
+    });
+  });
+
+  function openLightbox(startIndex, filterCategory) {
+    let currentIndex = startIndex;
+    const allCards = document.querySelectorAll('.photo-card');
+    const visibleCards = Array.from(allCards).filter(card => card.style.display !== 'none');
+    const currentCard = visibleCards[visibleCards.findIndex(card => card.getAttribute('data-index') === startIndex.toString())];
+    
+    const modal = document.createElement('div');
+    modal.innerHTML = `
+      <div style="position:fixed;inset:0;background:rgba(0,0,0,0.95);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem" id="photo-modal">
+        <button style="position:absolute;top:50%;left:1rem;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;font-size:2rem;cursor:pointer;padding:1rem;border-radius:50%;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center" id="prev-photo">‹</button>
+        <button style="position:absolute;top:50%;right:1rem;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;font-size:2rem;cursor:pointer;padding:1rem;border-radius:50%;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center" id="next-photo">›</button>
+        <button style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:white;font-size:3rem;cursor:pointer;line-height:1;opacity:.8" id="close-modal">&times;</button>
+        <img id="lightbox-img" style="max-width:90%;max-height:90%;object-fit:contain" />
+        <div style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:white;font-size:.9rem" id="photo-counter"></div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    function updateLightbox() {
+      const allPhotos = Array.from(allCards).map(card => card.querySelector('img').src);
+      const filteredPhotos = visibleCards.map(card => card.querySelector('img').src);
+      const img = document.getElementById('lightbox-img');
+      img.src = filteredPhotos[currentIndex] || filteredPhotos[0];
+      document.getElementById('photo-counter').textContent = `${currentIndex + 1} of ${filteredPhotos.length}`;
+    }
+    
+    updateLightbox();
+    
+    document.getElementById('next-photo')?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % visibleCards.length;
+      updateLightbox();
+    });
+    
+    document.getElementById('prev-photo')?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + visibleCards.length) % visibleCards.length;
+      updateLightbox();
+    });
+    
+    const closeModal = () => modal.remove();
+    document.getElementById('close-modal')?.addEventListener('click', closeModal);
+    document.getElementById('photo-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'photo-modal') closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') document.getElementById('next-photo')?.click();
+      if (e.key === 'ArrowLeft') document.getElementById('prev-photo')?.click();
+    });
+  }
+</script>

@@ -64,7 +64,7 @@ export const HypePromo = () => {
             </div>
           </section>
           {/* Hype/Promo Videos Gallery Section */}
-          <section className="py-24 bg-[#130c24]">
+          <section className="py-24 bg-gray-50 dark:bg-slate-800">
             <div className="container mx-auto px-4 md:px-6">
               <motion.div className="text-center mb-16" initial={{
               opacity: 0,

@@ -62,6 +62,20 @@
   - Add emoji organization and clear structure
   - **Priority**: High | **Complexity**: Low
 
+### 🚚 Astro Migration (Dec 2025)
+- [x] **Scaffold Astro skeleton** – Created `astro/` with `astro.config.mjs`, `package.json`, `tsconfig.json`, and `src/` structure [AC][CA]
+- [x] **BaseLayout foundation** – Built with floating nav/footer, Montserrat font, white/navy CSS variables [SF][RP]
+- [x] **Content Collections setup** – Added `src/content/config.ts` and migrated 3 case studies to markdown [SD]
+- [x] **Core pages** – Created `index.astro`, `about.astro`, `services/index.astro`, `contact.astro`, `projects/index.astro`, `projects/[slug].astro` [CA]
+- [x] **Asset migration** – Copied all 200+ assets (1.17GB) including photos, videos, client logos, thumbnails [AC][RM]
+- [x] **Portfolio system** – Built `/work` page with VideoModal, category filtering, and 49 video items from TS data file [CA][SF]
+- [x] **Photography galleries** – Created `/photography` hub with `/outdoor` (71 photos) and `/musician` (40 photos) lightbox galleries [CA][PA]
+- [x] **Interactive islands** – Implemented VideoModal and PhotoModal with vanilla JS, ClientMarquee with auto-scroll [DM][SF]
+- [x] **Home page enhancements** – Added ClientMarquee (13 logos) and portfolio category preview cards [CA][SF]
+- [x] **Navigation updates** – Added Work and Photography links to header/footer navigation [CA]
+- [x] **Legacy redirects** – Configured redirects for `/outdoor-photography`, `/musician-photography`, `/projects` routes [ISA]
+- [x] **Build verification** – Successful build with 12 pages + 5 redirects, dev server running at localhost:4321 [CTC]
+
 ---
 
 ## 📋 Pending Tasks
@@ -93,6 +107,28 @@
   - Add comments for Photography component filtering
   - Document Portfolio component video handling
   - **Priority**: Low | **Complexity**: Low
+
+### 🎨 Card Layout & Legibility
+- [x] **Adjust video projects page cards** [CA][RP]
+  - Make cards more square-shaped with rounded corners
+  - Ensure text legibility without cutoff
+  - Improve aspect ratio for better visual balance
+  - **Status**: Completed - Changed from 1:1 to 4:3 aspect ratio with overlay text
+
+- [x] **Adjust photography page cards** [CA][RP]
+  - Make cards more square-shaped with rounded corners
+  - Ensure text legibility without cutoff
+  - Improve aspect ratio for better visual balance
+  - **Status**: Completed - Updated outdoor.astro and musician.astro with 4:3 aspect ratio
+
+- [x] **Redesign photography hub page** [CA][RP]
+  - Create full-page hero section with background image
+  - Implement dynamic photo gallery with category filtering
+  - Update grid to 3-column responsive layout
+  - Add image darkening effect (brightness-75%)
+  - Implement client-side category filtering (All/Outdoor/Music)
+  - Add lightbox functionality with prev/next navigation
+  - **Status**: Completed - Full redesign of `/photography` with hero, filtering, and lightbox
 
 ### 🚀 Future Enhancements
 - [ ] **Mobile responsiveness audit** [CA]

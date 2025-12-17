@@ -1,0 +1,62 @@
+---
+const clientLogos = [
+  { name: "Champions for Literacy", file: "champions_for_literacy_logo.png" },
+  { name: "CNN", file: "cnn_logo.png" },
+  { name: "Complex", file: "complex_logo.png" },
+  { name: "Craft Recordings", file: "craft_recordings.png" },
+  { name: "FedEx", file: "fedEx_logo.png" },
+  { name: "Hyatt", file: "hyatt_logo.png" },
+  { name: "iBank", file: "ibank_logo.png" },
+  { name: "Memphis River Parks", file: "mrp-white-logo.png" },
+  { name: "Old Dominick", file: "Old-Dominick_Logo-FullColor.png" },
+  { name: "SMC", file: "smc_logo.png" },
+  { name: "Stax Records", file: "stax_logo.avif" },
+  { name: "University of Memphis", file: "umemphis_logo.png" },
+  { name: "Weesprout", file: "weesprout.png" },
+];
+---
+
+<section class="client-marquee" style="background:var(--color-fg);color:var(--color-bg);padding:3rem 0 2rem;overflow:hidden;position:relative">
+  <div style="text-align:center;margin-bottom:2rem">
+    <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.15em;color:white;margin:0;text-transform:uppercase">Trusted By:</p>
+  </div>
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      {[...clientLogos, ...clientLogos].map(logo => (
+        <div class="logo-item" style="flex-shrink:0;padding:0 2rem;display:flex;align-items:center;height:60px">
+          <img 
+            src={`/clients/${logo.file}`} 
+            alt={logo.name} 
+            style="height:40px;width:auto;object-fit:contain;opacity:0.95"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-wrapper {
+    display: flex;
+    width: 100%;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: scroll 40s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .client-marquee:hover .marquee-content {
+    animation-play-state: paused;
+  }
+</style>

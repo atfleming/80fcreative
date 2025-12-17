@@ -1,0 +1,114 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = '80F Creative', description = 'Creative agency portfolio' } = Astro.props as Props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/src/styles/global.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="pill" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+          <a href="/" style="font-weight:800;">80F Creative</a>
+          <nav style="display:none;gap:1.25rem;align-items:center;" class="desktop-nav">
+            <div style="position:relative;display:inline-block">
+              <button id="work-menu-btn" style="background:none;border:none;cursor:pointer;font-weight:600;padding:.5rem 0;font-size:1rem;color:var(--color-fg);display:flex;align-items:center;gap:.5rem" aria-label="Work menu">
+                Work
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 6l4 4 4-4"/>
+                </svg>
+              </button>
+              <div id="work-dropdown" style="position:absolute;top:100%;left:0;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:8px;min-width:180px;box-shadow:0 4px 12px rgba(0,0,0,0.1);display:none;z-index:1000;margin-top:.5rem">
+                <a href="/work" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Video Projects</a>
+                <a href="/photography" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Photography</a>
+                <a href="/services" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Services</a>
+                <a href="/projects" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Case Studies</a>
+              </div>
+            </div>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+          <div>© {new Date().getFullYear()} 80F Creative</div>
+          <nav style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+            <div style="position:relative;display:inline-block">
+              <button id="work-menu-btn-footer" style="background:none;border:none;cursor:pointer;font-weight:600;font-size:1rem;color:var(--color-fg);display:flex;align-items:center;gap:.5rem;padding:0" aria-label="Work menu">
+                Work
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 6l4 4 4-4"/>
+                </svg>
+              </button>
+              <div id="work-dropdown-footer" style="position:absolute;bottom:100%;left:0;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:8px;min-width:180px;box-shadow:0 4px 12px rgba(0,0,0,0.1);display:none;z-index:1000;margin-bottom:.5rem">
+                <a href="/work" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Video Projects</a>
+                <a href="/photography" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Photography</a>
+                <a href="/services" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.05);font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Services</a>
+                <a href="/projects" style="display:block;padding:.75rem 1rem;color:var(--color-fg);text-decoration:none;font-weight:500" onmouseover="this.style.background='rgba(0,0,0,0.03)'" onmouseout="this.style.background='transparent'">Case Studies</a>
+              </div>
+            </div>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <style>
+    @media (min-width: 900px){ .desktop-nav{ display:flex !important } }
+  </style>
+  <script>
+    // Work menu dropdown for navbar
+    const workBtn = document.getElementById('work-menu-btn');
+    const workDropdown = document.getElementById('work-dropdown');
+    
+    if (workBtn && workDropdown) {
+      workBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isVisible = workDropdown.style.display === 'block';
+        workDropdown.style.display = isVisible ? 'none' : 'block';
+      });
+      
+      document.addEventListener('click', (e) => {
+        if (!workBtn.contains(e.target) && !workDropdown.contains(e.target)) {
+          workDropdown.style.display = 'none';
+        }
+      });
+    }
+    
+    // Work menu dropdown for footer
+    const workBtnFooter = document.getElementById('work-menu-btn-footer');
+    const workDropdownFooter = document.getElementById('work-dropdown-footer');
+    
+    if (workBtnFooter && workDropdownFooter) {
+      workBtnFooter.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isVisible = workDropdownFooter.style.display === 'block';
+        workDropdownFooter.style.display = isVisible ? 'none' : 'block';
+      });
+      
+      document.addEventListener('click', (e) => {
+        if (!workBtnFooter.contains(e.target) && !workDropdownFooter.contains(e.target)) {
+          workDropdownFooter.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  </html>
