@@ -25,6 +25,10 @@ html, body {
 	line-height: 1.6;
 }
 
+main {
+	padding-top: 4.5rem;
+}
+
 a { color: var(--color-fg); text-decoration: none; }
 a:hover { opacity: .8; }
 
@@ -53,11 +57,14 @@ a:hover { opacity: .8; }
 }
 
 header.site-header {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
 	backdrop-filter: saturate(180%) blur(8px);
 	padding: .75rem 0;
-	background: color-mix(in oklab, var(--color-bg) 80%, transparent);
+	background: transparent;
 	z-index: 50;
 }
 
