@@ -133,11 +133,13 @@ const FeaturedCaseStudy: React.FC = () => {
             #featured-case-study .featured-copy {
               text-align: center !important;
               align-items: center;
+              order: 2;
             }
 
             #featured-case-study .featured-figure {
               max-width: 520px;
               margin: 0 auto;
+              order: 1;
             }
           }
         `}
