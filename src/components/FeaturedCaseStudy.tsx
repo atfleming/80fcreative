@@ -62,6 +62,7 @@ const FeaturedCaseStudy: React.FC = () => {
             {featured.title}
           </h2>
           <p
+            className="featured-subtitle"
             style={{
               fontSize: "1.125rem",
               lineHeight: 1.6,
@@ -141,7 +142,9 @@ const FeaturedCaseStudy: React.FC = () => {
               margin: 0 auto;
               order: 1;
             }
-          }
+            #featured-case-study .featured-subtitle {
+              max-width: 280px;
+            }          }
         `}
       </style>
     </section>
