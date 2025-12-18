@@ -33,10 +33,11 @@ const FeaturedCaseStudy: React.FC = () => {
           gridTemplateColumns: "1fr 1fr",
           gap: "3rem",
           alignItems: "center",
+          justifyItems: "start",
         }}
       >
         {/* Text Content */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+        <div className="featured-copy" style={{ display: "flex", flexDirection: "column", gap: "1.5rem", textAlign: "left" }}>
           <span
             style={{
               fontSize: "0.75rem",
@@ -94,6 +95,7 @@ const FeaturedCaseStudy: React.FC = () => {
 
         {/* Image */}
         <figure
+          className="featured-figure"
           style={{
             position: "relative",
             overflow: "hidden",
@@ -101,6 +103,7 @@ const FeaturedCaseStudy: React.FC = () => {
             background: "var(--color-bg)",
             boxShadow: "0 12px 32px rgba(0,0,0,0.15)",
             border: "1px solid rgba(0,0,0,0.06)",
+            width: "100%",
           }}
         >
           <img
@@ -124,6 +127,17 @@ const FeaturedCaseStudy: React.FC = () => {
             #featured-case-study > div {
               grid-template-columns: 1fr !important;
               gap: 2rem !important;
+              justify-items: center !important;
+            }
+
+            #featured-case-study .featured-copy {
+              text-align: center !important;
+              align-items: center;
+            }
+
+            #featured-case-study .featured-figure {
+              max-width: 520px;
+              margin: 0 auto;
             }
           }
         `}
