@@ -14,14 +14,21 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="/montserrat-v31-latin/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/montserrat-v31-latin/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <div class="pill" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
           <a href="/" style="font-weight:800;">80F Creative</a>
+          <button id="mobile-menu-btn" style="display:none;background:none;border:none;cursor:pointer;padding:.5rem;" class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
           <nav style="display:none;gap:1.25rem;align-items:center;" class="desktop-nav">
             <div style="position:relative;display:inline-block">
               <button id="work-menu-btn" style="background:none;border:none;cursor:pointer;font-weight:600;padding:.5rem 0;font-size:1rem;color:var(--color-fg);display:flex;align-items:center;gap:.5rem" aria-label="Work menu">
@@ -39,6 +46,25 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
             </div>
             <a href="/about">About</a>
             <a href="/#contact">Contact</a>
+          </nav>
+          <nav id="mobile-nav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,37,69,0.98);z-index:100;padding:2rem;" class="mobile-nav">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;">
+              <a href="/" style="font-weight:800;color:white;font-size:1.25rem;">80F Creative</a>
+              <button id="mobile-close-btn" style="background:none;border:none;cursor:pointer;padding:.5rem;color:white;" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1.5rem;">
+              <a href="/work" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Video Projects</a>
+              <a href="/photography" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Photography</a>
+              <a href="/#services" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Services</a>
+              <a href="/projects" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Case Studies</a>
+              <a href="/about" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">About</a>
+              <a href="/#contact" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Contact</a>
+            </div>
           </nav>
         </div>
       </div>
@@ -74,6 +100,9 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
   </body>
   <style>
     @media (min-width: 900px){ .desktop-nav{ display:flex !important } }
+    @media (max-width: 899px){ .mobile-menu-btn{ display:block !important } }
+    .mobile-nav-link { transition: opacity 0.2s ease; }
+    .mobile-nav-link:hover { opacity: 0.7; }
   </style>
   <script>
     // Work menu dropdown for navbar
@@ -109,6 +138,32 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
         if (!workBtnFooter.contains(e.target) && !workDropdownFooter.contains(e.target)) {
           workDropdownFooter.style.display = 'none';
         }
+      });
+    }
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (mobileMenuBtn && mobileNav && mobileCloseBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileNav.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+      
+      mobileCloseBtn.addEventListener('click', () => {
+        mobileNav.style.display = 'none';
+        document.body.style.overflow = '';
+      });
+      
+      // Close menu when clicking on a link
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.style.display = 'none';
+          document.body.style.overflow = '';
+        });
       });
     }
   </script>
