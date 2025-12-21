@@ -1,0 +1,121 @@
+---
+import { ACTION_ERROR_CODES } from "astro:actions";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Healthcare — 80F Creative">
+  <section id="healthcare-page" style="padding:4rem 0;">
+    <div class="container" style="max-width:80ch;margin:0 auto;">
+      <style>
+        /* Center h2 headings on the Healthcare page */
+        #healthcare-page h2 { text-align: center; }
+      </style>
+      <h1 style="text-align:center;margin-bottom:1rem;font-weight:900;">Healthcare Experience and Work Samples</h1>
+
+      <!-- Top: Healthcare Reel -->
+      <p style="font-size:1.125rem;line-height:1.8;opacity:0.95;margin-bottom:1.25rem;">
+        I’ve spent 15+ years producing video and photo production projects across agency, in-house, and production-studio environments, with a significant portion of that work in healthcare and regulated industries.”
+      </p>
+
+      <h3 style="text-align:center;font-size:1.125rem;margin-bottom:0.75rem;font-weight:700;">Healthcare Reel</h3>
+      <div style="margin:1.5rem 0 2rem;">
+        <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,0.12);">
+          <iframe src="https://www.youtube.com/embed/LQ7YLrrdETs" title="Healthcare Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+        </div>
+      </div>
+
+      <p style="font-size:1.125rem;line-height:1.8;opacity:0.95;margin-top:1.25rem;margin-bottom:1.25rem;">
+        Over time, my role has evolved from hands-on director to leading teams, building production workflows, managing vendors, and improving efficiency and quality at scale. <br><br>
+
+        Most recently, I’ve been focused on building and operating in-house production models—balancing internal teams with external partners—to support brand, marketing, social, and communications video and photo initiatives for clients.<br><br>
+
+        I'm currently exploring opportunities to find a role to use my experience scaling internal production, improving processes, and delivering impactful authentic storytelling.<br><br>
+
+        In addition to the clients below, I've collaborated on projects with St. Jude, Medtronic, Baptist Healthcare, and The MERI.
+      </p>
+
+      <!-- Client sections -->
+      <section style="margin-top:2.5rem;">
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">Methodist LeBonheur Healthcare</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Produced and Directed a Covid-specific piece to give patients peace of mind.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/Me9VNpVXpYM" title="Methodist LeBonheur Healthcare" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">ANOVORx — Patient Stories & Internal</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">For the last year, I've produced internal and external video pieces for AnovoRx and their patients, as well as internal HR, onboarding, and year-end employee videos.</p>
+
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.25rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/3aAEZ2ZLAd0" title="ANOVORx Patient Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.05rem;margin-bottom:0.5rem;font-weight:700;">Internal HR / Onboarding / Year-End</h3>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Internal-facing pieces for employee communications and onboarding.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/jtfeA6NtmWw" title="Internal HR Onboarding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/5f96AKv-9Xs" title="Year End Employee Appreciation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">ATEC Spine</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Produced and directed 12 pieces for ATEC Spine 2025 National Sales Meeting.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/QR8g7veYweE" title="ATEC Spine National Sales Meeting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">Various Sales Meeting Spots</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Showcasing ATEC Employees in a variety of engaging pieces.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/4pvKVfb05Sw" title="Winning: Lebron" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/22AAAttvdhA" title="Spot 22AA" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/rHDlQiehRow" title="Spot rHDl" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">FedEx Family House + Le Bonheur </h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Produced and directed a pro-bono fundraising piece for the FedEx Family House Gala 2025. </p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/l0zjRzMjB2Q" title="FedEx Family House" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">Campbell Clinic</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Wrote and produced patient stories in longform, as well as multiple :30 cuts for a digital ad campaign.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/P8Yxpswm4us" title="Campbell Clinic 1" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/7XatABc2Hk8" title="Campbell Clinic 2" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.25rem;margin-bottom:1rem;font-weight:700;">Semmes Murphey Clinic</h2>
+        <p style="opacity:0.9;margin-bottom:0.75rem;">Managed and Produced Doctor Introductions, Patient Stories, and Social Content for 2 years.</p>
+        <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/cnKGRcx4fcQ" title="Semmes Murphey 1" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+          <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+            <iframe src="https://www.youtube.com/embed/kmgqXF4lqj4" title="Semmes Murphey 2" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;"></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

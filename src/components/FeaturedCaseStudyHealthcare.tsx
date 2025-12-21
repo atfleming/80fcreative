@@ -1,21 +1,22 @@
 import React from "react";
 
 /**
- * Featured case study component for University of Memphis [SF][CA].
- * Simplified from React version: removed motion animations, kept clean layout.
+ * Featured Healthcare case study card [SF][CA].
+ * Kept styling consistent with FeaturedCaseStudy component.
  */
-const FeaturedCaseStudy: React.FC = () => {
+const FeaturedCaseStudyHealthcare: React.FC = () => {
   const featured = {
-    slug: "university-of-memphis",
-    title: "University of Memphis:\nGive to the Legacy",
-    subtitle: "Driving Legacy Donations Through Cinematic Storytelling",
-    ctaLabel: "View Case Study",
-    heroImage: "/case_studies/case_study_1_images/casestudy1image1.png",
+    slug: "healthcare",
+    title: "Healthcare & Regulated Industries",
+    subtitle: "Impactful storytelling, managing production workflow and campaigns for clinical communications teams",
+    ctaLabel: "View Healthcare",
+    // Use the image you provided at `public/services/healthcare.png`
+    heroImage: "/services/healthcare.png",
   };
 
   return (
     <section
-      id="featured-case-study"
+      id="featured-case-study-healthcare"
       style={{
         position: "relative",
         marginTop: "1.5rem",
@@ -54,7 +55,6 @@ const FeaturedCaseStudy: React.FC = () => {
               fontWeight: 900,
               color: "var(--color-fg)",
               textAlign: "center",
-              whiteSpace: "pre-line",
             }}
           >
             {featured.title}
@@ -62,7 +62,7 @@ const FeaturedCaseStudy: React.FC = () => {
 
           <figure style={{ width: "100%", display: "flex", justifyContent: "center", margin: "0" }}>
             <img
-              alt="University of Memphis case study still"
+              alt="Healthcare case study still"
               src={featured.heroImage}
               loading="lazy"
               style={{
@@ -93,7 +93,7 @@ const FeaturedCaseStudy: React.FC = () => {
           </p>
 
           <a
-            href={`/projects/${featured.slug}`}
+            href={`/` + `healthcare`}
             className="btn"
             style={{
               display: "inline-flex",
@@ -116,10 +116,10 @@ const FeaturedCaseStudy: React.FC = () => {
       </div>
 
       <style>
-        {`\n          @media (max-width: 900px) {\n            #featured-case-study { padding: 2rem 1rem; }\n            #featured-case-study h2 { font-size: clamp(1.5rem, 6vw, 1.9rem); }\n          }\n        `}
+        {`\n          @media (max-width: 900px) {\n            #featured-case-study-healthcare { padding: 2rem 1rem; }\n            #featured-case-study-healthcare h2 { font-size: clamp(1.5rem, 6vw, 1.9rem); }\n          }\n        `}
       </style>
     </section>
   );
 };
 
-export default FeaturedCaseStudy;
+export default FeaturedCaseStudyHealthcare;

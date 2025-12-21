@@ -3,15 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ClientMarquee from "../components/ClientMarquee.astro";
 import AnimatedVideoSection from "../components/AnimatedVideoSection";
 import FeaturedCaseStudy from "../components/FeaturedCaseStudy";
+import FeaturedCaseStudyHealthcare from "../components/FeaturedCaseStudyHealthcare";
 import { getCollection } from 'astro:content';
 const featured = (await getCollection('case-studies')).slice(0, 2);
 ---
 <BaseLayout title="80F Creative — Portfolio">
   <section class="hero" style="position:relative;overflow:hidden;color:#0B2545;height:100vh;display:flex;align-items:center;justify-content:center;">
     <div style="position:absolute;inset:0;z-index:0;">
-      <video autoplay loop muted playsinline poster="/Hero_Image_background.png" style="width:100%;height:100%;object-fit:cover;opacity:1;">
+      <video autoplay loop muted playsinline poster="/services/healthcare.png" style="width:100%;height:100%;object-fit:cover;opacity:1;">
         <source src="https://res.cloudinary.com/da2wgtiau/video/upload/Clean_Hero_Banner_4k_SMall_rzj0a0.mp4" type="video/mp4" />
-        <img src="/Hero_Image_background.png" alt="Showreel background" style="width:100%;height:100%;object-fit:cover;" />
+        <img src="/services/healthcare.png" alt="Showreel background" style="width:100%;height:100%;object-fit:cover;" />
       </video>
     </div>
     <div class="container" style="position:relative;z-index:1;text-align:center;color:#F5F7FB;">
@@ -25,8 +26,19 @@ const featured = (await getCollection('case-studies')).slice(0, 2);
     </div>
   </section>
   <ClientMarquee />
+
+  <div style="max-width:var(--maxw);margin:2rem auto;">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;align-items:start;">
+      <div style="width:100%;">
+        <FeaturedCaseStudy client:idle />
+      </div>
+      <div style="width:100%;">
+        <FeaturedCaseStudyHealthcare client:idle />
+      </div>
+    </div>
+  </div>
+
   <AnimatedVideoSection client:idle />
-  <FeaturedCaseStudy client:idle />
 
   <section id="services" style="padding:4rem 0;background:var(--color-fg);color:var(--color-bg)">
     <div class="container">
