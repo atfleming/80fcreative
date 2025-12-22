@@ -29,6 +29,8 @@ const featured = (await getCollection('case-studies')).slice(0, 2);
   </section>
   <ClientMarquee />
 
+  <AnimatedVideoSection client:idle />
+
   <div style="max-width:var(--maxw);margin:2rem auto;">
     <div class="featured-case-studies" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;align-items:start;">
       <div style="width:100%;">
@@ -39,8 +41,6 @@ const featured = (await getCollection('case-studies')).slice(0, 2);
       </div>
     </div>
   </div>
-
-  <AnimatedVideoSection client:idle />
 
   <section id="services" style="padding:4rem 0;background:var(--color-fg);color:var(--color-bg)">
     <div class="container">
