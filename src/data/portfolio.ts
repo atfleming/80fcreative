@@ -23,7 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'champions for lit grizzlies promo',
     category: 'Commercial',
     image: '/champions for lit grizzlies promo.webp',
-    videoId: '935182826',
+    videoId: 'ex66IZtfyQI',
     isVimeo: true
   },
   {
