@@ -16,19 +16,21 @@ const featured = (await getCollection('case-studies')).slice(0, 2);
       </video>
     </div>
     <div class="container" style="position:relative;z-index:1;text-align:center;color:#F5F7FB;">
-      <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3.5rem);margin:0 0 .5rem;text-shadow:0 6px 18px rgba(0,0,0,0.35)">
-        Creative Work<span class="hero-break"><br /></span> That Moves
-      </h1>
-      <p style="max-width:60ch;margin:0 auto 2.2rem;font-size:1.125rem;opacity:.95;text-shadow:0 4px 12px rgba(0,0,0,0.35)">Creative storytelling for teams that need compelling campaigns and measurable results across all mediums.</p>
-      <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap">
-        <a class="btn" href="/#contact" style="background:#0B2545;color:white;box-shadow:0 10px 24px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.18);">Start a Project</a>
+      <div style="background:rgba(11,37,69,0.85);backdrop-filter:blur(8px);padding:2.5rem 2rem;border-radius:24px;max-width:900px;margin:0 auto;">
+        <h1 style="font-weight:900;font-size:clamp(2rem,5vw,3.5rem);margin:0 0 .5rem;">
+          Creative Work<span class="hero-break"><br /></span> That Moves
+        </h1>
+        <p style="max-width:60ch;margin:0 auto 2.2rem;font-size:1.125rem;opacity:.95;">Creative storytelling for teams that need compelling campaigns and measurable results across all mediums.</p>
+        <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap">
+          <a class="btn" href="/#contact" style="background:white;color:#0B2545;box-shadow:0 10px 24px rgba(0,0,0,0.25);font-weight:700;">Start a Project</a>
+        </div>
       </div>
     </div>
   </section>
   <ClientMarquee />
 
   <div style="max-width:var(--maxw);margin:2rem auto;">
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;align-items:start;">
+    <div class="featured-case-studies" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;align-items:start;">
       <div style="width:100%;">
         <FeaturedCaseStudy client:idle />
       </div>
@@ -136,17 +138,17 @@ const featured = (await getCollection('case-studies')).slice(0, 2);
             </div>
           </div>
         </a>
-        ##<a href="/design" class="card" aria-label="Design">
-          ##<div class="card-media">
-            ##<img src="/design/sports_intro_titles.png" alt="Design work" loading="lazy" />
-            ##<div class="card-overlay">
-              ##<span class="card-meta">Design</span>
-            ##</div>
-          ##</div>
-        ##</a>
+        <a href="/design" class="card" aria-label="Design">
+          <div class="card-media">
+            <img src="/design/sports_intro_titles.png" alt="Design work" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-meta">Design</span>
+            </div>
+          </div>
+        </a>
         <a href="https://www.github.com/atfleming" class="card" aria-label="Development">
           <div class="card-media">
-            <img src="/development" alt="Development work" loading="lazy" />
+            <img src="public/development.png" alt="Development work" loading="lazy" />
             <div class="card-overlay">
               <span class="card-meta">Development</span>
             </div>

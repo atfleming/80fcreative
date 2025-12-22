@@ -30,6 +30,7 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
             </svg>
           </button>
           <nav style="display:none;gap:1.25rem;align-items:center;" class="desktop-nav">
+            <a href="/">Home</a>
             <div style="position:relative;display:inline-block">
               <button id="work-menu-btn" style="background:none;border:none;cursor:pointer;font-weight:600;padding:.5rem 0;font-size:1rem;color:var(--color-fg);display:flex;align-items:center;gap:.5rem" aria-label="Work menu">
                 Work
@@ -47,7 +48,7 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
             <a href="/about">About</a>
             <a href="/#contact">Contact</a>
           </nav>
-          <nav id="mobile-nav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,37,69,0.98);z-index:100;padding:2rem;" class="mobile-nav">
+          <nav id="mobile-nav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,37,69,0.97);backdrop-filter:blur(8px);z-index:100;padding:2rem;" class="mobile-nav">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;">
               <a href="/" style="font-weight:800;color:white;font-size:1.25rem;">80F Creative</a>
               <button id="mobile-close-btn" style="background:none;border:none;cursor:pointer;padding:.5rem;color:white;" aria-label="Close menu">
@@ -57,7 +58,8 @@ const { title = '80F Creative', description = 'Creative agency portfolio' } = As
                 </svg>
               </button>
             </div>
-            <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div style="display:flex;flex-direction:column;gap:1.5rem;background:#0B2545;padding:2rem;border-radius:16px;">
+              <a href="/" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Home</a>
               <a href="/work" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Video Projects</a>
               <a href="/photography" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Photography</a>
               <a href="/#services" style="color:white;font-size:1.5rem;font-weight:600;" class="mobile-nav-link">Services</a>
