@@ -10,8 +10,8 @@ const FeaturedCaseStudyHealthcare: React.FC = () => {
     title: "Healthcare & Regulated Industries",
     subtitle: "Impactful storytelling, managing production workflow and campaigns for clinical communications teams",
     ctaLabel: "View Healthcare",
-    // Use the image you provided at `public/services/healthcare.png`
-    heroImage: "/services/healthcare.png",
+    // Use the image you provided at `public/services/healthcare.webp`
+    heroImage: "/services/healthcare.webp",
   };
 
   return (

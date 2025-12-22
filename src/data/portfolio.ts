@@ -22,7 +22,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv2',
     title: 'champions for lit grizzlies promo',
     category: 'Commercial',
-    image: '/champions for lit grizzlies promo.png',
+    image: '/champions for lit grizzlies promo.webp',
     videoId: '935182826',
     isVimeo: true
   },
@@ -30,7 +30,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'v8',
     title: 'FedEx x Memphis Record Pressing',
     category: 'Commercial',
-    image: '/fedex mrp .png',
+    image: '/fedex mrp .webp',
     description: '',
     videoId: 'VaT_oPNG8eM'
   },
@@ -38,7 +38,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv3',
     title: 'champions for lit player hype promo',
     category: 'Commercial',
-    image: '/champions for lit player intro.png',
+    image: '/champions for lit player intro.webp',
     videoId: '1002964765',
     isVimeo: true
   },
@@ -46,7 +46,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv4',
     title: 'aces x penny hardaway x complex promo',
     category: 'Commercial',
-    image: '/aces penny thumbnail.png',
+    image: '/aces penny thumbnail.webp',
     videoId: '947118016',
     isVimeo: true
   },
@@ -54,7 +54,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv5',
     title: 'u of m engineering promo',
     category: 'Commercial',
-    image: '/uofmengineering.png',
+    image: '/uofmengineering.webp',
     videoId: '947123598',
     isVimeo: true
   },
@@ -167,42 +167,42 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv21',
     title: 'the memphis masters: the bar-kays',
     category: 'Documentary/Branded',
-    image: '/memphis masters barkays.png',
+    image: '/memphis masters barkays.webp',
     videoId: 'INUr6UD6UR0'
   },
   {
     id: 'csv22',
     title: 'rolling stone',
     category: 'Documentary/Branded',
-    image: '/memphis masters rolling stone.png',
+    image: '/memphis masters rolling stone.webp',
     externalLink: 'https://www.rollingstone.com/music/music-news/big-star-memphis-masters-series-1021789/'
   },
   {
     id: 'csv23',
     title: 'the memphis masters: full series',
     category: 'Documentary/Branded',
-    image: '/memphis masters full series.png',
+    image: '/memphis masters full series.webp',
     externalLink: 'https://www.youtube.com/watch?v=u4NRkMWrlnc&list=PL79xK-VVZpsntp7H7m-p9vr48f6Yxiv7E'
   },
   {
     id: 'csv24',
     title: 'Roberta Finocchiaro "Put the Memphis On it" album release',
     category: 'Documentary/Branded',
-    image: '/put the memphis on it.png',
+    image: '/put the memphis on it.webp',
     videoId: 'qSN-wQlqj1s'
   },
   {
     id: 'csv25',
     title: 'MLB Fan Cave Submission (top 30 winner 2012)',
     category: 'Documentary/Branded',
-    image: '/mlb fan cave submission.png',
+    image: '/mlb fan cave submission.webp',
     videoId: 'TSwXZa6EDbI'
   },
   {
     id: 'csv26',
     title: 'the cotton board: forever cotton',
     category: 'Documentary/Branded',
-    image: '/cotton board forever cotton.png',
+    image: '/cotton board forever cotton.webp',
     externalLink: 'https://www.cottonboard.org/forever-cotton'
   },
   {
@@ -216,7 +216,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv28',
     title: 'daykisser: "it\'s just what we talked about"',
     category: 'Music Videos',
-    image: '/daykisser ijwwta.png',
+    image: '/daykisser ijwwta.webp',
     videoId: '0efLsK07TxA'
   },
   {
@@ -237,14 +237,14 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv31',
     title: 'brennan villines: "better than we\'ve ever been"',
     category: 'Music Videos',
-    image: '/brennan villines better than we\'ve ever been.png',
+    image: '/brennan villines better than we\'ve ever been.webp',
     videoId: 'v-70xxtygbA'
   },
   {
     id: 'csv32',
     title: 'marco pave: "dirty benz"',
     category: 'Music Videos',
-    image: '/marco pave dirty benz.png',
+    image: '/marco pave dirty benz.webp',
     videoId: 'sfsEnFcfGqQ'
   },
   {
@@ -265,7 +265,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv35',
     title: 'marco pave: "gold grind"',
     category: 'Music Videos',
-    image: '/marco pave gold grind.png',
+    image: '/marco pave gold grind.webp',
     videoId: 'OYzT1YvPpbs'
   },
   {
@@ -293,7 +293,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'csv39',
     title: 'marco pave: "black tux"',
     category: 'Music Videos',
-    image: '/marco pave black tux.png',
+    image: '/marco pave black tux.webp',
     videoId: 'jyCqLS8CPHw'
   },
   {

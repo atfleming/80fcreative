@@ -10,7 +10,7 @@ const FeaturedCaseStudy: React.FC = () => {
     title: "University of Memphis:\nGive to the Legacy",
     subtitle: "Driving Legacy Donations Through Cinematic Storytelling",
     ctaLabel: "View Case Study",
-    heroImage: "/case_studies/case_study_1_images/casestudy1image1.png",
+    heroImage: "/case_studies/case_study_1_images/casestudy1image1.webp",
   };
 
   return (
